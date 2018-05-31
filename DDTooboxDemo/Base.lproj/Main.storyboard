@@ -79,6 +79,15 @@
                                     <action selector="clickSharedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xpi-gc-GnE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghQ-OB-zob">
+                                <rect key="frame" x="20" y="548" width="68" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.51083381930000005" blue="0.41065615799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Date"/>
+                                <connections>
+                                    <action selector="clickDateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QCP-pR-QFn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.85696198287585257" blue="0.63038459483703524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

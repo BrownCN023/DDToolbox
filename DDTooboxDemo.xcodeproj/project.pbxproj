@@ -38,6 +38,12 @@
 		B2AE6A0D20BE49120001E34A /* DDBaseCollectionHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A0C20BE49120001E34A /* DDBaseCollectionHeaderFooterView.m */; };
 		B2AE6A2420BF9CCF0001E34A /* UIImageView+DDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A2120BF9CCF0001E34A /* UIImageView+DDHelper.m */; };
 		B2AE6A2520BF9CCF0001E34A /* NSObject+DDCopyProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A2320BF9CCF0001E34A /* NSObject+DDCopyProperties.m */; };
+		B2AE6A5820BFA9310001E34A /* DDSimpleDateAlertHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A4A20BFA9310001E34A /* DDSimpleDateAlertHeaderView.m */; };
+		B2AE6A5A20BFA9310001E34A /* DDSimpleDateAlertItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A4D20BFA9310001E34A /* DDSimpleDateAlertItemCell.m */; };
+		B2AE6A5C20BFA9310001E34A /* DDSimpleDateAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A5020BFA9310001E34A /* DDSimpleDateAlertViewController.m */; };
+		B2AE6A5D20BFA9310001E34A /* DDSimpleDateAlertWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A5220BFA9310001E34A /* DDSimpleDateAlertWeekView.m */; };
+		B2AE6A5F20BFA9310001E34A /* DDSimpleDateCalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A5520BFA9310001E34A /* DDSimpleDateCalendarManager.m */; };
+		B2AE6A6020BFA9310001E34A /* NSDate+DDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A5720BFA9310001E34A /* NSDate+DDHelper.m */; };
 		C013EAAC20BC470500AB1932 /* DDSimpleActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAAB20BC470500AB1932 /* DDSimpleActionViewController.m */; };
 		C013EAB320BC5E4100AB1932 /* DDResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAAF20BC5E4100AB1932 /* DDResultModel.m */; };
 		C013EAB420BC5E4100AB1932 /* DDPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAB020BC5E4100AB1932 /* DDPageModel.m */; };
@@ -139,6 +145,18 @@
 		B2AE6A2120BF9CCF0001E34A /* UIImageView+DDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DDHelper.m"; sourceTree = "<group>"; };
 		B2AE6A2220BF9CCF0001E34A /* NSObject+DDCopyProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DDCopyProperties.h"; sourceTree = "<group>"; };
 		B2AE6A2320BF9CCF0001E34A /* NSObject+DDCopyProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DDCopyProperties.m"; sourceTree = "<group>"; };
+		B2AE6A4920BFA9310001E34A /* DDSimpleDateAlertHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSimpleDateAlertHeaderView.h; sourceTree = "<group>"; };
+		B2AE6A4A20BFA9310001E34A /* DDSimpleDateAlertHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSimpleDateAlertHeaderView.m; sourceTree = "<group>"; };
+		B2AE6A4C20BFA9310001E34A /* DDSimpleDateAlertItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSimpleDateAlertItemCell.h; sourceTree = "<group>"; };
+		B2AE6A4D20BFA9310001E34A /* DDSimpleDateAlertItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSimpleDateAlertItemCell.m; sourceTree = "<group>"; };
+		B2AE6A4F20BFA9310001E34A /* DDSimpleDateAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSimpleDateAlertViewController.h; sourceTree = "<group>"; };
+		B2AE6A5020BFA9310001E34A /* DDSimpleDateAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSimpleDateAlertViewController.m; sourceTree = "<group>"; };
+		B2AE6A5120BFA9310001E34A /* DDSimpleDateAlertWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSimpleDateAlertWeekView.h; sourceTree = "<group>"; };
+		B2AE6A5220BFA9310001E34A /* DDSimpleDateAlertWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSimpleDateAlertWeekView.m; sourceTree = "<group>"; };
+		B2AE6A5420BFA9310001E34A /* DDSimpleDateCalendarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSimpleDateCalendarManager.h; sourceTree = "<group>"; };
+		B2AE6A5520BFA9310001E34A /* DDSimpleDateCalendarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSimpleDateCalendarManager.m; sourceTree = "<group>"; };
+		B2AE6A5620BFA9310001E34A /* NSDate+DDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DDHelper.h"; sourceTree = "<group>"; };
+		B2AE6A5720BFA9310001E34A /* NSDate+DDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DDHelper.m"; sourceTree = "<group>"; };
 		C013EAAA20BC470500AB1932 /* DDSimpleActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDSimpleActionViewController.h; sourceTree = "<group>"; };
 		C013EAAB20BC470500AB1932 /* DDSimpleActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDSimpleActionViewController.m; sourceTree = "<group>"; };
 		C013EAAD20BC5E4100AB1932 /* DDPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPageModel.h; sourceTree = "<group>"; };
@@ -312,6 +330,7 @@
 		B235C6B820BBDA9200AD22B8 /* DDModal */ = {
 			isa = PBXGroup;
 			children = (
+				B2AE6A4820BFA9310001E34A /* DDSimpleDate */,
 				B235C6C720BBDA9200AD22B8 /* DDToolboxThemeConfig.h */,
 				B235C6C820BBDA9200AD22B8 /* DDToolboxThemeConfig.m */,
 				B235C6B920BBDA9200AD22B8 /* DDConfirmAlertViewController.h */,
@@ -385,6 +404,25 @@
 				B235C6B220BBDA9200AD22B8 /* UI */,
 			);
 			path = DDToolbox;
+			sourceTree = "<group>";
+		};
+		B2AE6A4820BFA9310001E34A /* DDSimpleDate */ = {
+			isa = PBXGroup;
+			children = (
+				B2AE6A4920BFA9310001E34A /* DDSimpleDateAlertHeaderView.h */,
+				B2AE6A4A20BFA9310001E34A /* DDSimpleDateAlertHeaderView.m */,
+				B2AE6A4C20BFA9310001E34A /* DDSimpleDateAlertItemCell.h */,
+				B2AE6A4D20BFA9310001E34A /* DDSimpleDateAlertItemCell.m */,
+				B2AE6A4F20BFA9310001E34A /* DDSimpleDateAlertViewController.h */,
+				B2AE6A5020BFA9310001E34A /* DDSimpleDateAlertViewController.m */,
+				B2AE6A5120BFA9310001E34A /* DDSimpleDateAlertWeekView.h */,
+				B2AE6A5220BFA9310001E34A /* DDSimpleDateAlertWeekView.m */,
+				B2AE6A5420BFA9310001E34A /* DDSimpleDateCalendarManager.h */,
+				B2AE6A5520BFA9310001E34A /* DDSimpleDateCalendarManager.m */,
+				B2AE6A5620BFA9310001E34A /* NSDate+DDHelper.h */,
+				B2AE6A5720BFA9310001E34A /* NSDate+DDHelper.m */,
+			);
+			path = DDSimpleDate;
 			sourceTree = "<group>";
 		};
 		C013EAB620BC60A400AB1932 /* HTTP */ = {
@@ -578,9 +616,12 @@
 				C013EACE20BC60B100AB1932 /* DDTableControllerViewModel.m in Sources */,
 				C013EAB920BC60A400AB1932 /* DDHTTPClient.m in Sources */,
 				C013EAED20BC616B00AB1932 /* DDBaseView.m in Sources */,
+				B2AE6A5D20BFA9310001E34A /* DDSimpleDateAlertWeekView.m in Sources */,
 				B2AA54BA20B3F07B000C0C0A /* ViewController.m in Sources */,
 				B211462E20BD05490006B6D6 /* DDSimpleInputViewController.m in Sources */,
+				B2AE6A5C20BFA9310001E34A /* DDSimpleDateAlertViewController.m in Sources */,
 				C013EAF020BC616B00AB1932 /* DDBaseTableViewHeaderFooterView.m in Sources */,
+				B2AE6A5820BFA9310001E34A /* DDSimpleDateAlertHeaderView.m in Sources */,
 				C013EAD220BC60B100AB1932 /* DDControllerViewModel.m in Sources */,
 				B235C6D120BBDA9200AD22B8 /* DDSimpleAlertViewController.m in Sources */,
 				C013EAB320BC5E4100AB1932 /* DDResultModel.m in Sources */,
@@ -603,12 +644,15 @@
 				C013EB4A20BC61C200AB1932 /* NSUserDefaults+DDHelper.m in Sources */,
 				B235C6D520BBDA9200AD22B8 /* DDTableAlertViewController.m in Sources */,
 				B235C6DA20BBDACF00AD22B8 /* NSMutableArray+DDNode.m in Sources */,
+				B2AE6A5A20BFA9310001E34A /* DDSimpleDateAlertItemCell.m in Sources */,
 				C013EAEE20BC616B00AB1932 /* DDLoopTableView.m in Sources */,
 				C013EAF520BC616B00AB1932 /* DDLoopCollectionView.m in Sources */,
+				B2AE6A6020BFA9310001E34A /* NSDate+DDHelper.m in Sources */,
 				B2AE69EB20BD291E0001E34A /* DDBarStyle.m in Sources */,
 				B235C6DD20BBDB1300AD22B8 /* NSMutableString+DDNode.m in Sources */,
 				C013EB4720BC61C200AB1932 /* DDFileCacheTools.m in Sources */,
 				B211462B20BCFB750006B6D6 /* DDSimpleMenuAlertViewController.m in Sources */,
+				B2AE6A5F20BFA9310001E34A /* DDSimpleDateCalendarManager.m in Sources */,
 				B235C6CE20BBDA9200AD22B8 /* UIView+DDLoading.m in Sources */,
 				B235C6D420BBDA9200AD22B8 /* DDSuperModalViewController.m in Sources */,
 				C013EB4620BC61C200AB1932 /* DDTimer.m in Sources */,
