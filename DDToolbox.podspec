@@ -16,7 +16,10 @@ s.license      = { :type => "MIT", :file => "LICENSE" }
 s.author       = { "liyebiao1990" => "347991555@qq.com" }
 s.platform     = :ios, "9.0"
 s.source       = { :git => "https://github.com/BrownCN023/DDToolbox.git", :tag => s.version }
-s.source_files  =  "DDToolbox/**/*"
+s.source_files  = "AXWebViewController/AXWebViewController/*.{h,m}", "AXWebViewController/AXWebViewController/Activity/*.{h,m}", "AXWebViewController/AXWebViewController/Security/*.{h,m}"
+
+s.source_files =  "DDToolbox/*.h","DDToolbox/Core/**/*.{h,m}","DDToolbox/Core/*.h","DDToolbox/UI/**/*.{h,m}"
+s.resources    = 'DDToolbox/Resources/*.bundle'
 s.requires_arc = true
 s.dependency "Masonry", "~> 1.1.0"
 s.dependency "AFNetworking", "~> 3.2.1"
