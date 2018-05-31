@@ -7,77 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B211462020BBE15F0006B6D6 /* NSString+DDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B211461F20BBE15F0006B6D6 /* NSString+DDHelper.m */; };
 		B211462320BBFF5C0006B6D6 /* TestTableAlertViewCtl.m in Sources */ = {isa = PBXBuildFile; fileRef = B211462220BBFF5C0006B6D6 /* TestTableAlertViewCtl.m */; };
 		B211462720BBFF810006B6D6 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B211462520BBFF810006B6D6 /* TestTableViewCell.m */; };
 		B211462820BBFF810006B6D6 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B211462620BBFF810006B6D6 /* TestTableViewCell.xib */; };
-		B211462B20BCFB750006B6D6 /* DDSimpleMenuAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B211462A20BCFB750006B6D6 /* DDSimpleMenuAlertViewController.m */; };
-		B211462E20BD05490006B6D6 /* DDSimpleInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B211462D20BD05490006B6D6 /* DDSimpleInputViewController.m */; };
-		B235C6CB20BBDA9200AD22B8 /* UIView+DDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B235C6AF20BBDA9200AD22B8 /* UIView+DDHelper.m */; };
-		B235C6CD20BBDA9200AD22B8 /* DDLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B235C6B520BBDA9200AD22B8 /* DDLoadingView.m */; };
-		B235C6CE20BBDA9200AD22B8 /* UIView+DDLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = B235C6B720BBDA9200AD22B8 /* UIView+DDLoading.m */; };
-		B235C6CF20BBDA9200AD22B8 /* DDConfirmAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B235C6BA20BBDA9200AD22B8 /* DDConfirmAlertViewController.m */; };
-		B235C6D120BBDA9200AD22B8 /* DDSimpleAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B235C6BE20BBDA9200AD22B8 /* DDSimpleAlertViewController.m */; };
-		B235C6D320BBDA9200AD22B8 /* DDSuperAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B235C6C220BBDA9200AD22B8 /* DDSuperAlertViewController.m */; };
-		B235C6D420BBDA9200AD22B8 /* DDSuperModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B235C6C420BBDA9200AD22B8 /* DDSuperModalViewController.m */; };
-		B235C6D520BBDA9200AD22B8 /* DDTableAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B235C6C620BBDA9200AD22B8 /* DDTableAlertViewController.m */; };
-		B235C6D620BBDA9200AD22B8 /* DDToolboxThemeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B235C6C820BBDA9200AD22B8 /* DDToolboxThemeConfig.m */; };
-		B235C6DA20BBDACF00AD22B8 /* NSMutableArray+DDNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B235C6D920BBDACF00AD22B8 /* NSMutableArray+DDNode.m */; };
-		B235C6DD20BBDB1300AD22B8 /* NSMutableString+DDNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B235C6DC20BBDB1300AD22B8 /* NSMutableString+DDNode.m */; };
 		B2AA54B720B3F07B000C0C0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA54B620B3F07B000C0C0A /* AppDelegate.m */; };
 		B2AA54BA20B3F07B000C0C0A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA54B920B3F07B000C0C0A /* ViewController.m */; };
 		B2AA54BD20B3F07B000C0C0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2AA54BB20B3F07B000C0C0A /* Main.storyboard */; };
 		B2AA54BF20B3F07B000C0C0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2AA54BE20B3F07B000C0C0A /* Assets.xcassets */; };
 		B2AA54C220B3F07B000C0C0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2AA54C020B3F07B000C0C0A /* LaunchScreen.storyboard */; };
 		B2AA54C520B3F07B000C0C0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA54C420B3F07B000C0C0A /* main.m */; };
-		B2AE69EB20BD291E0001E34A /* DDBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE69EA20BD291E0001E34A /* DDBarStyle.m */; };
-		B2AE69EE20BD299C0001E34A /* DDSuperViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE69ED20BD299C0001E34A /* DDSuperViewModel.m */; };
-		B2AE69F120BD2B110001E34A /* DDSimpleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE69F020BD2B110001E34A /* DDSimpleViewModel.m */; };
-		B2AE69F420BD31EB0001E34A /* DDCornerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE69F320BD31EB0001E34A /* DDCornerButton.m */; };
-		B2AE69F720BD329B0001E34A /* DDSimpleSharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE69F620BD329B0001E34A /* DDSimpleSharedViewController.m */; };
-		B2AE6A0D20BE49120001E34A /* DDBaseCollectionHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A0C20BE49120001E34A /* DDBaseCollectionHeaderFooterView.m */; };
-		B2AE6A2420BF9CCF0001E34A /* UIImageView+DDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A2120BF9CCF0001E34A /* UIImageView+DDHelper.m */; };
-		B2AE6A2520BF9CCF0001E34A /* NSObject+DDCopyProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A2320BF9CCF0001E34A /* NSObject+DDCopyProperties.m */; };
-		B2AE6A5820BFA9310001E34A /* DDSimpleDateAlertHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A4A20BFA9310001E34A /* DDSimpleDateAlertHeaderView.m */; };
-		B2AE6A5A20BFA9310001E34A /* DDSimpleDateAlertItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A4D20BFA9310001E34A /* DDSimpleDateAlertItemCell.m */; };
-		B2AE6A5C20BFA9310001E34A /* DDSimpleDateAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A5020BFA9310001E34A /* DDSimpleDateAlertViewController.m */; };
-		B2AE6A5D20BFA9310001E34A /* DDSimpleDateAlertWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A5220BFA9310001E34A /* DDSimpleDateAlertWeekView.m */; };
-		B2AE6A5F20BFA9310001E34A /* DDSimpleDateCalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A5520BFA9310001E34A /* DDSimpleDateCalendarManager.m */; };
-		B2AE6A6020BFA9310001E34A /* NSDate+DDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6A5720BFA9310001E34A /* NSDate+DDHelper.m */; };
-		C013EAAC20BC470500AB1932 /* DDSimpleActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAAB20BC470500AB1932 /* DDSimpleActionViewController.m */; };
-		C013EAB320BC5E4100AB1932 /* DDResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAAF20BC5E4100AB1932 /* DDResultModel.m */; };
-		C013EAB420BC5E4100AB1932 /* DDPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAB020BC5E4100AB1932 /* DDPageModel.m */; };
-		C013EAB520BC5E4100AB1932 /* DDFlagPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAB220BC5E4100AB1932 /* DDFlagPageModel.m */; };
-		C013EAB920BC60A400AB1932 /* DDHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAB720BC60A400AB1932 /* DDHTTPClient.m */; };
-		C013EACC20BC60B100AB1932 /* DDTableRowViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EABC20BC60B000AB1932 /* DDTableRowViewModel.m */; };
-		C013EACD20BC60B100AB1932 /* DDCollectionControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EABF20BC60B100AB1932 /* DDCollectionControllerViewModel.m */; };
-		C013EACE20BC60B100AB1932 /* DDTableControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAC020BC60B100AB1932 /* DDTableControllerViewModel.m */; };
-		C013EACF20BC60B100AB1932 /* DDCollectionSectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAC120BC60B100AB1932 /* DDCollectionSectionViewModel.m */; };
-		C013EAD020BC60B100AB1932 /* DDCollectionItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAC220BC60B100AB1932 /* DDCollectionItemViewModel.m */; };
-		C013EAD120BC60B100AB1932 /* DDTableSectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAC620BC60B100AB1932 /* DDTableSectionViewModel.m */; };
-		C013EAD220BC60B100AB1932 /* DDControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAC820BC60B100AB1932 /* DDControllerViewModel.m */; };
-		C013EAEC20BC616B00AB1932 /* DDBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAD820BC616900AB1932 /* DDBaseTableViewController.m */; };
-		C013EAED20BC616B00AB1932 /* DDBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAD920BC616900AB1932 /* DDBaseView.m */; };
-		C013EAEE20BC616B00AB1932 /* DDLoopTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EADB20BC616A00AB1932 /* DDLoopTableView.m */; };
-		C013EAF020BC616B00AB1932 /* DDBaseTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EADD20BC616A00AB1932 /* DDBaseTableViewHeaderFooterView.m */; };
-		C013EAF120BC616B00AB1932 /* DDBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EADE20BC616A00AB1932 /* DDBaseCollectionViewController.m */; };
-		C013EAF220BC616B00AB1932 /* DDLayoutButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EADF20BC616A00AB1932 /* DDLayoutButton.m */; };
-		C013EAF320BC616B00AB1932 /* DDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAE120BC616A00AB1932 /* DDBaseViewController.m */; };
-		C013EAF420BC616B00AB1932 /* DDBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAE420BC616A00AB1932 /* DDBaseCollectionViewCell.m */; };
-		C013EAF520BC616B00AB1932 /* DDLoopCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAE620BC616A00AB1932 /* DDLoopCollectionView.m */; };
-		C013EAF620BC616B00AB1932 /* DDBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EAE820BC616A00AB1932 /* DDBaseTableViewCell.m */; };
-		C013EB4420BC61C200AB1932 /* DDPageItemFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EB2620BC61BF00AB1932 /* DDPageItemFlowLayout.m */; };
-		C013EB4620BC61C200AB1932 /* DDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EB2D20BC61BF00AB1932 /* DDTimer.m */; };
-		C013EB4720BC61C200AB1932 /* DDFileCacheTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EB3020BC61C000AB1932 /* DDFileCacheTools.m */; };
-		C013EB4820BC61C200AB1932 /* DDXib.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EB3120BC61C000AB1932 /* DDXib.m */; };
-		C013EB4A20BC61C200AB1932 /* NSUserDefaults+DDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EB3320BC61C000AB1932 /* NSUserDefaults+DDHelper.m */; };
-		C013EB4D20BC61C200AB1932 /* NSObject+DDAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EB3820BC61C000AB1932 /* NSObject+DDAdaptor.m */; };
-		C013EB4F20BC61C200AB1932 /* DDAsyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EB3D20BC61C100AB1932 /* DDAsyncOperation.m */; };
-		C013EB5020BC61C200AB1932 /* DDTimer+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EB3E20BC61C200AB1932 /* DDTimer+Expand.m */; };
-		C013EB5120BC61C200AB1932 /* DDWeakDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EB4020BC61C200AB1932 /* DDWeakDelegate.m */; };
-		C013EB5220BC61C200AB1932 /* UIImage+DDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EB4220BC61C200AB1932 /* UIImage+DDHelper.m */; };
-		C013EB5520BD8B2700AB1932 /* DDToolbox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C013EB5420BD8B2700AB1932 /* DDToolbox.bundle */; };
-		C013EB5E20BDA17300AB1932 /* UIView+DDBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = C013EB5D20BDA17300AB1932 /* UIView+DDBorder.m */; };
+		B2AE6C9820BFDD030001E34A /* DDAsyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C3B20BFDD030001E34A /* DDAsyncOperation.m */; };
+		B2AE6C9920BFDD030001E34A /* DDBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C3D20BFDD030001E34A /* DDBarStyle.m */; };
+		B2AE6C9A20BFDD030001E34A /* DDFileCacheTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C3F20BFDD030001E34A /* DDFileCacheTools.m */; };
+		B2AE6C9B20BFDD030001E34A /* DDPageItemFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C4120BFDD030001E34A /* DDPageItemFlowLayout.m */; };
+		B2AE6C9C20BFDD030001E34A /* DDSimpleCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C4320BFDD030001E34A /* DDSimpleCalendar.m */; };
+		B2AE6C9D20BFDD030001E34A /* DDTimer+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C4520BFDD030001E34A /* DDTimer+Expand.m */; };
+		B2AE6C9E20BFDD030001E34A /* DDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C4720BFDD030001E34A /* DDTimer.m */; };
+		B2AE6C9F20BFDD030001E34A /* DDWeakDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C4920BFDD030001E34A /* DDWeakDelegate.m */; };
+		B2AE6CA020BFDD030001E34A /* DDXib.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C4B20BFDD030001E34A /* DDXib.m */; };
+		B2AE6CA120BFDD030001E34A /* NSDate+DDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C4D20BFDD030001E34A /* NSDate+DDHelper.m */; };
+		B2AE6CA220BFDD030001E34A /* NSMutableArray+DDNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C4F20BFDD030001E34A /* NSMutableArray+DDNode.m */; };
+		B2AE6CA320BFDD030001E34A /* NSMutableString+DDNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C5120BFDD030001E34A /* NSMutableString+DDNode.m */; };
+		B2AE6CA420BFDD030001E34A /* NSObject+DDAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C5320BFDD030001E34A /* NSObject+DDAdaptor.m */; };
+		B2AE6CA520BFDD030001E34A /* NSObject+DDCopyProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C5520BFDD030001E34A /* NSObject+DDCopyProperties.m */; };
+		B2AE6CA620BFDD030001E34A /* NSString+DDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C5720BFDD030001E34A /* NSString+DDHelper.m */; };
+		B2AE6CA720BFDD030001E34A /* NSUserDefaults+DDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C5920BFDD030001E34A /* NSUserDefaults+DDHelper.m */; };
+		B2AE6CA820BFDD030001E34A /* UIImage+DDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C5B20BFDD030001E34A /* UIImage+DDHelper.m */; };
+		B2AE6CA920BFDD030001E34A /* UIImageView+DDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C5D20BFDD030001E34A /* UIImageView+DDHelper.m */; };
+		B2AE6CAA20BFDD030001E34A /* UIView+DDBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C5F20BFDD030001E34A /* UIView+DDBorder.m */; };
+		B2AE6CAB20BFDD030001E34A /* UIView+DDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C6120BFDD030001E34A /* UIView+DDHelper.m */; };
+		B2AE6CAC20BFDD030001E34A /* DDFlagPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C6420BFDD030001E34A /* DDFlagPageModel.m */; };
+		B2AE6CAD20BFDD030001E34A /* DDPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C6620BFDD030001E34A /* DDPageModel.m */; };
+		B2AE6CAE20BFDD030001E34A /* DDResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C6820BFDD030001E34A /* DDResultModel.m */; };
+		B2AE6CAF20BFDD030001E34A /* DDCollectionControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C6B20BFDD030001E34A /* DDCollectionControllerViewModel.m */; };
+		B2AE6CB020BFDD030001E34A /* DDCollectionItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C6D20BFDD030001E34A /* DDCollectionItemViewModel.m */; };
+		B2AE6CB120BFDD030001E34A /* DDCollectionSectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C6F20BFDD030001E34A /* DDCollectionSectionViewModel.m */; };
+		B2AE6CB220BFDD030001E34A /* DDControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C7120BFDD030001E34A /* DDControllerViewModel.m */; };
+		B2AE6CB320BFDD030001E34A /* DDSimpleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C7320BFDD030001E34A /* DDSimpleViewModel.m */; };
+		B2AE6CB420BFDD030001E34A /* DDSuperViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C7520BFDD030001E34A /* DDSuperViewModel.m */; };
+		B2AE6CB520BFDD030001E34A /* DDTableControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C7720BFDD030001E34A /* DDTableControllerViewModel.m */; };
+		B2AE6CB620BFDD030001E34A /* DDTableRowViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C7920BFDD030001E34A /* DDTableRowViewModel.m */; };
+		B2AE6CB720BFDD030001E34A /* DDTableSectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C7B20BFDD030001E34A /* DDTableSectionViewModel.m */; };
+		B2AE6CB820BFDD030001E34A /* DDBaseCollectionHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C7F20BFDD030001E34A /* DDBaseCollectionHeaderFooterView.m */; };
+		B2AE6CB920BFDD030001E34A /* DDBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C8120BFDD030001E34A /* DDBaseCollectionViewCell.m */; };
+		B2AE6CBA20BFDD030001E34A /* DDBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C8320BFDD030001E34A /* DDBaseCollectionViewController.m */; };
+		B2AE6CBB20BFDD030001E34A /* DDBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C8520BFDD030001E34A /* DDBaseTableViewCell.m */; };
+		B2AE6CBC20BFDD030001E34A /* DDBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C8720BFDD030001E34A /* DDBaseTableViewController.m */; };
+		B2AE6CBD20BFDD030001E34A /* DDBaseTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C8920BFDD030001E34A /* DDBaseTableViewHeaderFooterView.m */; };
+		B2AE6CBE20BFDD030001E34A /* DDBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C8B20BFDD030001E34A /* DDBaseView.m */; };
+		B2AE6CBF20BFDD030001E34A /* DDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C8D20BFDD030001E34A /* DDBaseViewController.m */; };
+		B2AE6CC020BFDD030001E34A /* DDCornerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C8F20BFDD030001E34A /* DDCornerButton.m */; };
+		B2AE6CC120BFDD030001E34A /* DDLayoutButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C9120BFDD030001E34A /* DDLayoutButton.m */; };
+		B2AE6CC220BFDD030001E34A /* DDLoopCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C9320BFDD030001E34A /* DDLoopCollectionView.m */; };
+		B2AE6CC320BFDD030001E34A /* DDLoopTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE6C9520BFDD030001E34A /* DDLoopTableView.m */; };
 		FADFBB39234711343392AD49 /* libPods-DDTooboxDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 520B3C740C73C76D45545176 /* libPods-DDTooboxDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -85,40 +67,11 @@
 		520B3C740C73C76D45545176 /* libPods-DDTooboxDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DDTooboxDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B70CE3ED59AD2CF0CABAE01 /* Pods-DDTooboxDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDTooboxDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DDTooboxDemo/Pods-DDTooboxDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A14DA01C9EE9EFF0B8B43348 /* Pods-DDTooboxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDTooboxDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DDTooboxDemo/Pods-DDTooboxDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		B211461E20BBE15F0006B6D6 /* NSString+DDHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+DDHelper.h"; sourceTree = "<group>"; };
-		B211461F20BBE15F0006B6D6 /* NSString+DDHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDHelper.m"; sourceTree = "<group>"; };
 		B211462120BBFF5C0006B6D6 /* TestTableAlertViewCtl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableAlertViewCtl.h; sourceTree = "<group>"; };
 		B211462220BBFF5C0006B6D6 /* TestTableAlertViewCtl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableAlertViewCtl.m; sourceTree = "<group>"; };
 		B211462420BBFF810006B6D6 /* TestTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
 		B211462520BBFF810006B6D6 /* TestTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
 		B211462620BBFF810006B6D6 /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
-		B211462920BCFB750006B6D6 /* DDSimpleMenuAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDSimpleMenuAlertViewController.h; sourceTree = "<group>"; };
-		B211462A20BCFB750006B6D6 /* DDSimpleMenuAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDSimpleMenuAlertViewController.m; sourceTree = "<group>"; };
-		B211462C20BD05490006B6D6 /* DDSimpleInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDSimpleInputViewController.h; sourceTree = "<group>"; };
-		B211462D20BD05490006B6D6 /* DDSimpleInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDSimpleInputViewController.m; sourceTree = "<group>"; };
-		B235C6AA20BBDA9200AD22B8 /* DDMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMacro.h; sourceTree = "<group>"; };
-		B235C6AE20BBDA9200AD22B8 /* UIView+DDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDHelper.h"; sourceTree = "<group>"; };
-		B235C6AF20BBDA9200AD22B8 /* UIView+DDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDHelper.m"; sourceTree = "<group>"; };
-		B235C6B420BBDA9200AD22B8 /* DDLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLoadingView.h; sourceTree = "<group>"; };
-		B235C6B520BBDA9200AD22B8 /* DDLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLoadingView.m; sourceTree = "<group>"; };
-		B235C6B620BBDA9200AD22B8 /* UIView+DDLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDLoading.h"; sourceTree = "<group>"; };
-		B235C6B720BBDA9200AD22B8 /* UIView+DDLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDLoading.m"; sourceTree = "<group>"; };
-		B235C6B920BBDA9200AD22B8 /* DDConfirmAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDConfirmAlertViewController.h; sourceTree = "<group>"; };
-		B235C6BA20BBDA9200AD22B8 /* DDConfirmAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDConfirmAlertViewController.m; sourceTree = "<group>"; };
-		B235C6BD20BBDA9200AD22B8 /* DDSimpleAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSimpleAlertViewController.h; sourceTree = "<group>"; };
-		B235C6BE20BBDA9200AD22B8 /* DDSimpleAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSimpleAlertViewController.m; sourceTree = "<group>"; };
-		B235C6C120BBDA9200AD22B8 /* DDSuperAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSuperAlertViewController.h; sourceTree = "<group>"; };
-		B235C6C220BBDA9200AD22B8 /* DDSuperAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSuperAlertViewController.m; sourceTree = "<group>"; };
-		B235C6C320BBDA9200AD22B8 /* DDSuperModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSuperModalViewController.h; sourceTree = "<group>"; };
-		B235C6C420BBDA9200AD22B8 /* DDSuperModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSuperModalViewController.m; sourceTree = "<group>"; };
-		B235C6C520BBDA9200AD22B8 /* DDTableAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTableAlertViewController.h; sourceTree = "<group>"; };
-		B235C6C620BBDA9200AD22B8 /* DDTableAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTableAlertViewController.m; sourceTree = "<group>"; };
-		B235C6C720BBDA9200AD22B8 /* DDToolboxThemeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDToolboxThemeConfig.h; sourceTree = "<group>"; };
-		B235C6C820BBDA9200AD22B8 /* DDToolboxThemeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDToolboxThemeConfig.m; sourceTree = "<group>"; };
-		B235C6D820BBDACF00AD22B8 /* NSMutableArray+DDNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+DDNode.h"; sourceTree = "<group>"; };
-		B235C6D920BBDACF00AD22B8 /* NSMutableArray+DDNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+DDNode.m"; sourceTree = "<group>"; };
-		B235C6DB20BBDB1300AD22B8 /* NSMutableString+DDNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+DDNode.h"; sourceTree = "<group>"; };
-		B235C6DC20BBDB1300AD22B8 /* NSMutableString+DDNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+DDNode.m"; sourceTree = "<group>"; };
 		B2AA54B220B3F07B000C0C0A /* DDTooboxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDTooboxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AA54B520B3F07B000C0C0A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B2AA54B620B3F07B000C0C0A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -129,102 +82,96 @@
 		B2AA54C120B3F07B000C0C0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2AA54C320B3F07B000C0C0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2AA54C420B3F07B000C0C0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B2AE69E920BD291E0001E34A /* DDBarStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDBarStyle.h; sourceTree = "<group>"; };
-		B2AE69EA20BD291E0001E34A /* DDBarStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDBarStyle.m; sourceTree = "<group>"; };
-		B2AE69EC20BD299C0001E34A /* DDSuperViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDSuperViewModel.h; sourceTree = "<group>"; };
-		B2AE69ED20BD299C0001E34A /* DDSuperViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDSuperViewModel.m; sourceTree = "<group>"; };
-		B2AE69EF20BD2B110001E34A /* DDSimpleViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDSimpleViewModel.h; sourceTree = "<group>"; };
-		B2AE69F020BD2B110001E34A /* DDSimpleViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDSimpleViewModel.m; sourceTree = "<group>"; };
-		B2AE69F220BD31EB0001E34A /* DDCornerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCornerButton.h; sourceTree = "<group>"; };
-		B2AE69F320BD31EB0001E34A /* DDCornerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCornerButton.m; sourceTree = "<group>"; };
-		B2AE69F520BD329B0001E34A /* DDSimpleSharedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDSimpleSharedViewController.h; sourceTree = "<group>"; };
-		B2AE69F620BD329B0001E34A /* DDSimpleSharedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDSimpleSharedViewController.m; sourceTree = "<group>"; };
-		B2AE6A0B20BE49120001E34A /* DDBaseCollectionHeaderFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDBaseCollectionHeaderFooterView.h; sourceTree = "<group>"; };
-		B2AE6A0C20BE49120001E34A /* DDBaseCollectionHeaderFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDBaseCollectionHeaderFooterView.m; sourceTree = "<group>"; };
-		B2AE6A2020BF9CCF0001E34A /* UIImageView+DDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+DDHelper.h"; sourceTree = "<group>"; };
-		B2AE6A2120BF9CCF0001E34A /* UIImageView+DDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DDHelper.m"; sourceTree = "<group>"; };
-		B2AE6A2220BF9CCF0001E34A /* NSObject+DDCopyProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DDCopyProperties.h"; sourceTree = "<group>"; };
-		B2AE6A2320BF9CCF0001E34A /* NSObject+DDCopyProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DDCopyProperties.m"; sourceTree = "<group>"; };
-		B2AE6A4920BFA9310001E34A /* DDSimpleDateAlertHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSimpleDateAlertHeaderView.h; sourceTree = "<group>"; };
-		B2AE6A4A20BFA9310001E34A /* DDSimpleDateAlertHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSimpleDateAlertHeaderView.m; sourceTree = "<group>"; };
-		B2AE6A4C20BFA9310001E34A /* DDSimpleDateAlertItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSimpleDateAlertItemCell.h; sourceTree = "<group>"; };
-		B2AE6A4D20BFA9310001E34A /* DDSimpleDateAlertItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSimpleDateAlertItemCell.m; sourceTree = "<group>"; };
-		B2AE6A4F20BFA9310001E34A /* DDSimpleDateAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSimpleDateAlertViewController.h; sourceTree = "<group>"; };
-		B2AE6A5020BFA9310001E34A /* DDSimpleDateAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSimpleDateAlertViewController.m; sourceTree = "<group>"; };
-		B2AE6A5120BFA9310001E34A /* DDSimpleDateAlertWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSimpleDateAlertWeekView.h; sourceTree = "<group>"; };
-		B2AE6A5220BFA9310001E34A /* DDSimpleDateAlertWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSimpleDateAlertWeekView.m; sourceTree = "<group>"; };
-		B2AE6A5420BFA9310001E34A /* DDSimpleDateCalendarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSimpleDateCalendarManager.h; sourceTree = "<group>"; };
-		B2AE6A5520BFA9310001E34A /* DDSimpleDateCalendarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSimpleDateCalendarManager.m; sourceTree = "<group>"; };
-		B2AE6A5620BFA9310001E34A /* NSDate+DDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DDHelper.h"; sourceTree = "<group>"; };
-		B2AE6A5720BFA9310001E34A /* NSDate+DDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DDHelper.m"; sourceTree = "<group>"; };
-		C013EAAA20BC470500AB1932 /* DDSimpleActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDSimpleActionViewController.h; sourceTree = "<group>"; };
-		C013EAAB20BC470500AB1932 /* DDSimpleActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDSimpleActionViewController.m; sourceTree = "<group>"; };
-		C013EAAD20BC5E4100AB1932 /* DDPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPageModel.h; sourceTree = "<group>"; };
-		C013EAAE20BC5E4100AB1932 /* DDFlagPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFlagPageModel.h; sourceTree = "<group>"; };
-		C013EAAF20BC5E4100AB1932 /* DDResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDResultModel.m; sourceTree = "<group>"; };
-		C013EAB020BC5E4100AB1932 /* DDPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDPageModel.m; sourceTree = "<group>"; };
-		C013EAB120BC5E4100AB1932 /* DDResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDResultModel.h; sourceTree = "<group>"; };
-		C013EAB220BC5E4100AB1932 /* DDFlagPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFlagPageModel.m; sourceTree = "<group>"; };
-		C013EAB720BC60A400AB1932 /* DDHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHTTPClient.m; sourceTree = "<group>"; };
-		C013EAB820BC60A400AB1932 /* DDHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHTTPClient.h; sourceTree = "<group>"; };
-		C013EABA20BC60B000AB1932 /* DDTableRowViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTableRowViewModel.h; sourceTree = "<group>"; };
-		C013EABC20BC60B000AB1932 /* DDTableRowViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTableRowViewModel.m; sourceTree = "<group>"; };
-		C013EABD20BC60B000AB1932 /* DDTableControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTableControllerViewModel.h; sourceTree = "<group>"; };
-		C013EABE20BC60B000AB1932 /* DDCollectionItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCollectionItemViewModel.h; sourceTree = "<group>"; };
-		C013EABF20BC60B100AB1932 /* DDCollectionControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCollectionControllerViewModel.m; sourceTree = "<group>"; };
-		C013EAC020BC60B100AB1932 /* DDTableControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTableControllerViewModel.m; sourceTree = "<group>"; };
-		C013EAC120BC60B100AB1932 /* DDCollectionSectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCollectionSectionViewModel.m; sourceTree = "<group>"; };
-		C013EAC220BC60B100AB1932 /* DDCollectionItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCollectionItemViewModel.m; sourceTree = "<group>"; };
-		C013EAC320BC60B100AB1932 /* DDTableSectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTableSectionViewModel.h; sourceTree = "<group>"; };
-		C013EAC520BC60B100AB1932 /* DDCollectionControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCollectionControllerViewModel.h; sourceTree = "<group>"; };
-		C013EAC620BC60B100AB1932 /* DDTableSectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTableSectionViewModel.m; sourceTree = "<group>"; };
-		C013EAC720BC60B100AB1932 /* DDControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDControllerViewModel.h; sourceTree = "<group>"; };
-		C013EAC820BC60B100AB1932 /* DDControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDControllerViewModel.m; sourceTree = "<group>"; };
-		C013EACB20BC60B100AB1932 /* DDCollectionSectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCollectionSectionViewModel.h; sourceTree = "<group>"; };
-		C013EAD620BC616900AB1932 /* DDLayoutButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLayoutButton.h; sourceTree = "<group>"; };
-		C013EAD720BC616900AB1932 /* DDLoopTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLoopTableView.h; sourceTree = "<group>"; };
-		C013EAD820BC616900AB1932 /* DDBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseTableViewController.m; sourceTree = "<group>"; };
-		C013EAD920BC616900AB1932 /* DDBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseView.m; sourceTree = "<group>"; };
-		C013EADA20BC616900AB1932 /* DDLoopCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLoopCollectionView.h; sourceTree = "<group>"; };
-		C013EADB20BC616A00AB1932 /* DDLoopTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLoopTableView.m; sourceTree = "<group>"; };
-		C013EADD20BC616A00AB1932 /* DDBaseTableViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseTableViewHeaderFooterView.m; sourceTree = "<group>"; };
-		C013EADE20BC616A00AB1932 /* DDBaseCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseCollectionViewController.m; sourceTree = "<group>"; };
-		C013EADF20BC616A00AB1932 /* DDLayoutButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLayoutButton.m; sourceTree = "<group>"; };
-		C013EAE120BC616A00AB1932 /* DDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseViewController.m; sourceTree = "<group>"; };
-		C013EAE220BC616A00AB1932 /* DDBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseTableViewCell.h; sourceTree = "<group>"; };
-		C013EAE320BC616A00AB1932 /* DDBaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseCollectionViewCell.h; sourceTree = "<group>"; };
-		C013EAE420BC616A00AB1932 /* DDBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseCollectionViewCell.m; sourceTree = "<group>"; };
-		C013EAE520BC616A00AB1932 /* DDBaseTableViewHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseTableViewHeaderFooterView.h; sourceTree = "<group>"; };
-		C013EAE620BC616A00AB1932 /* DDLoopCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLoopCollectionView.m; sourceTree = "<group>"; };
-		C013EAE720BC616A00AB1932 /* DDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseViewController.h; sourceTree = "<group>"; };
-		C013EAE820BC616A00AB1932 /* DDBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseTableViewCell.m; sourceTree = "<group>"; };
-		C013EAE920BC616A00AB1932 /* DDBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseView.h; sourceTree = "<group>"; };
-		C013EAEA20BC616A00AB1932 /* DDBaseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseCollectionViewController.h; sourceTree = "<group>"; };
-		C013EAEB20BC616B00AB1932 /* DDBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseTableViewController.h; sourceTree = "<group>"; };
-		C013EB2620BC61BF00AB1932 /* DDPageItemFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDPageItemFlowLayout.m; sourceTree = "<group>"; };
-		C013EB2820BC61BF00AB1932 /* DDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTimer.h; sourceTree = "<group>"; };
-		C013EB2B20BC61BF00AB1932 /* DDAsyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAsyncOperation.h; sourceTree = "<group>"; };
-		C013EB2D20BC61BF00AB1932 /* DDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTimer.m; sourceTree = "<group>"; };
-		C013EB2E20BC61BF00AB1932 /* UIImage+DDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DDHelper.h"; sourceTree = "<group>"; };
-		C013EB2F20BC61BF00AB1932 /* NSUserDefaults+DDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+DDHelper.h"; sourceTree = "<group>"; };
-		C013EB3020BC61C000AB1932 /* DDFileCacheTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileCacheTools.m; sourceTree = "<group>"; };
-		C013EB3120BC61C000AB1932 /* DDXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXib.m; sourceTree = "<group>"; };
-		C013EB3320BC61C000AB1932 /* NSUserDefaults+DDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+DDHelper.m"; sourceTree = "<group>"; };
-		C013EB3720BC61C000AB1932 /* DDWeakDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDWeakDelegate.h; sourceTree = "<group>"; };
-		C013EB3820BC61C000AB1932 /* NSObject+DDAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DDAdaptor.m"; sourceTree = "<group>"; };
-		C013EB3920BC61C100AB1932 /* DDXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXib.h; sourceTree = "<group>"; };
-		C013EB3B20BC61C100AB1932 /* DDTimer+Expand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDTimer+Expand.h"; sourceTree = "<group>"; };
-		C013EB3C20BC61C100AB1932 /* NSObject+DDAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DDAdaptor.h"; sourceTree = "<group>"; };
-		C013EB3D20BC61C100AB1932 /* DDAsyncOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAsyncOperation.m; sourceTree = "<group>"; };
-		C013EB3E20BC61C200AB1932 /* DDTimer+Expand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDTimer+Expand.m"; sourceTree = "<group>"; };
-		C013EB3F20BC61C200AB1932 /* DDPageItemFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPageItemFlowLayout.h; sourceTree = "<group>"; };
-		C013EB4020BC61C200AB1932 /* DDWeakDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDWeakDelegate.m; sourceTree = "<group>"; };
-		C013EB4120BC61C200AB1932 /* DDFileCacheTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileCacheTools.h; sourceTree = "<group>"; };
-		C013EB4220BC61C200AB1932 /* UIImage+DDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DDHelper.m"; sourceTree = "<group>"; };
-		C013EB5420BD8B2700AB1932 /* DDToolbox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DDToolbox.bundle; sourceTree = "<group>"; };
-		C013EB5620BD962D00AB1932 /* DDToolbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDToolbox.h; sourceTree = "<group>"; };
-		C013EB5C20BDA17300AB1932 /* UIView+DDBorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+DDBorder.h"; sourceTree = "<group>"; };
-		C013EB5D20BDA17300AB1932 /* UIView+DDBorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDBorder.m"; sourceTree = "<group>"; };
+		B2AE6C3A20BFDD030001E34A /* DDAsyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAsyncOperation.h; sourceTree = "<group>"; };
+		B2AE6C3B20BFDD030001E34A /* DDAsyncOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAsyncOperation.m; sourceTree = "<group>"; };
+		B2AE6C3C20BFDD030001E34A /* DDBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBarStyle.h; sourceTree = "<group>"; };
+		B2AE6C3D20BFDD030001E34A /* DDBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBarStyle.m; sourceTree = "<group>"; };
+		B2AE6C3E20BFDD030001E34A /* DDFileCacheTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileCacheTools.h; sourceTree = "<group>"; };
+		B2AE6C3F20BFDD030001E34A /* DDFileCacheTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileCacheTools.m; sourceTree = "<group>"; };
+		B2AE6C4020BFDD030001E34A /* DDPageItemFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPageItemFlowLayout.h; sourceTree = "<group>"; };
+		B2AE6C4120BFDD030001E34A /* DDPageItemFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDPageItemFlowLayout.m; sourceTree = "<group>"; };
+		B2AE6C4220BFDD030001E34A /* DDSimpleCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSimpleCalendar.h; sourceTree = "<group>"; };
+		B2AE6C4320BFDD030001E34A /* DDSimpleCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSimpleCalendar.m; sourceTree = "<group>"; };
+		B2AE6C4420BFDD030001E34A /* DDTimer+Expand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDTimer+Expand.h"; sourceTree = "<group>"; };
+		B2AE6C4520BFDD030001E34A /* DDTimer+Expand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDTimer+Expand.m"; sourceTree = "<group>"; };
+		B2AE6C4620BFDD030001E34A /* DDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTimer.h; sourceTree = "<group>"; };
+		B2AE6C4720BFDD030001E34A /* DDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTimer.m; sourceTree = "<group>"; };
+		B2AE6C4820BFDD030001E34A /* DDWeakDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDWeakDelegate.h; sourceTree = "<group>"; };
+		B2AE6C4920BFDD030001E34A /* DDWeakDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDWeakDelegate.m; sourceTree = "<group>"; };
+		B2AE6C4A20BFDD030001E34A /* DDXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXib.h; sourceTree = "<group>"; };
+		B2AE6C4B20BFDD030001E34A /* DDXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXib.m; sourceTree = "<group>"; };
+		B2AE6C4C20BFDD030001E34A /* NSDate+DDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DDHelper.h"; sourceTree = "<group>"; };
+		B2AE6C4D20BFDD030001E34A /* NSDate+DDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DDHelper.m"; sourceTree = "<group>"; };
+		B2AE6C4E20BFDD030001E34A /* NSMutableArray+DDNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+DDNode.h"; sourceTree = "<group>"; };
+		B2AE6C4F20BFDD030001E34A /* NSMutableArray+DDNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+DDNode.m"; sourceTree = "<group>"; };
+		B2AE6C5020BFDD030001E34A /* NSMutableString+DDNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+DDNode.h"; sourceTree = "<group>"; };
+		B2AE6C5120BFDD030001E34A /* NSMutableString+DDNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+DDNode.m"; sourceTree = "<group>"; };
+		B2AE6C5220BFDD030001E34A /* NSObject+DDAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DDAdaptor.h"; sourceTree = "<group>"; };
+		B2AE6C5320BFDD030001E34A /* NSObject+DDAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DDAdaptor.m"; sourceTree = "<group>"; };
+		B2AE6C5420BFDD030001E34A /* NSObject+DDCopyProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DDCopyProperties.h"; sourceTree = "<group>"; };
+		B2AE6C5520BFDD030001E34A /* NSObject+DDCopyProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DDCopyProperties.m"; sourceTree = "<group>"; };
+		B2AE6C5620BFDD030001E34A /* NSString+DDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDHelper.h"; sourceTree = "<group>"; };
+		B2AE6C5720BFDD030001E34A /* NSString+DDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDHelper.m"; sourceTree = "<group>"; };
+		B2AE6C5820BFDD030001E34A /* NSUserDefaults+DDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+DDHelper.h"; sourceTree = "<group>"; };
+		B2AE6C5920BFDD030001E34A /* NSUserDefaults+DDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+DDHelper.m"; sourceTree = "<group>"; };
+		B2AE6C5A20BFDD030001E34A /* UIImage+DDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DDHelper.h"; sourceTree = "<group>"; };
+		B2AE6C5B20BFDD030001E34A /* UIImage+DDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DDHelper.m"; sourceTree = "<group>"; };
+		B2AE6C5C20BFDD030001E34A /* UIImageView+DDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+DDHelper.h"; sourceTree = "<group>"; };
+		B2AE6C5D20BFDD030001E34A /* UIImageView+DDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DDHelper.m"; sourceTree = "<group>"; };
+		B2AE6C5E20BFDD030001E34A /* UIView+DDBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDBorder.h"; sourceTree = "<group>"; };
+		B2AE6C5F20BFDD030001E34A /* UIView+DDBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDBorder.m"; sourceTree = "<group>"; };
+		B2AE6C6020BFDD030001E34A /* UIView+DDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDHelper.h"; sourceTree = "<group>"; };
+		B2AE6C6120BFDD030001E34A /* UIView+DDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDHelper.m"; sourceTree = "<group>"; };
+		B2AE6C6320BFDD030001E34A /* DDFlagPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFlagPageModel.h; sourceTree = "<group>"; };
+		B2AE6C6420BFDD030001E34A /* DDFlagPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFlagPageModel.m; sourceTree = "<group>"; };
+		B2AE6C6520BFDD030001E34A /* DDPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPageModel.h; sourceTree = "<group>"; };
+		B2AE6C6620BFDD030001E34A /* DDPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDPageModel.m; sourceTree = "<group>"; };
+		B2AE6C6720BFDD030001E34A /* DDResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDResultModel.h; sourceTree = "<group>"; };
+		B2AE6C6820BFDD030001E34A /* DDResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDResultModel.m; sourceTree = "<group>"; };
+		B2AE6C6A20BFDD030001E34A /* DDCollectionControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCollectionControllerViewModel.h; sourceTree = "<group>"; };
+		B2AE6C6B20BFDD030001E34A /* DDCollectionControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCollectionControllerViewModel.m; sourceTree = "<group>"; };
+		B2AE6C6C20BFDD030001E34A /* DDCollectionItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCollectionItemViewModel.h; sourceTree = "<group>"; };
+		B2AE6C6D20BFDD030001E34A /* DDCollectionItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCollectionItemViewModel.m; sourceTree = "<group>"; };
+		B2AE6C6E20BFDD030001E34A /* DDCollectionSectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCollectionSectionViewModel.h; sourceTree = "<group>"; };
+		B2AE6C6F20BFDD030001E34A /* DDCollectionSectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCollectionSectionViewModel.m; sourceTree = "<group>"; };
+		B2AE6C7020BFDD030001E34A /* DDControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDControllerViewModel.h; sourceTree = "<group>"; };
+		B2AE6C7120BFDD030001E34A /* DDControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDControllerViewModel.m; sourceTree = "<group>"; };
+		B2AE6C7220BFDD030001E34A /* DDSimpleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSimpleViewModel.h; sourceTree = "<group>"; };
+		B2AE6C7320BFDD030001E34A /* DDSimpleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSimpleViewModel.m; sourceTree = "<group>"; };
+		B2AE6C7420BFDD030001E34A /* DDSuperViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSuperViewModel.h; sourceTree = "<group>"; };
+		B2AE6C7520BFDD030001E34A /* DDSuperViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSuperViewModel.m; sourceTree = "<group>"; };
+		B2AE6C7620BFDD030001E34A /* DDTableControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTableControllerViewModel.h; sourceTree = "<group>"; };
+		B2AE6C7720BFDD030001E34A /* DDTableControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTableControllerViewModel.m; sourceTree = "<group>"; };
+		B2AE6C7820BFDD030001E34A /* DDTableRowViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTableRowViewModel.h; sourceTree = "<group>"; };
+		B2AE6C7920BFDD030001E34A /* DDTableRowViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTableRowViewModel.m; sourceTree = "<group>"; };
+		B2AE6C7A20BFDD030001E34A /* DDTableSectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTableSectionViewModel.h; sourceTree = "<group>"; };
+		B2AE6C7B20BFDD030001E34A /* DDTableSectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTableSectionViewModel.m; sourceTree = "<group>"; };
+		B2AE6C7C20BFDD030001E34A /* DDToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDToolbox.h; sourceTree = "<group>"; };
+		B2AE6C7E20BFDD030001E34A /* DDBaseCollectionHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseCollectionHeaderFooterView.h; sourceTree = "<group>"; };
+		B2AE6C7F20BFDD030001E34A /* DDBaseCollectionHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseCollectionHeaderFooterView.m; sourceTree = "<group>"; };
+		B2AE6C8020BFDD030001E34A /* DDBaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseCollectionViewCell.h; sourceTree = "<group>"; };
+		B2AE6C8120BFDD030001E34A /* DDBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseCollectionViewCell.m; sourceTree = "<group>"; };
+		B2AE6C8220BFDD030001E34A /* DDBaseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseCollectionViewController.h; sourceTree = "<group>"; };
+		B2AE6C8320BFDD030001E34A /* DDBaseCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseCollectionViewController.m; sourceTree = "<group>"; };
+		B2AE6C8420BFDD030001E34A /* DDBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseTableViewCell.h; sourceTree = "<group>"; };
+		B2AE6C8520BFDD030001E34A /* DDBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseTableViewCell.m; sourceTree = "<group>"; };
+		B2AE6C8620BFDD030001E34A /* DDBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseTableViewController.h; sourceTree = "<group>"; };
+		B2AE6C8720BFDD030001E34A /* DDBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseTableViewController.m; sourceTree = "<group>"; };
+		B2AE6C8820BFDD030001E34A /* DDBaseTableViewHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseTableViewHeaderFooterView.h; sourceTree = "<group>"; };
+		B2AE6C8920BFDD030001E34A /* DDBaseTableViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseTableViewHeaderFooterView.m; sourceTree = "<group>"; };
+		B2AE6C8A20BFDD030001E34A /* DDBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseView.h; sourceTree = "<group>"; };
+		B2AE6C8B20BFDD030001E34A /* DDBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseView.m; sourceTree = "<group>"; };
+		B2AE6C8C20BFDD030001E34A /* DDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseViewController.h; sourceTree = "<group>"; };
+		B2AE6C8D20BFDD030001E34A /* DDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseViewController.m; sourceTree = "<group>"; };
+		B2AE6C8E20BFDD030001E34A /* DDCornerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCornerButton.h; sourceTree = "<group>"; };
+		B2AE6C8F20BFDD030001E34A /* DDCornerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCornerButton.m; sourceTree = "<group>"; };
+		B2AE6C9020BFDD030001E34A /* DDLayoutButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLayoutButton.h; sourceTree = "<group>"; };
+		B2AE6C9120BFDD030001E34A /* DDLayoutButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLayoutButton.m; sourceTree = "<group>"; };
+		B2AE6C9220BFDD030001E34A /* DDLoopCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLoopCollectionView.h; sourceTree = "<group>"; };
+		B2AE6C9320BFDD030001E34A /* DDLoopCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLoopCollectionView.m; sourceTree = "<group>"; };
+		B2AE6C9420BFDD030001E34A /* DDLoopTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLoopTableView.h; sourceTree = "<group>"; };
+		B2AE6C9520BFDD030001E34A /* DDLoopTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLoopTableView.m; sourceTree = "<group>"; };
+		B2AE6C9720BFDD030001E34A /* DDMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMacro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,105 +201,6 @@
 				5B70CE3ED59AD2CF0CABAE01 /* Pods-DDTooboxDemo.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		B235C6A920BBDA9200AD22B8 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				B235C6AA20BBDA9200AD22B8 /* DDMacro.h */,
-				C013EB2520BC61AE00AB1932 /* Common */,
-				C013EAB620BC60A400AB1932 /* HTTP */,
-				B235C6AD20BBDA9200AD22B8 /* Model */,
-				B235C6B020BBDA9200AD22B8 /* ViewModel */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		B235C6AD20BBDA9200AD22B8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C013EAAE20BC5E4100AB1932 /* DDFlagPageModel.h */,
-				C013EAB220BC5E4100AB1932 /* DDFlagPageModel.m */,
-				C013EAAD20BC5E4100AB1932 /* DDPageModel.h */,
-				C013EAB020BC5E4100AB1932 /* DDPageModel.m */,
-				C013EAB120BC5E4100AB1932 /* DDResultModel.h */,
-				C013EAAF20BC5E4100AB1932 /* DDResultModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B235C6B020BBDA9200AD22B8 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				B2AE69EC20BD299C0001E34A /* DDSuperViewModel.h */,
-				B2AE69ED20BD299C0001E34A /* DDSuperViewModel.m */,
-				B2AE69EF20BD2B110001E34A /* DDSimpleViewModel.h */,
-				B2AE69F020BD2B110001E34A /* DDSimpleViewModel.m */,
-				C013EABA20BC60B000AB1932 /* DDTableRowViewModel.h */,
-				C013EABC20BC60B000AB1932 /* DDTableRowViewModel.m */,
-				C013EAC320BC60B100AB1932 /* DDTableSectionViewModel.h */,
-				C013EAC620BC60B100AB1932 /* DDTableSectionViewModel.m */,
-				C013EABE20BC60B000AB1932 /* DDCollectionItemViewModel.h */,
-				C013EAC220BC60B100AB1932 /* DDCollectionItemViewModel.m */,
-				C013EACB20BC60B100AB1932 /* DDCollectionSectionViewModel.h */,
-				C013EAC120BC60B100AB1932 /* DDCollectionSectionViewModel.m */,
-				C013EAC720BC60B100AB1932 /* DDControllerViewModel.h */,
-				C013EAC820BC60B100AB1932 /* DDControllerViewModel.m */,
-				C013EAC520BC60B100AB1932 /* DDCollectionControllerViewModel.h */,
-				C013EABF20BC60B100AB1932 /* DDCollectionControllerViewModel.m */,
-				C013EABD20BC60B000AB1932 /* DDTableControllerViewModel.h */,
-				C013EAC020BC60B100AB1932 /* DDTableControllerViewModel.m */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		B235C6B220BBDA9200AD22B8 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				C013EAD520BC614700AB1932 /* Common */,
-				B235C6B320BBDA9200AD22B8 /* DDLoadingView */,
-				B235C6B820BBDA9200AD22B8 /* DDModal */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		B235C6B320BBDA9200AD22B8 /* DDLoadingView */ = {
-			isa = PBXGroup;
-			children = (
-				B235C6B420BBDA9200AD22B8 /* DDLoadingView.h */,
-				B235C6B520BBDA9200AD22B8 /* DDLoadingView.m */,
-				B235C6B620BBDA9200AD22B8 /* UIView+DDLoading.h */,
-				B235C6B720BBDA9200AD22B8 /* UIView+DDLoading.m */,
-			);
-			path = DDLoadingView;
-			sourceTree = "<group>";
-		};
-		B235C6B820BBDA9200AD22B8 /* DDModal */ = {
-			isa = PBXGroup;
-			children = (
-				B2AE6A4820BFA9310001E34A /* DDSimpleDate */,
-				B235C6C720BBDA9200AD22B8 /* DDToolboxThemeConfig.h */,
-				B235C6C820BBDA9200AD22B8 /* DDToolboxThemeConfig.m */,
-				B235C6B920BBDA9200AD22B8 /* DDConfirmAlertViewController.h */,
-				B235C6BA20BBDA9200AD22B8 /* DDConfirmAlertViewController.m */,
-				B235C6BD20BBDA9200AD22B8 /* DDSimpleAlertViewController.h */,
-				B235C6BE20BBDA9200AD22B8 /* DDSimpleAlertViewController.m */,
-				B235C6C120BBDA9200AD22B8 /* DDSuperAlertViewController.h */,
-				B235C6C220BBDA9200AD22B8 /* DDSuperAlertViewController.m */,
-				B235C6C320BBDA9200AD22B8 /* DDSuperModalViewController.h */,
-				B235C6C420BBDA9200AD22B8 /* DDSuperModalViewController.m */,
-				B235C6C520BBDA9200AD22B8 /* DDTableAlertViewController.h */,
-				B235C6C620BBDA9200AD22B8 /* DDTableAlertViewController.m */,
-				C013EAAA20BC470500AB1932 /* DDSimpleActionViewController.h */,
-				C013EAAB20BC470500AB1932 /* DDSimpleActionViewController.m */,
-				B211462920BCFB750006B6D6 /* DDSimpleMenuAlertViewController.h */,
-				B211462A20BCFB750006B6D6 /* DDSimpleMenuAlertViewController.m */,
-				B211462C20BD05490006B6D6 /* DDSimpleInputViewController.h */,
-				B211462D20BD05490006B6D6 /* DDSimpleInputViewController.m */,
-				B2AE69F520BD329B0001E34A /* DDSimpleSharedViewController.h */,
-				B2AE69F620BD329B0001E34A /* DDSimpleSharedViewController.m */,
-			);
-			path = DDModal;
 			sourceTree = "<group>";
 		};
 		B2AA54A920B3F07B000C0C0A = {
@@ -398,122 +246,138 @@
 		B2AA54CB20B3F08E000C0C0A /* DDToolbox */ = {
 			isa = PBXGroup;
 			children = (
-				C013EB5620BD962D00AB1932 /* DDToolbox.h */,
-				C013EB5320BD8B2700AB1932 /* Resources */,
-				B235C6A920BBDA9200AD22B8 /* Core */,
-				B235C6B220BBDA9200AD22B8 /* UI */,
+				B2AE6C7C20BFDD030001E34A /* DDToolbox.h */,
+				B2AE6C3920BFDD030001E34A /* Common */,
+				B2AE6C9620BFDD030001E34A /* Macro */,
+				B2AE6C6220BFDD030001E34A /* Model */,
+				B2AE6C7D20BFDD030001E34A /* UIComponents */,
+				B2AE6C6920BFDD030001E34A /* ViewModel */,
 			);
 			path = DDToolbox;
 			sourceTree = "<group>";
 		};
-		B2AE6A4820BFA9310001E34A /* DDSimpleDate */ = {
+		B2AE6C3920BFDD030001E34A /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				B2AE6A4920BFA9310001E34A /* DDSimpleDateAlertHeaderView.h */,
-				B2AE6A4A20BFA9310001E34A /* DDSimpleDateAlertHeaderView.m */,
-				B2AE6A4C20BFA9310001E34A /* DDSimpleDateAlertItemCell.h */,
-				B2AE6A4D20BFA9310001E34A /* DDSimpleDateAlertItemCell.m */,
-				B2AE6A4F20BFA9310001E34A /* DDSimpleDateAlertViewController.h */,
-				B2AE6A5020BFA9310001E34A /* DDSimpleDateAlertViewController.m */,
-				B2AE6A5120BFA9310001E34A /* DDSimpleDateAlertWeekView.h */,
-				B2AE6A5220BFA9310001E34A /* DDSimpleDateAlertWeekView.m */,
-				B2AE6A5420BFA9310001E34A /* DDSimpleDateCalendarManager.h */,
-				B2AE6A5520BFA9310001E34A /* DDSimpleDateCalendarManager.m */,
-				B2AE6A5620BFA9310001E34A /* NSDate+DDHelper.h */,
-				B2AE6A5720BFA9310001E34A /* NSDate+DDHelper.m */,
-			);
-			path = DDSimpleDate;
-			sourceTree = "<group>";
-		};
-		C013EAB620BC60A400AB1932 /* HTTP */ = {
-			isa = PBXGroup;
-			children = (
-				C013EAB820BC60A400AB1932 /* DDHTTPClient.h */,
-				C013EAB720BC60A400AB1932 /* DDHTTPClient.m */,
-			);
-			path = HTTP;
-			sourceTree = "<group>";
-		};
-		C013EAD520BC614700AB1932 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				C013EAE320BC616A00AB1932 /* DDBaseCollectionViewCell.h */,
-				C013EAE420BC616A00AB1932 /* DDBaseCollectionViewCell.m */,
-				C013EAEA20BC616A00AB1932 /* DDBaseCollectionViewController.h */,
-				C013EADE20BC616A00AB1932 /* DDBaseCollectionViewController.m */,
-				C013EAE220BC616A00AB1932 /* DDBaseTableViewCell.h */,
-				C013EAE820BC616A00AB1932 /* DDBaseTableViewCell.m */,
-				C013EAEB20BC616B00AB1932 /* DDBaseTableViewController.h */,
-				C013EAD820BC616900AB1932 /* DDBaseTableViewController.m */,
-				C013EAE520BC616A00AB1932 /* DDBaseTableViewHeaderFooterView.h */,
-				C013EADD20BC616A00AB1932 /* DDBaseTableViewHeaderFooterView.m */,
-				B2AE6A0B20BE49120001E34A /* DDBaseCollectionHeaderFooterView.h */,
-				B2AE6A0C20BE49120001E34A /* DDBaseCollectionHeaderFooterView.m */,
-				C013EAE920BC616A00AB1932 /* DDBaseView.h */,
-				C013EAD920BC616900AB1932 /* DDBaseView.m */,
-				C013EAE720BC616A00AB1932 /* DDBaseViewController.h */,
-				C013EAE120BC616A00AB1932 /* DDBaseViewController.m */,
-				B2AE69F220BD31EB0001E34A /* DDCornerButton.h */,
-				B2AE69F320BD31EB0001E34A /* DDCornerButton.m */,
-				C013EAD620BC616900AB1932 /* DDLayoutButton.h */,
-				C013EADF20BC616A00AB1932 /* DDLayoutButton.m */,
-				C013EADA20BC616900AB1932 /* DDLoopCollectionView.h */,
-				C013EAE620BC616A00AB1932 /* DDLoopCollectionView.m */,
-				C013EAD720BC616900AB1932 /* DDLoopTableView.h */,
-				C013EADB20BC616A00AB1932 /* DDLoopTableView.m */,
+				B2AE6C3A20BFDD030001E34A /* DDAsyncOperation.h */,
+				B2AE6C3B20BFDD030001E34A /* DDAsyncOperation.m */,
+				B2AE6C3C20BFDD030001E34A /* DDBarStyle.h */,
+				B2AE6C3D20BFDD030001E34A /* DDBarStyle.m */,
+				B2AE6C3E20BFDD030001E34A /* DDFileCacheTools.h */,
+				B2AE6C3F20BFDD030001E34A /* DDFileCacheTools.m */,
+				B2AE6C4020BFDD030001E34A /* DDPageItemFlowLayout.h */,
+				B2AE6C4120BFDD030001E34A /* DDPageItemFlowLayout.m */,
+				B2AE6C4220BFDD030001E34A /* DDSimpleCalendar.h */,
+				B2AE6C4320BFDD030001E34A /* DDSimpleCalendar.m */,
+				B2AE6C4420BFDD030001E34A /* DDTimer+Expand.h */,
+				B2AE6C4520BFDD030001E34A /* DDTimer+Expand.m */,
+				B2AE6C4620BFDD030001E34A /* DDTimer.h */,
+				B2AE6C4720BFDD030001E34A /* DDTimer.m */,
+				B2AE6C4820BFDD030001E34A /* DDWeakDelegate.h */,
+				B2AE6C4920BFDD030001E34A /* DDWeakDelegate.m */,
+				B2AE6C4A20BFDD030001E34A /* DDXib.h */,
+				B2AE6C4B20BFDD030001E34A /* DDXib.m */,
+				B2AE6C4C20BFDD030001E34A /* NSDate+DDHelper.h */,
+				B2AE6C4D20BFDD030001E34A /* NSDate+DDHelper.m */,
+				B2AE6C4E20BFDD030001E34A /* NSMutableArray+DDNode.h */,
+				B2AE6C4F20BFDD030001E34A /* NSMutableArray+DDNode.m */,
+				B2AE6C5020BFDD030001E34A /* NSMutableString+DDNode.h */,
+				B2AE6C5120BFDD030001E34A /* NSMutableString+DDNode.m */,
+				B2AE6C5220BFDD030001E34A /* NSObject+DDAdaptor.h */,
+				B2AE6C5320BFDD030001E34A /* NSObject+DDAdaptor.m */,
+				B2AE6C5420BFDD030001E34A /* NSObject+DDCopyProperties.h */,
+				B2AE6C5520BFDD030001E34A /* NSObject+DDCopyProperties.m */,
+				B2AE6C5620BFDD030001E34A /* NSString+DDHelper.h */,
+				B2AE6C5720BFDD030001E34A /* NSString+DDHelper.m */,
+				B2AE6C5820BFDD030001E34A /* NSUserDefaults+DDHelper.h */,
+				B2AE6C5920BFDD030001E34A /* NSUserDefaults+DDHelper.m */,
+				B2AE6C5A20BFDD030001E34A /* UIImage+DDHelper.h */,
+				B2AE6C5B20BFDD030001E34A /* UIImage+DDHelper.m */,
+				B2AE6C5C20BFDD030001E34A /* UIImageView+DDHelper.h */,
+				B2AE6C5D20BFDD030001E34A /* UIImageView+DDHelper.m */,
+				B2AE6C5E20BFDD030001E34A /* UIView+DDBorder.h */,
+				B2AE6C5F20BFDD030001E34A /* UIView+DDBorder.m */,
+				B2AE6C6020BFDD030001E34A /* UIView+DDHelper.h */,
+				B2AE6C6120BFDD030001E34A /* UIView+DDHelper.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
 		};
-		C013EB2520BC61AE00AB1932 /* Common */ = {
+		B2AE6C6220BFDD030001E34A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B2AE6A2220BF9CCF0001E34A /* NSObject+DDCopyProperties.h */,
-				B2AE6A2320BF9CCF0001E34A /* NSObject+DDCopyProperties.m */,
-				B2AE6A2020BF9CCF0001E34A /* UIImageView+DDHelper.h */,
-				B2AE6A2120BF9CCF0001E34A /* UIImageView+DDHelper.m */,
-				B2AE69E920BD291E0001E34A /* DDBarStyle.h */,
-				B2AE69EA20BD291E0001E34A /* DDBarStyle.m */,
-				C013EB2E20BC61BF00AB1932 /* UIImage+DDHelper.h */,
-				C013EB4220BC61C200AB1932 /* UIImage+DDHelper.m */,
-				C013EB3F20BC61C200AB1932 /* DDPageItemFlowLayout.h */,
-				C013EB2620BC61BF00AB1932 /* DDPageItemFlowLayout.m */,
-				C013EB2B20BC61BF00AB1932 /* DDAsyncOperation.h */,
-				C013EB3D20BC61C100AB1932 /* DDAsyncOperation.m */,
-				C013EB4120BC61C200AB1932 /* DDFileCacheTools.h */,
-				C013EB3020BC61C000AB1932 /* DDFileCacheTools.m */,
-				C013EB2820BC61BF00AB1932 /* DDTimer.h */,
-				C013EB2D20BC61BF00AB1932 /* DDTimer.m */,
-				C013EB3B20BC61C100AB1932 /* DDTimer+Expand.h */,
-				C013EB3E20BC61C200AB1932 /* DDTimer+Expand.m */,
-				C013EB3720BC61C000AB1932 /* DDWeakDelegate.h */,
-				C013EB4020BC61C200AB1932 /* DDWeakDelegate.m */,
-				C013EB3920BC61C100AB1932 /* DDXib.h */,
-				C013EB3120BC61C000AB1932 /* DDXib.m */,
-				C013EB3C20BC61C100AB1932 /* NSObject+DDAdaptor.h */,
-				C013EB3820BC61C000AB1932 /* NSObject+DDAdaptor.m */,
-				C013EB2F20BC61BF00AB1932 /* NSUserDefaults+DDHelper.h */,
-				C013EB3320BC61C000AB1932 /* NSUserDefaults+DDHelper.m */,
-				B235C6D820BBDACF00AD22B8 /* NSMutableArray+DDNode.h */,
-				B235C6D920BBDACF00AD22B8 /* NSMutableArray+DDNode.m */,
-				B235C6DB20BBDB1300AD22B8 /* NSMutableString+DDNode.h */,
-				B235C6DC20BBDB1300AD22B8 /* NSMutableString+DDNode.m */,
-				B235C6AE20BBDA9200AD22B8 /* UIView+DDHelper.h */,
-				B235C6AF20BBDA9200AD22B8 /* UIView+DDHelper.m */,
-				B211461E20BBE15F0006B6D6 /* NSString+DDHelper.h */,
-				B211461F20BBE15F0006B6D6 /* NSString+DDHelper.m */,
-				C013EB5C20BDA17300AB1932 /* UIView+DDBorder.h */,
-				C013EB5D20BDA17300AB1932 /* UIView+DDBorder.m */,
+				B2AE6C6320BFDD030001E34A /* DDFlagPageModel.h */,
+				B2AE6C6420BFDD030001E34A /* DDFlagPageModel.m */,
+				B2AE6C6520BFDD030001E34A /* DDPageModel.h */,
+				B2AE6C6620BFDD030001E34A /* DDPageModel.m */,
+				B2AE6C6720BFDD030001E34A /* DDResultModel.h */,
+				B2AE6C6820BFDD030001E34A /* DDResultModel.m */,
 			);
-			path = Common;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		C013EB5320BD8B2700AB1932 /* Resources */ = {
+		B2AE6C6920BFDD030001E34A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C013EB5420BD8B2700AB1932 /* DDToolbox.bundle */,
+				B2AE6C6A20BFDD030001E34A /* DDCollectionControllerViewModel.h */,
+				B2AE6C6B20BFDD030001E34A /* DDCollectionControllerViewModel.m */,
+				B2AE6C6C20BFDD030001E34A /* DDCollectionItemViewModel.h */,
+				B2AE6C6D20BFDD030001E34A /* DDCollectionItemViewModel.m */,
+				B2AE6C6E20BFDD030001E34A /* DDCollectionSectionViewModel.h */,
+				B2AE6C6F20BFDD030001E34A /* DDCollectionSectionViewModel.m */,
+				B2AE6C7020BFDD030001E34A /* DDControllerViewModel.h */,
+				B2AE6C7120BFDD030001E34A /* DDControllerViewModel.m */,
+				B2AE6C7220BFDD030001E34A /* DDSimpleViewModel.h */,
+				B2AE6C7320BFDD030001E34A /* DDSimpleViewModel.m */,
+				B2AE6C7420BFDD030001E34A /* DDSuperViewModel.h */,
+				B2AE6C7520BFDD030001E34A /* DDSuperViewModel.m */,
+				B2AE6C7620BFDD030001E34A /* DDTableControllerViewModel.h */,
+				B2AE6C7720BFDD030001E34A /* DDTableControllerViewModel.m */,
+				B2AE6C7820BFDD030001E34A /* DDTableRowViewModel.h */,
+				B2AE6C7920BFDD030001E34A /* DDTableRowViewModel.m */,
+				B2AE6C7A20BFDD030001E34A /* DDTableSectionViewModel.h */,
+				B2AE6C7B20BFDD030001E34A /* DDTableSectionViewModel.m */,
 			);
-			path = Resources;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B2AE6C7D20BFDD030001E34A /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B2AE6C7E20BFDD030001E34A /* DDBaseCollectionHeaderFooterView.h */,
+				B2AE6C7F20BFDD030001E34A /* DDBaseCollectionHeaderFooterView.m */,
+				B2AE6C8020BFDD030001E34A /* DDBaseCollectionViewCell.h */,
+				B2AE6C8120BFDD030001E34A /* DDBaseCollectionViewCell.m */,
+				B2AE6C8220BFDD030001E34A /* DDBaseCollectionViewController.h */,
+				B2AE6C8320BFDD030001E34A /* DDBaseCollectionViewController.m */,
+				B2AE6C8420BFDD030001E34A /* DDBaseTableViewCell.h */,
+				B2AE6C8520BFDD030001E34A /* DDBaseTableViewCell.m */,
+				B2AE6C8620BFDD030001E34A /* DDBaseTableViewController.h */,
+				B2AE6C8720BFDD030001E34A /* DDBaseTableViewController.m */,
+				B2AE6C8820BFDD030001E34A /* DDBaseTableViewHeaderFooterView.h */,
+				B2AE6C8920BFDD030001E34A /* DDBaseTableViewHeaderFooterView.m */,
+				B2AE6C8A20BFDD030001E34A /* DDBaseView.h */,
+				B2AE6C8B20BFDD030001E34A /* DDBaseView.m */,
+				B2AE6C8C20BFDD030001E34A /* DDBaseViewController.h */,
+				B2AE6C8D20BFDD030001E34A /* DDBaseViewController.m */,
+				B2AE6C8E20BFDD030001E34A /* DDCornerButton.h */,
+				B2AE6C8F20BFDD030001E34A /* DDCornerButton.m */,
+				B2AE6C9020BFDD030001E34A /* DDLayoutButton.h */,
+				B2AE6C9120BFDD030001E34A /* DDLayoutButton.m */,
+				B2AE6C9220BFDD030001E34A /* DDLoopCollectionView.h */,
+				B2AE6C9320BFDD030001E34A /* DDLoopCollectionView.m */,
+				B2AE6C9420BFDD030001E34A /* DDLoopTableView.h */,
+				B2AE6C9520BFDD030001E34A /* DDLoopTableView.m */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		B2AE6C9620BFDD030001E34A /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				B2AE6C9720BFDD030001E34A /* DDMacro.h */,
+			);
+			path = Macro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -576,7 +440,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2AA54C220B3F07B000C0C0A /* LaunchScreen.storyboard in Resources */,
-				C013EB5520BD8B2700AB1932 /* DDToolbox.bundle in Resources */,
 				B2AA54BF20B3F07B000C0C0A /* Assets.xcassets in Resources */,
 				B2AA54BD20B3F07B000C0C0A /* Main.storyboard in Resources */,
 				B211462820BBFF810006B6D6 /* TestTableViewCell.xib in Resources */,
@@ -611,72 +474,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C013EAF320BC616B00AB1932 /* DDBaseViewController.m in Sources */,
-				C013EAEC20BC616B00AB1932 /* DDBaseTableViewController.m in Sources */,
-				C013EACE20BC60B100AB1932 /* DDTableControllerViewModel.m in Sources */,
-				C013EAB920BC60A400AB1932 /* DDHTTPClient.m in Sources */,
-				C013EAED20BC616B00AB1932 /* DDBaseView.m in Sources */,
-				B2AE6A5D20BFA9310001E34A /* DDSimpleDateAlertWeekView.m in Sources */,
+				B2AE6CBF20BFDD030001E34A /* DDBaseViewController.m in Sources */,
 				B2AA54BA20B3F07B000C0C0A /* ViewController.m in Sources */,
-				B211462E20BD05490006B6D6 /* DDSimpleInputViewController.m in Sources */,
-				B2AE6A5C20BFA9310001E34A /* DDSimpleDateAlertViewController.m in Sources */,
-				C013EAF020BC616B00AB1932 /* DDBaseTableViewHeaderFooterView.m in Sources */,
-				B2AE6A5820BFA9310001E34A /* DDSimpleDateAlertHeaderView.m in Sources */,
-				C013EAD220BC60B100AB1932 /* DDControllerViewModel.m in Sources */,
-				B235C6D120BBDA9200AD22B8 /* DDSimpleAlertViewController.m in Sources */,
-				C013EAB320BC5E4100AB1932 /* DDResultModel.m in Sources */,
-				C013EACC20BC60B100AB1932 /* DDTableRowViewModel.m in Sources */,
-				B2AE69F720BD329B0001E34A /* DDSimpleSharedViewController.m in Sources */,
-				B2AE69EE20BD299C0001E34A /* DDSuperViewModel.m in Sources */,
+				B2AE6CA920BFDD030001E34A /* UIImageView+DDHelper.m in Sources */,
+				B2AE6CA620BFDD030001E34A /* NSString+DDHelper.m in Sources */,
+				B2AE6CB020BFDD030001E34A /* DDCollectionItemViewModel.m in Sources */,
+				B2AE6C9C20BFDD030001E34A /* DDSimpleCalendar.m in Sources */,
+				B2AE6CBE20BFDD030001E34A /* DDBaseView.m in Sources */,
+				B2AE6CA720BFDD030001E34A /* NSUserDefaults+DDHelper.m in Sources */,
 				B2AA54C520B3F07B000C0C0A /* main.m in Sources */,
-				C013EAB520BC5E4100AB1932 /* DDFlagPageModel.m in Sources */,
-				C013EAF420BC616B00AB1932 /* DDBaseCollectionViewCell.m in Sources */,
-				B2AE6A2520BF9CCF0001E34A /* NSObject+DDCopyProperties.m in Sources */,
-				C013EACF20BC60B100AB1932 /* DDCollectionSectionViewModel.m in Sources */,
-				C013EB4D20BC61C200AB1932 /* NSObject+DDAdaptor.m in Sources */,
-				C013EAD020BC60B100AB1932 /* DDCollectionItemViewModel.m in Sources */,
-				C013EAF620BC616B00AB1932 /* DDBaseTableViewCell.m in Sources */,
+				B2AE6CAA20BFDD030001E34A /* UIView+DDBorder.m in Sources */,
+				B2AE6CA420BFDD030001E34A /* NSObject+DDAdaptor.m in Sources */,
+				B2AE6CAC20BFDD030001E34A /* DDFlagPageModel.m in Sources */,
+				B2AE6CB220BFDD030001E34A /* DDControllerViewModel.m in Sources */,
+				B2AE6CC120BFDD030001E34A /* DDLayoutButton.m in Sources */,
+				B2AE6CA520BFDD030001E34A /* NSObject+DDCopyProperties.m in Sources */,
+				B2AE6CA820BFDD030001E34A /* UIImage+DDHelper.m in Sources */,
+				B2AE6C9A20BFDD030001E34A /* DDFileCacheTools.m in Sources */,
+				B2AE6CBC20BFDD030001E34A /* DDBaseTableViewController.m in Sources */,
+				B2AE6CB420BFDD030001E34A /* DDSuperViewModel.m in Sources */,
+				B2AE6CB820BFDD030001E34A /* DDBaseCollectionHeaderFooterView.m in Sources */,
+				B2AE6C9F20BFDD030001E34A /* DDWeakDelegate.m in Sources */,
+				B2AE6CA220BFDD030001E34A /* NSMutableArray+DDNode.m in Sources */,
+				B2AE6CA320BFDD030001E34A /* NSMutableString+DDNode.m in Sources */,
+				B2AE6C9B20BFDD030001E34A /* DDPageItemFlowLayout.m in Sources */,
+				B2AE6CA120BFDD030001E34A /* NSDate+DDHelper.m in Sources */,
+				B2AE6CC020BFDD030001E34A /* DDCornerButton.m in Sources */,
+				B2AE6CC220BFDD030001E34A /* DDLoopCollectionView.m in Sources */,
+				B2AE6CAD20BFDD030001E34A /* DDPageModel.m in Sources */,
+				B2AE6CAF20BFDD030001E34A /* DDCollectionControllerViewModel.m in Sources */,
 				B2AA54B720B3F07B000C0C0A /* AppDelegate.m in Sources */,
-				C013EB5120BC61C200AB1932 /* DDWeakDelegate.m in Sources */,
-				B2AE69F120BD2B110001E34A /* DDSimpleViewModel.m in Sources */,
-				C013EACD20BC60B100AB1932 /* DDCollectionControllerViewModel.m in Sources */,
-				C013EB4820BC61C200AB1932 /* DDXib.m in Sources */,
-				C013EB4A20BC61C200AB1932 /* NSUserDefaults+DDHelper.m in Sources */,
-				B235C6D520BBDA9200AD22B8 /* DDTableAlertViewController.m in Sources */,
-				B235C6DA20BBDACF00AD22B8 /* NSMutableArray+DDNode.m in Sources */,
-				B2AE6A5A20BFA9310001E34A /* DDSimpleDateAlertItemCell.m in Sources */,
-				C013EAEE20BC616B00AB1932 /* DDLoopTableView.m in Sources */,
-				C013EAF520BC616B00AB1932 /* DDLoopCollectionView.m in Sources */,
-				B2AE6A6020BFA9310001E34A /* NSDate+DDHelper.m in Sources */,
-				B2AE69EB20BD291E0001E34A /* DDBarStyle.m in Sources */,
-				B235C6DD20BBDB1300AD22B8 /* NSMutableString+DDNode.m in Sources */,
-				C013EB4720BC61C200AB1932 /* DDFileCacheTools.m in Sources */,
-				B211462B20BCFB750006B6D6 /* DDSimpleMenuAlertViewController.m in Sources */,
-				B2AE6A5F20BFA9310001E34A /* DDSimpleDateCalendarManager.m in Sources */,
-				B235C6CE20BBDA9200AD22B8 /* UIView+DDLoading.m in Sources */,
-				B235C6D420BBDA9200AD22B8 /* DDSuperModalViewController.m in Sources */,
-				C013EB4620BC61C200AB1932 /* DDTimer.m in Sources */,
-				B2AE6A2420BF9CCF0001E34A /* UIImageView+DDHelper.m in Sources */,
-				B235C6D320BBDA9200AD22B8 /* DDSuperAlertViewController.m in Sources */,
-				B2AE6A0D20BE49120001E34A /* DDBaseCollectionHeaderFooterView.m in Sources */,
 				B211462320BBFF5C0006B6D6 /* TestTableAlertViewCtl.m in Sources */,
-				C013EB4F20BC61C200AB1932 /* DDAsyncOperation.m in Sources */,
-				C013EAF220BC616B00AB1932 /* DDLayoutButton.m in Sources */,
-				C013EB5220BC61C200AB1932 /* UIImage+DDHelper.m in Sources */,
-				B235C6D620BBDA9200AD22B8 /* DDToolboxThemeConfig.m in Sources */,
+				B2AE6CB620BFDD030001E34A /* DDTableRowViewModel.m in Sources */,
+				B2AE6CAB20BFDD030001E34A /* UIView+DDHelper.m in Sources */,
+				B2AE6C9820BFDD030001E34A /* DDAsyncOperation.m in Sources */,
+				B2AE6CAE20BFDD030001E34A /* DDResultModel.m in Sources */,
+				B2AE6CA020BFDD030001E34A /* DDXib.m in Sources */,
 				B211462720BBFF810006B6D6 /* TestTableViewCell.m in Sources */,
-				C013EAB420BC5E4100AB1932 /* DDPageModel.m in Sources */,
-				C013EAF120BC616B00AB1932 /* DDBaseCollectionViewController.m in Sources */,
-				B235C6CD20BBDA9200AD22B8 /* DDLoadingView.m in Sources */,
-				B211462020BBE15F0006B6D6 /* NSString+DDHelper.m in Sources */,
-				C013EB5E20BDA17300AB1932 /* UIView+DDBorder.m in Sources */,
-				B235C6CB20BBDA9200AD22B8 /* UIView+DDHelper.m in Sources */,
-				C013EB4420BC61C200AB1932 /* DDPageItemFlowLayout.m in Sources */,
-				C013EAD120BC60B100AB1932 /* DDTableSectionViewModel.m in Sources */,
-				B2AE69F420BD31EB0001E34A /* DDCornerButton.m in Sources */,
-				C013EAAC20BC470500AB1932 /* DDSimpleActionViewController.m in Sources */,
-				B235C6CF20BBDA9200AD22B8 /* DDConfirmAlertViewController.m in Sources */,
-				C013EB5020BC61C200AB1932 /* DDTimer+Expand.m in Sources */,
+				B2AE6CB720BFDD030001E34A /* DDTableSectionViewModel.m in Sources */,
+				B2AE6C9E20BFDD030001E34A /* DDTimer.m in Sources */,
+				B2AE6CB520BFDD030001E34A /* DDTableControllerViewModel.m in Sources */,
+				B2AE6CBA20BFDD030001E34A /* DDBaseCollectionViewController.m in Sources */,
+				B2AE6CB920BFDD030001E34A /* DDBaseCollectionViewCell.m in Sources */,
+				B2AE6CC320BFDD030001E34A /* DDLoopTableView.m in Sources */,
+				B2AE6C9920BFDD030001E34A /* DDBarStyle.m in Sources */,
+				B2AE6CBB20BFDD030001E34A /* DDBaseTableViewCell.m in Sources */,
+				B2AE6CBD20BFDD030001E34A /* DDBaseTableViewHeaderFooterView.m in Sources */,
+				B2AE6CB120BFDD030001E34A /* DDCollectionSectionViewModel.m in Sources */,
+				B2AE6CB320BFDD030001E34A /* DDSimpleViewModel.m in Sources */,
+				B2AE6C9D20BFDD030001E34A /* DDTimer+Expand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
