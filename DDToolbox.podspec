@@ -20,6 +20,8 @@ s.source       = { :git => "https://github.com/BrownCN023/DDToolbox.git", :tag =
 s.source_files =  "DDToolbox/*.h","DDToolbox/Core/**/*.{h,m}","DDToolbox/Core/*.h","DDToolbox/UI/**/*.{h,m}"
 s.resources    = 'DDToolbox/Resources/*.bundle'
 s.requires_arc = true
+s.frameworks = "UIKit", "Foundation"
+
 s.dependency "Masonry", "~> 1.1.0"
 s.dependency "AFNetworking", "~> 3.2.1"
 s.dependency "SDWebImage", "~> 4.3.3"
