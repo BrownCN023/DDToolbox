@@ -23,7 +23,7 @@
 #import "DDSimpleInputViewController.h"
 #import "DDSimpleViewModel.h"
 #import "DDSimpleSharedViewController.h"
-#import "DDSimpleDateAlertViewController.h"
+
 #import "DDLayoutButton.h"
 #import "DDToolbox.h"
 
@@ -31,7 +31,7 @@
     
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic,strong) DDSimpleDateCalendarManager * calendarManager;
+//@property (nonatomic,strong) DDSimpleDateCalendarManager * calendarManager;
 
 @end
 
@@ -53,10 +53,10 @@
     DDLayoutButton * btn = [[DDLayoutButton alloc] init];
     [self.view addSubview:btn];
     
-    self.calendarManager = [[DDSimpleDateCalendarManager alloc] initWithMinYear:1970 maxYear:2030];
-    DD_GCD_Global_Async(^{
-        [self.calendarManager prepare];
-    });
+//    self.calendarManager = [[DDSimpleDateCalendarManager alloc] initWithMinYear:1970 maxYear:2030];
+//    DD_GCD_Global_Async(^{
+//        [self.calendarManager prepare];
+//    });
     
 }
 
@@ -163,11 +163,11 @@ int flag = 0;
 //    DDSimpleDateCalendarManager * manager = [[DDSimpleDateCalendarManager alloc] init];
 //    [manager prepare];
     
-    DDSimpleDateAlertViewController * vctl = [[DDSimpleDateAlertViewController alloc] initWithCalendarManager:self.calendarManager];
-    vctl.onSelectedItemBlock = ^(NSInteger year, NSInteger month, NSInteger day) {
-        DDPLog(@"year:%@  month:%@  day:%@",@(year),@(month),@(day));
-    };
-    [vctl show:nil];
+//    DDSimpleDateAlertViewController * vctl = [[DDSimpleDateAlertViewController alloc] initWithCalendarManager:self.calendarManager];
+//    vctl.onSelectedItemBlock = ^(NSInteger year, NSInteger month, NSInteger day) {
+//        DDPLog(@"year:%@  month:%@  day:%@",@(year),@(month),@(day));
+//    };
+//    [vctl show:nil];
 }
 
 #pragma mark - UITableViewDelegate/UITableViewDataSource

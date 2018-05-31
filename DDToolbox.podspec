@@ -14,7 +14,7 @@ s.summary      = "辅助开发工具类"
 s.homepage     = "https://github.com/BrownCN023/DDToolbox"
 s.license      = { :type => "MIT", :file => "LICENSE" }
 s.author       = { "liyebiao1990" => "347991555@qq.com" }
-s.platform     = :ios, "8.0"
+s.platform     = :ios, "9.0"
 s.source       = { :git => "https://github.com/BrownCN023/DDToolbox.git", :tag => s.version }
 s.source_files  =  "DDToolbox/**/*"
 s.requires_arc = true
