@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
 @interface DDLayoutButton : UIButton
 
-@property (nonatomic,assign) CGFloat titleImageInterval;
+@property (nonatomic,assign) IBInspectable CGFloat titleImageInterval;
+
 
 @end

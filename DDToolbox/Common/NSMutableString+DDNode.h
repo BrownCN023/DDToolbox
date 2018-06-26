@@ -11,7 +11,10 @@
 typedef NSString * (^DDMutableStringAppendNodeCallback) (void);
 typedef NSMutableString * (^DDMutableStringAppendExpNode)(BOOL exp,DDMutableStringAppendNodeCallback callback);
 
+
+
 @interface NSMutableString (DDNode)
+
 @property (nonatomic, strong, readonly) DDMutableStringAppendExpNode appendNode;
 /**
  e.g

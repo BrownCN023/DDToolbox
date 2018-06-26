@@ -9,13 +9,20 @@
 #import "DDCornerButton.h"
 #import "UIView+DDHelper.h"
 
+@interface DDCornerButton()
+
+@property (nonatomic,assign) CGSize originCornerSize;
+@property (nonatomic,assign) UIRectCorner originCorners;
+
+@end
+
 @implementation DDCornerButton
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        self.cornerSize = CGSizeMake(5, 5);
-        self.corners = UIRectCornerAllCorners;
+        _cornerSize = CGSizeMake(5, 5);
+        _corners = UIRectCornerAllCorners;
     }
     return self;
 }
@@ -23,15 +30,39 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.cornerSize = CGSizeMake(5, 5);
-        self.corners = UIRectCornerAllCorners;
+        _cornerSize = CGSizeMake(5, 5);
+        _corners = UIRectCornerAllCorners;
     }
     return self;
 }
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    [self layerCorners:self.corners cornerSize:self.cornerSize];
+    BOOL needLayout = NO;
+    if(_corners != self.originCorners){
+        self.originCorners = _corners;
+        needLayout = YES;
+    }
+    if(!CGSizeEqualToSize(_cornerSize, self.originCornerSize)){
+        self.originCornerSize = _cornerSize;
+        needLayout = YES;
+    }
+    if(CGSizeEqualToSize(_cornerSize, CGSizeZero)){
+        needLayout = NO;
+        self.layer.mask = nil;
+    }else{
+        (!needLayout)?:[self layerCorners:_corners cornerSize:_cornerSize];
+    }
+}
+
+- (void)setCorners:(UIRectCorner)corners{
+    _corners = corners;
+    [self setNeedsLayout];
+}
+
+- (void)setCornerSize:(CGSize)cornerSize{
+    _cornerSize = cornerSize;
+    [self setNeedsLayout];
 }
 
 @end

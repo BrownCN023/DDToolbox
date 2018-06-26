@@ -13,6 +13,10 @@
 - (void)layerCorners:(UIRectCorner)corners cornerSize:(CGSize)cornerSize;
 - (void)layerCorners:(UIRectCorner)corners cornerRect:(CGRect)cornerRect cornerSize:(CGSize)cornerSize;
 
-- (NSLayoutConstraint *)simpleLayoutToView:(UIView *)toView attribute:(NSLayoutAttribute)attribute relation:(NSLayoutRelation)relation multiplier:(CGFloat)multiplier constant:(CGFloat)constant;
+- (NSLayoutConstraint *)simpleLayoutToView:(UIView *)toView
+                                 attribute:(NSLayoutAttribute)attribute
+                                  relation:(NSLayoutRelation)relation
+                                multiplier:(CGFloat)multiplier
+                                  constant:(CGFloat)constant;
 
 @end

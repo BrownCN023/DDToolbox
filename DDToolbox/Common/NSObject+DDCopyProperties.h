@@ -14,8 +14,16 @@
 /**
  *  属性拷贝
  *  将object中与self的相同的属性拷贝到self
- *  @param object 
+ *  @param object 拷贝对象
  */
 - (void)copyProperties:(NSObject *)object;
+
+/**
+ 
+ e.g:
+    Person * p ...;
+    Person * p2 = [Person new];
+    [p2 copyProperties:p];
+ */
 
 @end

@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class DDLoopCollectionView;
+@protocol DDLoopCollectionViewDelegate <NSObject>
+
+@optional
+- (void)loopCollectionView:(DDLoopCollectionView *)collectionView itemIndex:(NSInteger)itemIndex;
+
+@end
+
 @interface DDLoopCollectionView : UICollectionView
+
+@property (nonatomic,weak) id<DDLoopCollectionViewDelegate> LoopDelegate;
 
 @end

@@ -34,7 +34,7 @@
     return 100;
 }
 
-- (UITableViewCell *)tableAlertController:(DDTableAlertViewController *)controller tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableAlertController:(DDSimpleTableViewController *)controller tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     TestTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"TestTableViewCell"];
     if(!cell){

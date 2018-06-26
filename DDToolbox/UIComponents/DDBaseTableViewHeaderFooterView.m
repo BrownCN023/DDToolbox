@@ -10,6 +10,10 @@
 
 @implementation DDBaseTableViewHeaderFooterView
 
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)bindingViewModel:(DDTableSectionViewModel *)viewModel section:(NSInteger)section{
     self.viewModel = viewModel;
     self.section = section;

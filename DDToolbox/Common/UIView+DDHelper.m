@@ -15,11 +15,15 @@
 }
 
 - (void)layerCorners:(UIRectCorner)corners cornerRect:(CGRect)cornerRect cornerSize:(CGSize)cornerSize{
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:cornerRect byRoundingCorners:corners cornerRadii:cornerSize];
-    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-    maskLayer.frame = cornerRect;
-    maskLayer.path = maskPath.CGPath;
-    self.layer.mask = maskLayer;
+    if(CGSizeEqualToSize(cornerSize, CGSizeZero)){
+        self.layer.mask = nil;
+    }else{
+        UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:cornerRect byRoundingCorners:corners cornerRadii:cornerSize];
+        CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+        maskLayer.frame = cornerRect;
+        maskLayer.path = maskPath.CGPath;
+        self.layer.mask = maskLayer;
+    }
 }
 
 - (NSLayoutConstraint *)simpleLayoutToView:(UIView *)toView attribute:(NSLayoutAttribute)attribute relation:(NSLayoutRelation)relation multiplier:(CGFloat)multiplier constant:(CGFloat)constant{

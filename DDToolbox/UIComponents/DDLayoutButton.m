@@ -26,6 +26,9 @@
 
 - (void)setupData{
     self.titleImageInterval = 5;
+    self.contentEdgeInsets = UIEdgeInsetsMake(CGFLOAT_MIN, 0, CGFLOAT_MIN, 0);
+    self.adjustsImageWhenHighlighted = NO;
+    self.adjustsImageWhenDisabled = NO;
 }
 
 - (void)drawRect:(CGRect)rect{

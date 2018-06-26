@@ -9,7 +9,6 @@
 
 #import "DDLoopCollectionView.h"
 
-
 @interface DDLoopCollectinViewDataSource : NSObject
 
 @property (nonatomic,weak) id receiver;
@@ -38,8 +37,6 @@
 @property (nonatomic, assign) NSInteger actualRows;
 @property (nonatomic, strong) DDLoopCollectinViewDataSource * loopDataSource;
 
-
-
 @end
 
 @implementation DDLoopCollectionView
@@ -55,26 +52,26 @@
     if([self.collectionViewLayout isKindOfClass:[UICollectionViewFlowLayout class]]){
         UICollectionViewFlowLayout * layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
         if(layout.scrollDirection == UICollectionViewScrollDirectionHorizontal){
-        //scroll over left
-        if (contentOffset.x < 0.0) {
-            contentOffset.x = self.contentSize.width / 3.0;
+            //scroll over left
+            if (contentOffset.x < 0.0) {
+                contentOffset.x = self.contentSize.width / 3.0;
+            }
+            //scroll over right
+            else if (contentOffset.x >= (self.contentSize.width - self.bounds.size.width)) {
+                contentOffset.x = self.contentSize.width / 3.0 - self.bounds.size.width;
+            }
+        }else{
+            //scroll over top
+            if (contentOffset.y < 0.0) {
+                contentOffset.y = self.contentSize.height / 3.0;
+            }
+            //scroll over bottom
+            else if (contentOffset.y >= (self.contentSize.height - self.bounds.size.height)) {
+                contentOffset.y = self.contentSize.height / 3.0 - self.bounds.size.height;
+            }
         }
-        //scroll over right
-        else if (contentOffset.x >= (self.contentSize.width - self.bounds.size.width)) {
-            contentOffset.x = self.contentSize.width / 3.0 - self.bounds.size.width;
-        }
-    }else{
-        //scroll over top
-        if (contentOffset.y < 0.0) {
-            contentOffset.y = self.contentSize.height / 3.0;
-        }
-        //scroll over bottom
-        else if (contentOffset.y >= (self.contentSize.height - self.bounds.size.height)) {
-            contentOffset.y = self.contentSize.height / 3.0 - self.bounds.size.height;
-        }
-    }
-    
-    [self setContentOffset: contentOffset];
+        
+        [self setContentOffset: contentOffset];
     }
 }
 
@@ -101,6 +98,14 @@
 }
 
 #pragma mark - Delegate Method Override
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    NSInteger section = [self.loopDataSource.receiver numberOfSectionsInCollectionView:collectionView];
+    if(section > 1){
+        NSLog(@"- DDLoopCollectionView - method numberOfSectionsInCollectionView: section > 1 !!!");
+    }
+    return section;
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     self.actualRows = [self.loopDataSource.receiver collectionView:collectionView numberOfItemsInSection:section];
     return self.actualRows * 3;
@@ -114,6 +119,24 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSIndexPath * actualIndexPath = [NSIndexPath indexPathForRow:indexPath.row % self.actualRows inSection:indexPath.section];
     [self.loopDataSource.receiver collectionView:collectionView didSelectItemAtIndexPath:actualIndexPath];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    if([self.loopDataSource.receiver respondsToSelector:@selector(scrollViewDidEndDecelerating:)]){
+        [self.loopDataSource.receiver scrollViewDidEndDecelerating:scrollView];
+    }
+    
+    UICollectionViewFlowLayout * layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
+    NSInteger index = 0;
+    if(layout.scrollDirection == UICollectionViewScrollDirectionHorizontal){
+        index = scrollView.contentOffset.x/scrollView.bounds.size.width;
+    }else{
+        index = scrollView.contentOffset.y/scrollView.bounds.size.height;
+    }
+    NSInteger itemIndex = index%self.actualRows;
+    if(self.LoopDelegate && [self.LoopDelegate respondsToSelector:@selector(loopCollectionView:itemIndex:)]){
+        [self.LoopDelegate loopCollectionView:self itemIndex:itemIndex];
+    }
 }
 
 @end

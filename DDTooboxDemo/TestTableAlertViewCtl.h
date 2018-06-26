@@ -6,8 +6,8 @@
 //  Copyright © 2018年 abiang. All rights reserved.
 //
 
-#import "DDTableAlertViewController.h"
+#import <DDModal/DDSimpleTableViewController.h>
 
-@interface TestTableAlertViewCtl : DDTableAlertViewController
+@interface TestTableAlertViewCtl : DDSimpleTableViewController
 
 @end

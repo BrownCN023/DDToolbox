@@ -9,6 +9,7 @@
 #import "NSMutableArray+DDNode.h"
 
 @implementation NSMutableArray (DDNode)
+
 - (void)dd_append:(id)obj{
     if([obj isKindOfClass:[NSArray class]] || [obj isKindOfClass:[NSMutableArray class]]){
         [self addObjectsFromArray:obj];
@@ -16,6 +17,7 @@
         [self addObject:obj];
     }
 }
+
 - (DDMutableArrayAppendExpNode)appendNode{
     return ^(BOOL exp,DDMutableArrayAppendNodeCallback callback){
         if(exp){
@@ -27,4 +29,5 @@
         return self;
     };
 }
+
 @end

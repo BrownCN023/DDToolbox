@@ -37,33 +37,11 @@
     return daysInOfMonth.length;
 }
 
-// 日历的上一个月
-+ (NSDate *)lastMonth:(NSDate *)date{
+- (NSDate *)offsetByYear:(NSInteger)offset{
     NSDateComponents *comp = [[NSDateComponents alloc]init];
-    comp.month = -1;
-    NSDate *newDate = [[NSCalendar currentCalendar] dateByAddingComponents:comp toDate:date options:0];
+    comp.year = offset;
+    NSDate *newDate = [[NSCalendar currentCalendar] dateByAddingComponents:comp toDate:self options:0];
     return newDate;
-}
-
-// 日历的上一个月
-+ (NSDate *)nextMonth:(NSDate *)date{
-    NSDateComponents *comp = [[NSDateComponents alloc]init];
-    comp.month = +1;
-    NSDate *newDate = [[NSCalendar currentCalendar] dateByAddingComponents:comp toDate:date options:0];
-    return newDate;
-}
-
-- (NSInteger)year{
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:self];
-    return components.year;
-}
-- (NSInteger)month{
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:self];
-    return components.month;
-}
-- (NSInteger)day{
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:self];
-    return components.day;
 }
 
 - (NSDate *)offsetByMonth:(NSInteger)offset{
@@ -73,12 +51,50 @@
     return newDate;
 }
 
+- (NSDate *)offsetByDay:(NSInteger)offset{
+    NSDateComponents *comp = [[NSDateComponents alloc]init];
+    comp.day = offset;
+    NSDate *newDate = [[NSCalendar currentCalendar] dateByAddingComponents:comp toDate:self options:0];
+    return newDate;
+}
 
 - (void)year:(NSInteger *)year month:(NSInteger *)month day:(NSInteger *)day{
     NSDateComponents *components = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:self];
     *year = components.year;
     *month = components.month;
     *day = components.day;
+}
+
+- (NSDate *)lastYear{
+    return [self offsetByYear:-1];
+}
+- (NSDate *)nextYear{
+    return [self offsetByYear:1];
+}
+- (NSDate *)lastMonth{
+    return [self offsetByMonth:-1];
+}
+- (NSDate *)nextMonth{
+    return [self offsetByMonth:1];
+}
+- (NSDate *)lastDay{
+    return [self offsetByDay:-1];
+}
+- (NSDate *)nextDay{
+    return [self offsetByDay:1];
+}
+
+- (NSUInteger)year{
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:self];
+    return components.year;
+}
+- (NSUInteger)month{
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:self];
+    return components.month;
+}
+- (NSUInteger)day{
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:self];
+    return components.day;
 }
 
 @end

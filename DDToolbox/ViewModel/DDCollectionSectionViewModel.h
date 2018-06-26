@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DDSimpleViewModel.h"
+#import "DDSuperViewModel.h"
 
 @interface DDCollectionSectionViewModel : DDSuperViewModel
 

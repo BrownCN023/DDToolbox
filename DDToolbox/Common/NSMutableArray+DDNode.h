@@ -9,9 +9,14 @@
 #import <Foundation/Foundation.h>
 
 typedef id (^DDMutableArrayAppendNodeCallback) (void);
+
 typedef NSMutableArray * (^DDMutableArrayAppendExpNode)(BOOL exp,DDMutableArrayAppendNodeCallback callback);
 
+
+
+
 @interface NSMutableArray (DDNode)
+
 @property (nonatomic, strong, readonly) DDMutableArrayAppendExpNode appendNode;
 /**
  e.g

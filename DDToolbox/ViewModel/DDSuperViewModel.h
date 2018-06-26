@@ -10,12 +10,11 @@
 
 @interface DDSuperViewModel : NSObject
 
-@property (nonatomic,strong,readonly) id data;
+@property (nonatomic,strong) id data;
 
 + (id)viewModelWithData:(id)data;
 - (id)initWithData:(id)data;
-- (void)setupData;
-- (void)create;
-- (void)updateWithData:(id)data;
+- (void)setupData;  //初始化数据
+- (void)create;     //创建 - 用于子类实现
 
 @end

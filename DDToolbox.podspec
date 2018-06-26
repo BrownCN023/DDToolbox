@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "DDToolbox"
-s.version      = "0.0.4"
+s.version      = "0.0.5"
 s.summary      = "辅助开发工具类"
 s.homepage     = "https://github.com/BrownCN023/DDToolbox"
 s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -23,5 +23,9 @@ s.frameworks = "UIKit", "Foundation"
 
 s.dependency "Masonry", "~> 1.1.0"
 s.dependency "SDWebImage", "~> 4.3.3"
+s.dependency "DDLoadingView", "~> 0.0.4"
+s.dependency "DDModal", "~> 1.0.15"
+s.dependency "DDCircleProgressView", "~> 0.0.4"
+s.dependency "DDHTTPClient", "~> 0.0.6"
 
 end

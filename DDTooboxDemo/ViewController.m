@@ -7,32 +7,29 @@
 //
 
 #import "ViewController.h"
-#import "UIView+DDLoading.h"
-#import "DDSuperModalViewController.h"
-#import "DDSuperAlertViewController.h"
-#import "DDSimpleAlertViewController.h"
-#import "DDConfirmAlertViewController.h"
-#import "DDTableAlertViewController.h"
-#import "DDSimpleActionViewController.h"
-
-#import "DDToolboxThemeConfig.h"
+#import <UIView+DDLoading.h>
+#import <DDModal.h>
+#import <DDSimpleMenuViewController.h>
+#import <DDSimpleConfirmViewController.h>
 #import "DDMacro.h"
 #import "TestTableAlertViewCtl.h"
-#import "DDSimpleMenuAlertViewController.h"
+
 #import "NSMutableArray+DDNode.h"
-#import "DDSimpleInputViewController.h"
-#import "DDSimpleViewModel.h"
-#import "DDSimpleSharedViewController.h"
-#import "DDSimpleDateAlertViewController.h"
+
+#import "UIView+DDDisable.h"
 
 #import "DDLayoutButton.h"
 #import "DDToolbox.h"
+#import <DDCircleProgressView.h>
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>{
     
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic,strong) DDSimpleDateCalendarManager * calendarManager;
+@property (nonatomic,strong) DDCalendarManager * calendarManager;
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (weak, nonatomic) IBOutlet DDCircleProgressView *progressView;
+@property (weak, nonatomic) IBOutlet DDCornerButton *dateButton;
 
 @end
 
@@ -42,22 +39,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 //    [DDToolboxThemeConfig sharedConfig].themeColor = DD_COLOR_Hex(0xff534d);
-    
     __weak typeof(self) weakself = self;
     self.tableView.onLoadingBlock = ^{
         [weakself performSelector:@selector(sssto) withObject:nil afterDelay:4];
     };
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    [self.tableView beginLoad];
+    [self.tableView beginLoading];
     
     DDLayoutButton * btn = [[DDLayoutButton alloc] init];
     [self.view addSubview:btn];
     
-    self.calendarManager = [[DDSimpleDateCalendarManager alloc] initWithMinYear:1970 maxYear:2030];
+    self.calendarManager = [[DDCalendarManager alloc] initWithMinDate:[NSDate date].lastMonth maxDate:[NSDate date].nextMonth];
     DD_GCD_Global_Async(^{
         [self.calendarManager prepare];
     });
+    
+//    self.progressView.type = DDCircleTypeGradient;
+    
     
 }
 
@@ -65,6 +64,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 int flag = 0;
@@ -75,40 +75,42 @@ int flag = 0;
     }else if(flag == 1){
         [self.tableView loadNoData];
     }else{
-        [self.tableView loadNetError];
+        [self.tableView loadError:nil];
     }
     flag ++;
 }
 - (IBAction)clickAlertButton:(id)sender {
     
-    
-    [DDConfirmAlertViewController showAlert:@"操作提醒" message:@"截至2017年末，天津房地产集团有限公司及其控制的7家公司贷款余额为16.6亿元。" onCancelBlock:nil onConfirmBlock:^{
-        [TestTableAlertViewCtl showAlert:@"列表选择" items:@[
-                                                         @"A",
-                                                         @"B",
-                                                         @"C",
-                                                         @"D",
-                                                         @"E",
-                                                         @"F",
-                                                         @"G",
-                                                         ] onFixedHeightBlock:nil onCancelBlock:nil onItemBlock:^(NSInteger itemIndex, NSDictionary<NSString *,id> *item) {
-                                                            DDPLog(@"itemIndex:%@",@(itemIndex));
-                                                         }];
+    [DDSimpleConfirmViewController showAlert:@"操作提醒" message:@"截至2017年末，天津房地产集团有限公司及其控制的7家公司贷款余额为16.6亿元。" onCancelBlock:nil onConfirmBlock:^{
+        
+        
+//
+//        [TestTableAlertViewCtl showAlert:@"列表选择" items:@[
+//                                                         @"A",
+//                                                         @"B",
+//                                                         @"C",
+//                                                         @"D",
+//                                                         @"E",
+//                                                         @"F",
+//                                                         @"G",
+//                                                         ] onFixedHeightBlock:nil onCancelBlock:nil onItemBlock:^(NSInteger itemIndex, NSDictionary<NSString *,id> *item) {
+//                                                             DDPLog(@"itemIndex:%@",@(itemIndex));
+//                                                         }];
     }];
 }
 - (IBAction)clickTableButton:(id)sender {
-    [DDTableAlertViewController showAlert:@"列表选择" items:@[
-                                                     @{@"张三":@(1110)},
-                                                     @{@"李四":@(1111)},
-                                                     @{@"王五":@(1112)},
-                                                     @{@"二娃":@(1113)},
-                                                     @{@"小六":@(1114)},
-                                                     @{@"王麻子":@(1114)},
-                                                     @{@"狗子":@(1114)},
-                                                     ] onFixedHeightBlock:nil  onCancelBlock:nil onItemBlock:^(NSInteger itemIndex, NSDictionary<NSString *,id> *item) {
-                                                         DDPLog(@"itemIndex:%@",@(itemIndex));
-                                                     }];
-    
+    DDSimpleTableViewController * vctl = [[DDSimpleTableViewController alloc] init];
+    vctl.items = @[
+                   @{@"title":@"张三",@"value":@(1110)},
+                   @{@"title":@"李四",@"value":@(1111)},
+                   @{@"title":@"王五",@"value":@(1113)},
+                   ];
+    vctl.onClickItemBlock = ^(NSIndexPath *indexPath, id itemObj) {
+        DDPLog(@"itemIndex:%@",itemObj);
+    };
+    vctl.fixedRowHeight = 50;
+    vctl.itemTitleKeyPath = @"title";
+    [vctl show:nil];
 }
 - (IBAction)clickActionButton:(UIButton *)sender {
     
@@ -132,11 +134,11 @@ int flag = 0;
     CGRect originFrame = [sender.superview convertRect:sender.frame toView:DD_KeyWindow];
     
     if(flag %2 == 0){
-        [DDSimpleMenuAlertViewController showWithItems:@[@"删除",@"复制"] originFrame:originFrame showDirection:0 onClickItemBlock:^(NSInteger itemIndex) {
+        [DDSimpleMenuViewController showWithItems:@[@"删除",@"复制"] originFrame:originFrame showDirection:0 onClickItemBlock:^(NSInteger itemIndex) {
             
         }];
     }else{
-        [DDSimpleMenuAlertViewController showWithItems:@[@"删除",@"复制"] originFrame:originFrame showDirection:1 onClickItemBlock:^(NSInteger itemIndex) {
+        [DDSimpleMenuViewController showWithItems:@[@"删除",@"复制"] originFrame:originFrame showDirection:1 onClickItemBlock:^(NSInteger itemIndex) {
             
         }];
     }
@@ -152,23 +154,28 @@ int flag = 0;
         }
         return YES;
     }];
-    DDSimpleViewModel * viewModel = [[DDSimpleViewModel alloc] init];//[DDSimpleViewModel viewModelWithData:@"Haha"];
-    [viewModel create];
 }
 
 - (IBAction)clickSharedButton:(id)sender {
-    DDSimpleSharedViewController * vctl = [[DDSimpleSharedViewController alloc] init];
-    [vctl show:nil];
+//    DDSimpleSharedViewController * vctl = [[DDSimpleSharedViewController alloc] init];
+//    [vctl show:nil];
+//    self.progressView.type = abs(self.progressView.type-1);
+//    self.progressView.startAngle = 180.0f;
+//    self.progressView.endAngle = 360.0f;
+    self.progressView.strokeColor = DD_COLOR_Random();
 }
-- (IBAction)clickDateButton:(id)sender {
-//    DDSimpleDateCalendarManager * manager = [[DDSimpleDateCalendarManager alloc] init];
-//    [manager prepare];
+- (IBAction)clickDateButton:(DDCornerButton *)sender {
+    sender.cornerSize = CGSizeMake(0, 0);
+    sender.corners = UIRectCornerTopLeft | UIRectCornerTopRight;
     
-    DDSimpleDateAlertViewController * vctl = [[DDSimpleDateAlertViewController alloc] initWithCalendarManager:self.calendarManager];
+    DDCalendarAlertViewController * vctl = [[DDCalendarAlertViewController alloc] initWithCalendarManager:self.calendarManager];
     vctl.onSelectedItemBlock = ^(NSInteger year, NSInteger month, NSInteger day) {
         DDPLog(@"year:%@  month:%@  day:%@",@(year),@(month),@(day));
     };
     [vctl show:nil];
+}
+- (IBAction)clickDisableButton:(id)sender {
+    self.tableView.disable = !self.tableView.disable;
 }
 
 #pragma mark - UITableViewDelegate/UITableViewDataSource
@@ -204,6 +211,12 @@ int flag = 0;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (IBAction)valueChanged:(UISlider *)sender {
+    self.progressView.progress = sender.value;
+    
+    self.dateButton.cornerSize = CGSizeMake(CGRectGetWidth(self.dateButton.bounds)/2.0*sender.value, CGRectGetHeight(self.dateButton.bounds)/2.0*sender.value);
 }
 
 

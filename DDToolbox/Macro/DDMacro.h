@@ -25,6 +25,12 @@
 #define DDPLog(format, ...)
 #endif
 
+#ifdef DEBUG
+#define DDFLog(format, ...) printf("-- %s(line %d) %s\n\n",__FUNCTION__,__LINE__,[[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String])
+#else
+#define DDFLog(format, ...)
+#endif
+
 //*************** Weak | Strong ****************
 #define DDWeakSelf(type)  __weak typeof(type) weak##type = type;
 #define DDStrongSelf(type) __strong typeof(type) type = weak##type;

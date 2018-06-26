@@ -18,7 +18,7 @@
 #import "DDAsyncOperation.h"
 #import "DDFileCacheTools.h"
 #import "DDPageItemFlowLayout.h"
-#import "DDWeakDelegate.h"
+#import "DDWeakDelegateObject.h"
 #import "DDXib.h"
 #import "DDBarStyle.h"
 #import "NSObject+DDAdaptor.h"
@@ -28,7 +28,6 @@
 #import "NSMutableString+DDNode.h"
 #import "NSString+DDHelper.h"
 #import "NSDate+DDHelper.h"
-#import "DDSimpleCalendar.h"
 
 #import "UIView+DDHelper.h"
 #import "UIImage+DDHelper.h"
@@ -41,14 +40,10 @@
 
 //------- ViewModel --------
 #import "DDSuperViewModel.h"
-#import "DDSimpleViewModel.h"
 #import "DDTableRowViewModel.h"
 #import "DDTableSectionViewModel.h"
 #import "DDCollectionItemViewModel.h"
 #import "DDCollectionSectionViewModel.h"
-#import "DDControllerViewModel.h"
-#import "DDCollectionControllerViewModel.h"
-#import "DDTableControllerViewModel.h"
 
 //------- UI --------
 #import "DDBaseView.h"

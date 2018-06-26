@@ -10,8 +10,6 @@
 
 @interface DDSuperViewModel()
 
-@property (nonatomic,strong) id data;
-
 @end
 
 @implementation DDSuperViewModel
@@ -42,11 +40,6 @@
 
 - (void)create{
     
-}
-
-- (void)updateWithData:(id)data{
-    _data = data;
-    [self create];
 }
 
 @end

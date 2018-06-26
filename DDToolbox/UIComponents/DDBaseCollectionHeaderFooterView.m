@@ -10,6 +10,10 @@
 
 @implementation DDBaseCollectionHeaderFooterView
 
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     if(self = [super initWithCoder:aDecoder]){
         [self setupData];

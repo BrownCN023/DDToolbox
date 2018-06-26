@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
+
 @interface DDCornerButton : UIButton
 
-@property (nonatomic,assign) CGSize cornerSize;
+@property (nonatomic,assign) IBInspectable CGSize cornerSize;
 @property (nonatomic,assign) UIRectCorner corners;
 
 @end

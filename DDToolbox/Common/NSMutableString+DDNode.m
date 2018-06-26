@@ -9,6 +9,7 @@
 #import "NSMutableString+DDNode.h"
 
 @implementation NSMutableString (DDNode)
+
 - (DDMutableStringAppendExpNode)appendNode{
     return ^(BOOL exp,DDMutableStringAppendNodeCallback callback){
         if(exp){
@@ -20,4 +21,5 @@
         return self;
     };
 }
+
 @end
