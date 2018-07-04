@@ -96,6 +96,7 @@
 		B2B5C82420DB891E00E314D5 /* DDWeakDelegateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B5C82320DB891E00E314D5 /* DDWeakDelegateObject.m */; };
 		B2B5C82720DB8AB000E314D5 /* NSArray+DDSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B5C82620DB8AB000E314D5 /* NSArray+DDSafeAccess.m */; };
 		B2B5C82A20DB919E00E314D5 /* NSObject+DDSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B5C82920DB919E00E314D5 /* NSObject+DDSwizzling.m */; };
+		C00FA61720ED1A3D00E2474E /* DDAutoLoopCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C00FA61620ED1A3D00E2474E /* DDAutoLoopCollectionView.m */; };
 		FADFBB39234711343392AD49 /* libPods-DDTooboxDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 520B3C740C73C76D45545176 /* libPods-DDTooboxDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -263,6 +264,8 @@
 		B2B5C82620DB8AB000E314D5 /* NSArray+DDSafeAccess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DDSafeAccess.m"; sourceTree = "<group>"; };
 		B2B5C82820DB919E00E314D5 /* NSObject+DDSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+DDSwizzling.h"; sourceTree = "<group>"; };
 		B2B5C82920DB919E00E314D5 /* NSObject+DDSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DDSwizzling.m"; sourceTree = "<group>"; };
+		C00FA61520ED1A3D00E2474E /* DDAutoLoopCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDAutoLoopCollectionView.h; sourceTree = "<group>"; };
+		C00FA61620ED1A3D00E2474E /* DDAutoLoopCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDAutoLoopCollectionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -528,6 +531,8 @@
 				B24F598920EA1AA7003BFDDC /* DDCircleRecordView.m */,
 				B2AE6C9220BFDD030001E34A /* DDLoopCollectionView.h */,
 				B2AE6C9320BFDD030001E34A /* DDLoopCollectionView.m */,
+				C00FA61520ED1A3D00E2474E /* DDAutoLoopCollectionView.h */,
+				C00FA61620ED1A3D00E2474E /* DDAutoLoopCollectionView.m */,
 				B2AE6C9420BFDD030001E34A /* DDLoopTableView.h */,
 				B2AE6C9520BFDD030001E34A /* DDLoopTableView.m */,
 			);
@@ -717,6 +722,7 @@
 				B212BE8720EC7D9800B0B506 /* DDCollectionItemViewModel.m in Sources */,
 				B2AE6CC020BFDD030001E34A /* DDCornerButton.m in Sources */,
 				B2B5C80720DA046100E314D5 /* CircleArcViewLayout.m in Sources */,
+				C00FA61720ED1A3D00E2474E /* DDAutoLoopCollectionView.m in Sources */,
 				B2AE6CC220BFDD030001E34A /* DDLoopCollectionView.m in Sources */,
 				B2AE6CAD20BFDD030001E34A /* DDPageModel.m in Sources */,
 				B20C277C20E6053B00E0A433 /* UIButton+DDHighlightColor.m in Sources */,
@@ -879,11 +885,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 72Z56Z4L5P;
+				DEVELOPMENT_TEAM = X77K95YFU8;
 				INFOPLIST_FILE = DDTooboxDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sztongan.DDTooboxDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abiang.DDTooboxDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -895,11 +901,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 72Z56Z4L5P;
+				DEVELOPMENT_TEAM = X77K95YFU8;
 				INFOPLIST_FILE = DDTooboxDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sztongan.DDTooboxDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abiang.DDTooboxDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

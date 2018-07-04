@@ -7,7 +7,7 @@
 //
 
 #import "ViewController2.h"
-#import "DDLoopCollectionView.h"
+#import "DDAutoLoopCollectionView.h"
 #import "CollectionViewCell2.h"
 #import "DDXib.h"
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -19,7 +19,7 @@
 
 @interface ViewController2 ()<UICollectionViewDelegate,UICollectionViewDataSource,DDLoopCollectionViewDelegate,DDCircleProgressDelegate>
 
-@property (strong, nonatomic) DDLoopCollectionView *collectionView;
+@property (strong, nonatomic) DDAutoLoopCollectionView *collectionView;
 @property (nonatomic,strong) NSArray * dataArray;
 @property (weak, nonatomic) IBOutlet TestCircleView *circleView;
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
@@ -83,6 +83,8 @@
     self.collectionView.backgroundColor = [UIColor orangeColor];
     self.collectionView.pagingEnabled = YES;
     [self.collectionView regCellNibWithClazz:[CollectionViewCell2 class]];
+    
+    [self.collectionView startLoopScroll];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -134,9 +136,9 @@
     NSLog(@"itemIndex:%@",@(itemIndex));
 }
 
-- (DDLoopCollectionView *)collectionView{
+- (DDAutoLoopCollectionView *)collectionView{
     if(!_collectionView){
-        DDLoopCollectionView * v = [[DDLoopCollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.collectionViewLayout];
+        DDAutoLoopCollectionView * v = [[DDAutoLoopCollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.collectionViewLayout];
         v.backgroundColor = [UIColor whiteColor];//DD_COLOR_RGB(230, 230, 230);
         v.delegate = self;
         v.dataSource = self;

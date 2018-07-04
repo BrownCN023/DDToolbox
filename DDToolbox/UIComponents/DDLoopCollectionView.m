@@ -32,7 +32,7 @@
 
 @end
 
-@interface DDLoopCollectionView()
+@interface DDLoopCollectionView()<UIScrollViewDelegate>
 
 @property (nonatomic, assign) NSInteger actualRows;
 @property (nonatomic, strong) DDLoopCollectinViewDataSource * loopDataSource;
@@ -121,22 +121,61 @@
     [self.loopDataSource.receiver collectionView:collectionView didSelectItemAtIndexPath:actualIndexPath];
 }
 
+- (NSInteger)getRowIndexByScrollView:(UIScrollView *)scrollView{
+    UICollectionViewFlowLayout * layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
+    NSInteger rowIndex = 0;
+    if(layout.scrollDirection == UICollectionViewScrollDirectionHorizontal){
+        rowIndex = scrollView.contentOffset.x/scrollView.bounds.size.width;
+    }else{
+        rowIndex = scrollView.contentOffset.y/scrollView.bounds.size.height;
+    }
+    return rowIndex;
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    if([self.loopDataSource.receiver respondsToSelector:@selector(scrollViewWillBeginDragging:)]){
+        [self.loopDataSource.receiver scrollViewWillBeginDragging:scrollView];
+    }
+    NSInteger rowIndex = [self getRowIndexByScrollView:scrollView];
+    NSInteger itemIndex = rowIndex%self.actualRows;
+    [self scrollViewWillBeginDragging:scrollView itemIndex:itemIndex rowIndex:rowIndex];
+}
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     if([self.loopDataSource.receiver respondsToSelector:@selector(scrollViewDidEndDecelerating:)]){
         [self.loopDataSource.receiver scrollViewDidEndDecelerating:scrollView];
     }
+    NSInteger rowIndex = [self getRowIndexByScrollView:scrollView];
+    NSInteger itemIndex = rowIndex%self.actualRows;
     
-    UICollectionViewFlowLayout * layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
-    NSInteger index = 0;
-    if(layout.scrollDirection == UICollectionViewScrollDirectionHorizontal){
-        index = scrollView.contentOffset.x/scrollView.bounds.size.width;
-    }else{
-        index = scrollView.contentOffset.y/scrollView.bounds.size.height;
-    }
-    NSInteger itemIndex = index%self.actualRows;
     if(self.LoopDelegate && [self.LoopDelegate respondsToSelector:@selector(loopCollectionView:itemIndex:)]){
         [self.LoopDelegate loopCollectionView:self itemIndex:itemIndex];
     }
+    [self scrollViewDidEndDecelerating:scrollView itemIndex:itemIndex rowIndex:rowIndex];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    if([self.loopDataSource.receiver respondsToSelector:@selector(scrollViewDidEndScrollingAnimation:)]){
+        [self.loopDataSource.receiver scrollViewDidEndScrollingAnimation:scrollView];
+    }
+    NSInteger rowIndex = [self getRowIndexByScrollView:scrollView];
+    NSInteger itemIndex = rowIndex%self.actualRows;
+    
+    if(self.LoopDelegate && [self.LoopDelegate respondsToSelector:@selector(loopCollectionView:itemIndex:)]){
+        [self.LoopDelegate loopCollectionView:self itemIndex:itemIndex];
+    }
+    [self scrollViewDidEndScrollingAnimation:scrollView itemIndex:itemIndex rowIndex:rowIndex actualRowCount:self.actualRows virtualRowCount:self.actualRows*3];
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView itemIndex:(NSInteger)itemIndex rowIndex:(NSInteger)rowIndex{
+    
+}
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView itemIndex:(NSInteger)itemIndex rowIndex:(NSInteger)rowIndex{
+    
+}
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView itemIndex:(NSInteger)itemIndex rowIndex:(NSInteger)rowIndex actualRowCount:(NSInteger)actualRowCount virtualRowCount:(NSInteger)virtualRowCount{
+    
 }
 
 @end
