@@ -13,15 +13,15 @@
 
 + (id)showAction:(NSString *)title
          message:(NSString *)message
-           items:(NSArray<NSString *> *)items
    onCancelBlock:(void (^)(void))cancelBlock
-     onItemBlock:(void (^)(NSInteger itemIndex))itemBlock;
+otherButtonItems:(NSArray<NSString *> *)otherButtonItems
+onClickItemBlock:(void (^)(NSInteger itemIndex))clickItemBlock;
 
 + (id)showAction:(NSString *)title
          message:(NSString *)message
-          cancel:(NSString *)cancel
-           items:(NSArray<NSString *> *)items
+cancelButtonTitle:(NSString *)cancelButtonTitle
    onCancelBlock:(void (^)(void))cancelBlock
-     onItemBlock:(void (^)(NSInteger itemIndex))itemBlock;
+otherButtonItems:(NSArray<NSString *> *)otherButtonItems
+onClickItemBlock:(void (^)(NSInteger itemIndex))clickItemBlock;
 
 @end

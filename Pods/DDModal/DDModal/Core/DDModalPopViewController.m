@@ -35,10 +35,10 @@
 }
 
 - (CGFloat)popMarginLeft{
-    return 45.0f;
+    return 53.0f;
 }
 - (CGFloat)popMarginRight{
-    return 45.0f;
+    return 53.0f;
 }
 - (CGFloat)popHeight{
     return 240.0f;
@@ -47,7 +47,7 @@
     return ([UIScreen mainScreen].bounds.size.height-self.popHeight)/2.0f;
 }
 - (CGSize)cornerSize{
-    return CGSizeMake(10, 10);
+    return CGSizeMake(13.5, 13.5);
 }
 - (UIRectCorner)corners{
     return UIRectCornerAllCorners;

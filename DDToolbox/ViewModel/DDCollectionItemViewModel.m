@@ -1,8 +1,8 @@
 //
 //  DDCollectionItemViewModel.m
-//  DDToolBoxDemo
+//  MVPDemo
 //
-//  Created by brown on 2018/4/19.
+//  Created by TongAn001 on 2018/7/4.
 //  Copyright © 2018年 ABiang. All rights reserved.
 //
 

@@ -10,7 +10,7 @@
 #import <UIView+DDLoading.h>
 #import <DDModal.h>
 #import <DDSimpleMenuViewController.h>
-#import <DDSimpleConfirmViewController.h>
+#import <DDSimpleAlertViewController.h>
 #import "DDMacro.h"
 #import "TestTableAlertViewCtl.h"
 
@@ -81,21 +81,8 @@ int flag = 0;
 }
 - (IBAction)clickAlertButton:(id)sender {
     
-    [DDSimpleConfirmViewController showAlert:@"操作提醒" message:@"截至2017年末，天津房地产集团有限公司及其控制的7家公司贷款余额为16.6亿元。" onCancelBlock:nil onConfirmBlock:^{
+    [DDSimpleAlertViewController showConfirm:@"操作提醒" message:@"截至2017年末，天津房地产集团有限公司及其控制的7家公司贷款余额为16.6亿元。" buttonTitle:@"是的" onOkBlock:^{
         
-        
-//
-//        [TestTableAlertViewCtl showAlert:@"列表选择" items:@[
-//                                                         @"A",
-//                                                         @"B",
-//                                                         @"C",
-//                                                         @"D",
-//                                                         @"E",
-//                                                         @"F",
-//                                                         @"G",
-//                                                         ] onFixedHeightBlock:nil onCancelBlock:nil onItemBlock:^(NSInteger itemIndex, NSDictionary<NSString *,id> *item) {
-//                                                             DDPLog(@"itemIndex:%@",@(itemIndex));
-//                                                         }];
     }];
 }
 - (IBAction)clickTableButton:(id)sender {
@@ -123,7 +110,7 @@ int flag = 0;
         return @[@"订阅",@"收藏",@"不喜欢",@"举报违规"];
     });
     
-    [DDSimpleActionViewController showAction:@"操作提醒" message:@"天津农商行与天津滨海农商行的主要股东均为天津市国资委，但两者之间并无隶属关系。" items:items onCancelBlock:nil onItemBlock:^(NSInteger itemIndex) {
+    [DDSimpleActionViewController showAction:@"操作提醒" message:@"天津农商行与天津滨海农商行的主要股东均为天津市国资委，但两者之间并无隶属关系。" onCancelBlock:nil otherButtonItems:items onClickItemBlock:^(NSInteger itemIndex) {
         
     }];
     

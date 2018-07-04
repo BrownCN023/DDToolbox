@@ -13,6 +13,9 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "CircleArcViewLayout.h"
 #import "TestCircleView.h"
+#import "ViewController3.h"
+#import "TestWebTableViewController.h"
+#import "DDCircleRecordView.h"
 
 @interface ViewController2 ()<UICollectionViewDelegate,UICollectionViewDataSource,DDLoopCollectionViewDelegate,DDCircleProgressDelegate>
 
@@ -23,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel2;
 @property (weak, nonatomic) IBOutlet TestCircleView *circleView2;
 @property (weak, nonatomic) IBOutlet DDCircleProgressView *circle3;
+@property (weak, nonatomic) IBOutlet DDCircleRecordView *recordView;
 
 @end
 
@@ -35,16 +39,27 @@
     if (circleView == self.circleView2) {
         self.progressLabel2.text = [NSString stringWithFormat:@"%0.2f%%",progress*100];
     }
-    
 }
+
+- (IBAction)clickWebTableButton:(id)sender {
+    TestWebTableViewController * vctl = [[TestWebTableViewController alloc] init];
+    [self.navigationController pushViewController:vctl animated:YES];
+}
+
 - (IBAction)valueChanged:(UISlider *)sender {
     self.circleView.progress = sender.value;
     self.circleView2.progress = sender.value;
 }
 
+- (IBAction)clickPushButton:(id)sender {
+    ViewController3 * vctl = [ViewController3 instanceFromXib];
+    [self.navigationController pushViewController:vctl animated:YES];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.recordView.layer.cornerRadius = MIN(CGRectGetWidth(self.recordView.bounds),CGRectGetHeight(self.recordView.bounds))/2.0f;
+    
     self.circleView.progressDelegate = self;
     self.circleView.progress = 0.35;
     self.circleView.type = DDCircleTypeGradient;
@@ -53,6 +68,8 @@
     self.circleView2.progressDelegate = self;
     self.circleView2.progress = 0.35;
     self.circleView2.type = DDCircleTypeGradient;
+    
+  
     
     self.dataArray = @[
                        @{@"title":@"0",@"img":@"https://desk-fd.zol-img.com.cn/t_s208x130c5/g5/M00/02/06/ChMkJlqYtyuIdpwcAAlWoF1ayFAAAlEMgE-F00ACVa4671.jpg"},

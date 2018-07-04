@@ -39,11 +39,13 @@
 #import "DDResultModel.h"
 
 //------- ViewModel --------
-#import "DDSuperViewModel.h"
+#import "DDViewModel.h"
 #import "DDTableRowViewModel.h"
 #import "DDTableSectionViewModel.h"
 #import "DDCollectionItemViewModel.h"
 #import "DDCollectionSectionViewModel.h"
+#import "DDCollectionControllerViewModel.h"
+#import "DDTableControllerViewModel.h"
 
 //------- UI --------
 #import "DDBaseView.h"

@@ -1,15 +1,14 @@
 //
 //  DDTableSectionViewModel.h
-//  DDToolboxExample
+//  MVPDemo
 //
-//  Created by brown on 2018/5/2.
+//  Created by TongAn001 on 2018/7/4.
 //  Copyright © 2018年 ABiang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "DDTableRowViewModel.h"
+#import "DDViewModel.h"
 
-@interface DDTableSectionViewModel : DDSuperViewModel
+@interface DDTableSectionViewModel : DDViewModel
 
 @property (nonatomic,copy) NSString * headerIdentifier;
 @property (nonatomic,copy) NSString * footerIdentifier;
@@ -19,8 +18,7 @@
 @property (nonatomic,assign) CGFloat footerHeight;
 @property (nonatomic,strong) NSMutableArray * rowArray;
 
-@property (nonatomic,copy) void (^onClickSectionHeaderViewBlock)(NSInteger section,DDSuperViewModel * viewModel);
-@property (nonatomic,copy) void (^onClickSectionFooterViewBlock)(NSInteger section,DDSuperViewModel * viewModel);
-
+@property (nonatomic,copy) void (^onClickSectionHeaderViewBlock)(NSInteger section,DDViewModel * viewModel);
+@property (nonatomic,copy) void (^onClickSectionFooterViewBlock)(NSInteger section,DDViewModel * viewModel);
 
 @end

@@ -8,11 +8,11 @@
 
 #import "DDModalThemeConfig.h"
 
-int modalThemeColor1 = 0xFF2742;
-int modalThemeColor2 = 0x36ab60;
-int modalThemeColor3 = 0x725dd1;
-int modalThemeColor4 = 0x37c6c0;
-int modalThemeColor5 = 0x373e40;
+int modalThemeColor1 = 0xFF7073;
+int modalThemeColor2 = 0x56a36c;
+int modalThemeColor3 = 0x1db0b8;
+int modalThemeColor4 = 0x96b8ff;
+int modalThemeColor5 = 0x32373b;
 
 @implementation DDModalThemeConfig
 

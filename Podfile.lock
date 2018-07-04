@@ -18,31 +18,35 @@ PODS:
   - DDHTTPClient (0.0.6):
     - AFNetworking
   - DDLoadingView (0.0.4)
-  - DDModal (1.0.15):
-    - DDModal/Core (= 1.0.15)
-    - DDModal/Simple (= 1.0.15)
-    - DDModal/SimpleCalendar (= 1.0.15)
+  - DDModal (1.0.21):
+    - DDModal/Core (= 1.0.21)
+    - DDModal/Simple (= 1.0.21)
+    - DDModal/SimpleCalendar (= 1.0.21)
     - Masonry
-  - DDModal/Core (1.0.15):
+  - DDModal/Core (1.0.21):
     - Masonry
-  - DDModal/Simple (1.0.15):
+  - DDModal/Simple (1.0.21):
     - DDModal/Core
     - Masonry
-  - DDModal/SimpleCalendar (1.0.15):
+  - DDModal/SimpleCalendar (1.0.21):
     - DDModal/Core
     - Masonry
   - Masonry (1.1.0)
+  - ReactiveObjC (3.1.0)
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
+  - UINavigation-SXFixSpace (1.0.6)
 
 DEPENDENCIES:
   - DDCircleProgressView (~> 0.0.4)
   - DDHTTPClient (~> 0.0.6)
   - DDLoadingView (~> 0.0.4)
-  - DDModal (~> 1.0.15)
+  - DDModal (~> 1.0.21)
   - Masonry (~> 1.1.0)
+  - ReactiveObjC (~> 3.1.0)
   - SDWebImage (~> 4.3.3)
+  - UINavigation-SXFixSpace (~> 1.0.6)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -52,17 +56,21 @@ SPEC REPOS:
     - DDLoadingView
     - DDModal
     - Masonry
+    - ReactiveObjC
     - SDWebImage
+    - UINavigation-SXFixSpace
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   DDCircleProgressView: cf1a84bb05771aa540c07c9645b319e9fa806fd2
   DDHTTPClient: 9d96b4c6715c783b843a5b2d174acb00478393b5
   DDLoadingView: 6066b61eb0bd2643c77d91aa70891d8dffa4f4fa
-  DDModal: 22a5319b2a4ac32c2dd461ac4ea869640fa593fe
+  DDModal: 2900ead470fb199e11b6680df174e8fb0eb71546
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  UINavigation-SXFixSpace: 796b8adf7f3022f1579c791097b3bfed5cb5e3fb
 
-PODFILE CHECKSUM: cb5c92898f5801d249191dc1288038abbca4a7bd
+PODFILE CHECKSUM: 0a8d1e3db0bc5695ff4fb5a6c0f19e6b1753d4e8
 
 COCOAPODS: 1.5.3

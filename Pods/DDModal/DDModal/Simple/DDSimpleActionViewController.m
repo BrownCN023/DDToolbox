@@ -8,19 +8,15 @@
 
 #import "DDSimpleActionViewController.h"
 #import "NSString+DDModal.h"
-
+#import "UIButton+DDModalHighlightColor.h"
 #define DDSimpleActionItemHeight 52.0f
-
-#define DDSimpleActionMarginLeftRight 20.0f
-#define DDSimpleActionMarginTopBottom 15.0f
 
 
 @interface DDSimpleActionItemCell : UITableViewCell
 
-@property (nonatomic,strong) UIButton * itemButton;
+@property (nonatomic,strong) UILabel * itemLabel;
 @property (nonatomic,strong) UIView * topLineView;
 @property (nonatomic,strong) NSIndexPath * indexPath;
-@property (nonatomic,copy) void (^onClickItemButtonBlock)(NSIndexPath * indexPath);
 
 - (void)configWithTitle:(NSString *)title indexPath:(NSIndexPath *)indexPath;
 
@@ -53,12 +49,15 @@
 - (void)setupSubviews{
     self.contentView.backgroundColor = [UIColor clearColor];
     self.backgroundColor = [UIColor clearColor];
-    [self.contentView addSubview:self.itemButton];
+    self.selectedBackgroundView = [[UIView alloc] initWithFrame:self.bounds];
+    self.selectedBackgroundView.backgroundColor = DDModal_COLOR_Hex(0xE6E6E6);
+    
+    [self.contentView addSubview:self.itemLabel];
     [self.contentView addSubview:self.topLineView];
 }
 
 - (void)setupLayout{
-    [self.itemButton mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.itemLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.contentView);
         make.top.equalTo(self.contentView).offset(0);
         make.bottom.equalTo(self.contentView).offset(0);
@@ -72,25 +71,24 @@
 
 - (void)configWithTitle:(NSString *)title indexPath:(NSIndexPath *)indexPath{
     self.indexPath = indexPath;
-    [self.itemButton setTitle:title forState:UIControlStateNormal];
-}
-
-- (void)clickItemButton:(UIButton *)sender{
-    if(self.onClickItemButtonBlock){
-        self.onClickItemButtonBlock(self.indexPath);
+    
+    self.itemLabel.text = title;
+    if(indexPath.section == 0 && indexPath.row == 0){
+        self.topLineView.hidden = YES;
+    }else{
+        self.topLineView.hidden = NO;
     }
 }
 
-- (UIButton *)itemButton{
-    if(!_itemButton){
-        UIButton * v = [UIButton buttonWithType:UIButtonTypeSystem];
-        v.titleLabel.font = [UIFont boldSystemFontOfSize:18];
-        v.backgroundColor = [UIColor whiteColor];
-        v.tintColor = [DDModalThemeConfig sharedConfig].tintColor;
-        [v addTarget:self action:@selector(clickItemButton:) forControlEvents:UIControlEventTouchUpInside];
-        _itemButton = v;
+- (UILabel *)itemLabel{
+    if(!_itemLabel){
+        UILabel * v = [[UILabel alloc] init];
+        v.font = [UIFont boldSystemFontOfSize:18];
+        v.textAlignment = NSTextAlignmentCenter;
+        v.textColor = [DDModalThemeConfig sharedConfig].tintColor;
+        _itemLabel = v;
     }
-    return _itemButton;
+    return _itemLabel;
 }
 
 - (UIView *)topLineView{
@@ -112,13 +110,18 @@
 @property (nonatomic,strong) UITableView * tableView;
 @property (nonatomic,strong) UIButton * cancelButton;
 
-
 @property (nonatomic,strong) UILabel * titleLabel;
 @property (nonatomic,strong) UILabel * messageLabel;
 
 @property (nonatomic,copy) NSString * alertTitle;
+@property (nonatomic,copy) NSAttributedString * alertTitleAttr;
+@property (nonatomic,copy) NSString * alertMessage;
 @property (nonatomic,copy) NSAttributedString * alertMessageAttr;
+
+@property (nonatomic,assign) CGFloat alertTitleHeight;
 @property (nonatomic,assign) CGFloat alertMessageHeight;
+
+
 
 @property (nonatomic,copy) NSString * cancelTitle;
 @property (nonatomic,copy) NSArray * items;
@@ -131,42 +134,60 @@
 
 + (id)showAction:(NSString *)title
          message:(NSString *)message
-           items:(NSArray<NSString *> *)items
    onCancelBlock:(void (^)(void))cancelBlock
-     onItemBlock:(void (^)(NSInteger itemIndex))itemBlock{
+otherButtonItems:(NSArray<NSString *> *)otherButtonItems
+onClickItemBlock:(void (^)(NSInteger itemIndex))clickItemBlock
+{
     return [self showAction:title
                     message:message
-                     cancel:nil
-                      items:items
+          cancelButtonTitle:@"取消"
               onCancelBlock:cancelBlock
-                onItemBlock:itemBlock];
+           otherButtonItems:otherButtonItems
+           onClickItemBlock:clickItemBlock];
 }
 
 + (id)showAction:(NSString *)title
          message:(NSString *)message
-          cancel:(NSString *)cancel
-           items:(NSArray<NSString *> *)items
+cancelButtonTitle:(NSString *)cancelButtonTitle
    onCancelBlock:(void (^)(void))cancelBlock
-     onItemBlock:(void (^)(NSInteger itemIndex))itemBlock{
+otherButtonItems:(NSArray<NSString *> *)otherButtonItems
+onClickItemBlock:(void (^)(NSInteger itemIndex))clickItemBlock
+{
     DDSimpleActionViewController * vctl = [[[self class] alloc] init];
     vctl.alertTitle = title;
+    vctl.cancelTitle = cancelButtonTitle;
+    vctl.items = otherButtonItems;
+    vctl.cancelBlock = cancelBlock;
+    vctl.itemBlock = clickItemBlock;
+    
+    
+    CGFloat targetMaxWidth = (DDModal_ScreenWidth-vctl.popMarginLeft-vctl.popMarginRight-30);
+    
+    if(!DDModal_StringIsEmpty(title)){
+        vctl.alertTitleAttr = [title modalSimpleAttributedString:[UIFont boldSystemFontOfSize:17]
+                                                           color:[UIColor whiteColor]
+                                                     lineSpacing:0.5
+                                                       alignment:NSTextAlignmentCenter];
+        CGFloat alertTitleHeight = [vctl.alertTitleAttr
+                                    boundingRectWithSize:CGSizeMake(targetMaxWidth, CGFLOAT_MAX)
+                                    options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading)
+                                    context:nil].size.height+0.5;
+        vctl.alertTitleHeight = alertTitleHeight;
+    }
     
     if(!DDModal_StringIsEmpty(message)){
-        vctl.alertMessageAttr = [message modalSimpleAttributedString:[UIFont boldSystemFontOfSize:18]
-                    color:[DDModalThemeConfig sharedConfig].messageColor
-                    lineSpacing:0.5
-                    alignment:NSTextAlignmentCenter];
-        
+        vctl.alertMessageAttr = [message modalSimpleAttributedString:[UIFont systemFontOfSize:13]
+                                                               color:[UIColor whiteColor]
+                                                         lineSpacing:0.5
+                                                           alignment:NSTextAlignmentCenter];
         CGFloat alertMessageHeight = [vctl.alertMessageAttr
-                                      boundingRectWithSize:CGSizeMake((DDModal_ScreenWidth-vctl.popMarginLeft-vctl.popMarginRight-DDSimpleActionMarginLeftRight*2), CGFLOAT_MAX)
+                                      boundingRectWithSize:CGSizeMake(targetMaxWidth, CGFLOAT_MAX)
                                       options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading)
-                                      context:nil].size.height+0.1;
-        vctl.alertMessageHeight = alertMessageHeight<40.0f?40.0f:alertMessageHeight;
+                                      context:nil].size.height+0.5;
+        vctl.alertMessageHeight = alertMessageHeight;
     }
-    vctl.cancelTitle = cancel;
-    vctl.items = items;
-    vctl.cancelBlock = cancelBlock;
-    vctl.itemBlock = itemBlock;
+    
+    
     [vctl show:nil];
     return vctl;
 }
@@ -197,16 +218,49 @@
 - (CGFloat)popMarginBottom{
     return 0.0f;
 }
+
+- (CGFloat)topHeight{
+    CGFloat targetTopHeight = self.titleMarginTop + self.alertTitleHeight +self.titleMarginBottom + self.messageMarginTop + self.alertMessageHeight + self.messageMarginBottom;
+    return targetTopHeight;
+}
+
+- (CGFloat)titleMarginTop{
+    if(self.alertTitleHeight > 0){
+        return 18.0f;
+    }
+    return 0.0f;
+}
+
+- (CGFloat)titleMarginBottom{
+    if(self.alertTitleHeight > 0 && self.alertMessageHeight <= 0){
+        return 18.0;
+    }
+    return 0.0f;
+}
+
+- (CGFloat)messageMarginTop{
+    if(self.alertMessageHeight <= 0){
+        return 0.0;
+    }
+    if(self.alertTitleHeight > 0){
+        return 5.0f;
+    }
+    return 18.0f;
+}
+- (CGFloat)messageMarginBottom{
+    if(self.alertMessageHeight <= 0){
+        return 0.0;
+    }
+    return 18.0f;
+}
+
 - (CGFloat)bottomHeight{
     return DDSimpleActionItemHeight+20;
 }
-- (CGFloat)topHeight{
-    return DDModal_StringIsEmpty(self.alertTitle)?0.0f:48.0f;
-}
 
 - (CGFloat)contentHeight{
-    CGFloat totalContentHeight = self.items.count*DDSimpleActionItemHeight+self.targetAlertMessageHeight;
-    CGFloat maxHeight = DDModal_ScreenHeight-64;
+    CGFloat totalContentHeight = self.items.count*DDSimpleActionItemHeight;
+    CGFloat maxHeight = DDModal_ScreenHeight-DDSimpleActionItemHeight;
     BOOL scrollEnabled = NO;
     if(totalContentHeight+self.topHeight+self.bottomHeight > maxHeight){
         totalContentHeight = maxHeight-(self.topHeight+self.bottomHeight);
@@ -214,20 +268,6 @@
     }
     self.tableView.scrollEnabled = scrollEnabled;
     return totalContentHeight;
-}
-
-- (CGFloat)targetAlertMessageHeight{
-    if(self.alertMessageHeight == 0.0f){
-        return 0.0f;
-    }
-    return self.alertMessageHeight+DDSimpleActionMarginTopBottom*2;
-}
-
-- (CGFloat)messageMarginTop{
-    if(self.alertMessageHeight == 0.0f){
-        return 0.0f;
-    }
-    return DDSimpleActionMarginTopBottom;
 }
 
 #pragma mark - Setup
@@ -242,29 +282,35 @@
     self.bottomView.backgroundColor = [UIColor clearColor];
     
     [self.topView addSubview:self.titleLabel];
-    [self.contentView addSubview:self.messageLabel];
+    [self.topView addSubview:self.messageLabel];
     [self.contentView addSubview:self.tableView];
     [self.bottomView addSubview:self.cancelButton];
     
     [self.tableView registerClass:[DDSimpleActionItemCell class] forCellReuseIdentifier:@"DDSimpleActionItemCell"];
-    [self.contentView modalLayerCorners:(UIRectCornerBottomLeft|UIRectCornerBottomRight) cornerRect:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds)-self.popMarginLeft-self.popMarginRight, self.contentHeight) cornerSize:self.cornerSize];
+    if(self.items.count > 0){
+        [self.contentView modalLayerCorners:(UIRectCornerBottomLeft|UIRectCornerBottomRight) cornerRect:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds)-self.popMarginLeft-self.popMarginRight, self.contentHeight) cornerSize:self.cornerSize];
+    }else{
+        [self.topView modalLayerCorners:(UIRectCornerBottomLeft|UIRectCornerBottomRight) cornerRect:CGRectMake(0, 0, DDModal_ScreenWidth-self.popMarginLeft-self.popMarginRight, self.topHeight) cornerSize:self.cornerSize];
+    }
     [self.cancelButton modalLayerCorners:(UIRectCornerAllCorners) cornerRect:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds)-self.popMarginLeft-self.popMarginRight, self.bottomHeight-20) cornerSize:self.cornerSize];
 }
 
 - (void)setupLayout{
     [super setupLayout];
+    
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.topView).offset(15);
-        make.right.equalTo(self.topView).offset(-15);
-        make.top.equalTo(self.topView).offset(0);
-        make.bottom.equalTo(self.topView).offset(0);
+        make.left.mas_equalTo(15);
+        make.right.mas_equalTo(-15);
+        make.height.mas_equalTo(self.alertTitleHeight);
+        make.top.mas_equalTo(self.titleMarginTop);
     }];
     [self.messageLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView).offset(DDSimpleActionMarginTopBottom);
-        make.right.equalTo(self.contentView).offset(-DDSimpleActionMarginTopBottom);
-        make.top.equalTo(self.contentView).offset(self.messageMarginTop);
+        make.left.mas_equalTo(15);
+        make.right.mas_equalTo(-15);
         make.height.mas_equalTo(self.alertMessageHeight);
+        make.top.equalTo(self.titleLabel.mas_bottom).offset(self.messageMarginTop);
     }];
+    
     [self.cancelButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.bottomView).offset(10);
         make.left.equalTo(self.bottomView).offset(0);
@@ -272,8 +318,7 @@
         make.bottom.equalTo(self.bottomView).offset(-10);
     }];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.equalTo(self.contentView);
-        make.top.equalTo(self.contentView).offset(self.targetAlertMessageHeight);
+        make.left.right.bottom.top.equalTo(self.contentView);
     }];
 }
 
@@ -296,22 +341,18 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     DDSimpleActionItemCell * cell = [tableView dequeueReusableCellWithIdentifier:@"DDSimpleActionItemCell" forIndexPath:indexPath];
-    if(!cell.onClickItemButtonBlock){
-        __weak typeof(self) weakself = self;
-        cell.onClickItemButtonBlock = ^(NSIndexPath *indexPath) {
-            [weakself dismiss:^{
-                if(weakself.itemBlock){
-                    weakself.itemBlock(indexPath.row);
-                }
-            }];
-        };
-    }
+    
     [cell configWithTitle:self.items[indexPath.row] indexPath:indexPath];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self dismiss:^{
+        if(self.itemBlock){
+            self.itemBlock(indexPath.row);
+        }
+    }];
 }
 
 #pragma mark - Getter
@@ -331,12 +372,14 @@
 
 - (UIButton *)cancelButton{
     if(!_cancelButton){
-        UIButton * v = [UIButton buttonWithType:UIButtonTypeSystem];
+        UIButton * v = [UIButton buttonWithType:UIButtonTypeCustom];
         [v setTitle:(self.cancelTitle?self.cancelTitle:@"取消") forState:UIControlStateNormal];
         v.backgroundColor = [UIColor whiteColor];
         v.titleLabel.font = [UIFont boldSystemFontOfSize:18];
         v.tintColor = [DDModalThemeConfig sharedConfig].tintColor;
+        [v setTitleColor:[DDModalThemeConfig sharedConfig].tintColor forState:UIControlStateNormal];
         [v addTarget:self action:@selector(clickCancelButton:) forControlEvents:UIControlEventTouchUpInside];
+        v.highlightColor = DDModal_COLOR_Hex(0xE6E6E6);
         _cancelButton = v;
     }
     return _cancelButton;
@@ -345,10 +388,8 @@
 - (UILabel *)titleLabel{
     if(!_titleLabel){
         UILabel * v = [[UILabel alloc] init];
-        v.text = self.alertTitle;
-        v.textColor = [UIColor whiteColor];
-        v.textAlignment = NSTextAlignmentCenter;
-        v.font = [UIFont boldSystemFontOfSize:17];
+        v.numberOfLines = 0;
+        v.attributedText = self.alertTitleAttr;
         _titleLabel = v;
     }
     return _titleLabel;
@@ -359,7 +400,7 @@
         UILabel * v = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 0.0)];
         v.numberOfLines = 0;
         v.attributedText = self.alertMessageAttr;
-//        v.backgroundColor = DD_COLOR_Random();
+        //v.backgroundColor = DDModal_COLOR_Hex(0xf7c32f);
         _messageLabel = v;
     }
     return _messageLabel;

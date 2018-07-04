@@ -134,14 +134,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="Dx5-VF-1jS" kind="relationship" relationship="viewControllers" id="DuJ-qz-4sp"/>
-                        <segue destination="cIJ-c7-PeW" kind="relationship" relationship="viewControllers" id="n5q-6W-0lV"/>
+                        <segue destination="9ZA-Zp-HSG" kind="relationship" relationship="viewControllers" id="n5q-6W-0lV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eeD-NA-5eH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-793" y="484"/>
         </scene>
-        <!--Item-->
+        <!--View Controller2-->
         <scene sceneID="W9J-h0-rfr">
             <objects>
                 <viewController id="cIJ-c7-PeW" customClass="ViewController2" sceneMemberID="viewController">
@@ -154,7 +154,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tb1-2M-RjL" customClass="TestCircleView">
-                                <rect key="frame" x="16" y="20" width="115" height="107"/>
+                                <rect key="frame" x="16" y="64" width="115" height="107"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.00%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8o-cs-bK4">
                                         <rect key="frame" x="27.5" y="24" width="60" height="60"/>
@@ -189,15 +189,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Udd-Rz-Sbj">
-                                <rect key="frame" x="16" y="142" width="243" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="valueChanged:" destination="cIJ-c7-PeW" eventType="valueChanged" id="o1j-xu-5cK"/>
-                                </connections>
-                            </slider>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgE-zj-7XZ" customClass="TestCircleView">
-                                <rect key="frame" x="139" y="20" width="118" height="107"/>
+                                <rect key="frame" x="139" y="64" width="118" height="107"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.00%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xW-co-Ogj">
                                         <rect key="frame" x="29.5" y="23.5" width="60" height="60"/>
@@ -232,8 +225,38 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pX2-M0-0eH">
+                                <rect key="frame" x="140" y="542" width="94" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.80464028245297237" blue="0.37026348716341373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Push"/>
+                                <connections>
+                                    <action selector="clickPushButton:" destination="cIJ-c7-PeW" eventType="touchUpInside" id="8yv-5s-fkh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPd-5W-CDq">
+                                <rect key="frame" x="246" y="542" width="113" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.72799992619999998" blue="0.79849239090000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="WebTable"/>
+                                <connections>
+                                    <action selector="clickWebTableButton:" destination="cIJ-c7-PeW" eventType="touchUpInside" id="A9N-sO-mnE"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Udd-Rz-Sbj">
+                                <rect key="frame" x="14" y="172" width="243" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="valueChanged:" destination="cIJ-c7-PeW" eventType="valueChanged" id="o1j-xu-5cK"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AeZ-hF-Eaw" customClass="DDCircleRecordView">
+                                <rect key="frame" x="31" y="480" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.92993037564766845" green="0.92993037564766845" blue="0.92993037564766845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Tb1-2M-RjL" firstAttribute="top" secondItem="78g-Xw-NZd" secondAttribute="bottom" id="Eh6-GY-yap"/>
                             <constraint firstItem="Tb1-2M-RjL" firstAttribute="leading" secondItem="KAY-S5-ImO" secondAttribute="leadingMargin" id="c60-Ql-MOW"/>
@@ -241,17 +264,18 @@
                             <constraint firstItem="tgE-zj-7XZ" firstAttribute="top" secondItem="78g-Xw-NZd" secondAttribute="bottom" id="xsr-f0-gzn"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="eru-Bh-Xr4"/>
+                    <navigationItem key="navigationItem" id="L6r-Ux-Bvu"/>
                     <connections>
                         <outlet property="circleView" destination="Tb1-2M-RjL" id="jLH-MT-Bdw"/>
                         <outlet property="circleView2" destination="tgE-zj-7XZ" id="dbI-X7-WPg"/>
                         <outlet property="progressLabel" destination="n8o-cs-bK4" id="61m-ik-RfW"/>
                         <outlet property="progressLabel2" destination="6xW-co-Ogj" id="bWV-dE-xAf"/>
+                        <outlet property="recordView" destination="AeZ-hF-Eaw" id="Rog-wm-wKc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cc6-TG-i50" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="766" y="797"/>
+            <point key="canvasLocation" x="1429.5999999999999" y="795.6521739130435"/>
         </scene>
         <!--Item-->
         <scene sceneID="MeE-pp-GWW">
@@ -271,6 +295,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LKO-pL-rqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-8" y="126.83658170914543"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Fg9-ah-1zx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9ZA-Zp-HSG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="eru-Bh-Xr4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TLE-ny-xHw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cIJ-c7-PeW" kind="relationship" relationship="rootViewController" id="xhX-Oy-fcW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="88p-0e-T5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764.79999999999995" y="796.10194902548733"/>
         </scene>
     </scenes>
 </document>

@@ -17,6 +17,9 @@
 #define DDModal_COLOR_HexA(hex,a) DDModal_COLOR_RGBA(((hex & 0xFF0000) >> 16),((hex &0xFF00) >>8),(hex &0xFF),a)
 #define DDModal_COLOR_Hex(hex) DDModal_COLOR_HexA(hex,1.0)
 
+#define DDModal_COLOR_RandomA(a) DDModal_COLOR_RGBA(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(256),a)
+#define DDModal_COLOR_Random() DDModal_COLOR_RandomA(1.0)
+
 #define DDModal_StringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
 #define DDModal_ArrayIsEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
 

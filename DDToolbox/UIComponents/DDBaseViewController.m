@@ -7,6 +7,7 @@
 //
 
 #import "DDBaseViewController.h"
+#import "DDMacro.h"
 
 @interface DDBaseViewController ()<UIGestureRecognizerDelegate>
 
@@ -16,6 +17,28 @@
 
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    DDPLog(@"--- dealloc %@ ---",self.class);
+}
+
+- (id)init{
+    if(self = [super init]){
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder{
+    if(self = [super initWithCoder:aDecoder]){
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    if(self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]){
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
 }
 
 - (void)viewDidLoad {
@@ -56,13 +79,16 @@
 }
 
 - (void)setupNavigation{
-    UIButton * leftButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+    UIButton * leftButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    leftButton.frame = CGRectMake(0, 0, 50, 44);
+    [leftButton setImage:[UIImage imageNamed:@"ddtoolbox-left.png"] forState:UIControlStateNormal];
     [leftButton addTarget:self action:@selector(clickNavLeftButton) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem * leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
     self.navigationItem.leftBarButtonItem = leftItem;
     _navLeftButton = leftButton;
     
-    UIButton * rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+    UIButton * rightButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    rightButton.frame = CGRectMake(0, 0, 50, 44);
     [rightButton addTarget:self action:@selector(clickNavRightButton) forControlEvents:UIControlEventTouchUpInside];
     rightButton.hidden = YES;
     UIBarButtonItem * rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];

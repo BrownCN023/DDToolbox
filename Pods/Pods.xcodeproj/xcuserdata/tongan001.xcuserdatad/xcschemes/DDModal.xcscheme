@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "687DF3DD807EA8673FFFD622C7C72BA1"
+               BlueprintIdentifier = "0708CF9C00F93A1A13A754A3DA5A13D7"
                BlueprintName = "DDModal"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libDDModal.a">
