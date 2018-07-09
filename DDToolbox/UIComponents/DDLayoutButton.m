@@ -10,53 +10,91 @@
 
 @implementation DDLayoutButton
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder{
-    if(self = [super initWithCoder:aDecoder]){
-        [self setupData];
+- (void)setLayoutType:(DDLayoutButtonType)layoutType{
+    _layoutType = layoutType;
+    
+    if (layoutType != DDLayoutButtonTypeNormal) {
+        self.titleLabel.textAlignment = NSTextAlignmentCenter;
     }
-    return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame{
-    if(self = [super initWithFrame:frame]){
-        [self setupData];
+- (CGRect)titleRectForContentRect:(CGRect)contentRect{
+    if(_layoutType == DDLayoutButtonTypeTitleLeft){
+        CGFloat x = self.layoutInsets.left;
+        CGFloat y = self.layoutInsets.top;
+        CGFloat width = contentRect.size.width - self.layoutInterval - self.layoutImageSize.width-self.layoutInsets.left-self.layoutInsets.right;
+        CGFloat height = contentRect.size.height-self.layoutInsets.top-self.layoutInsets.bottom;
+        
+        return CGRectMake(x, y, width, height);
+        
+    }else if(_layoutType == DDLayoutButtonTypeTitleRight){
+        CGFloat x = self.layoutInsets.left + self.layoutImageSize.width + self.layoutInterval;
+        CGFloat y = self.layoutInsets.top;
+        CGFloat width = contentRect.size.width - x - self.layoutInsets.right;
+        CGFloat height = contentRect.size.height-self.layoutInsets.top-self.layoutInsets.bottom;
+        
+        return CGRectMake(x, y, width, height);
+    }else if(_layoutType == DDLayoutButtonTypeTitleBottom){
+        
+        CGFloat x = self.layoutInsets.left;
+        CGFloat y = self.layoutInterval + self.layoutImageSize.height +self.layoutInsets.top;
+        CGFloat width = contentRect.size.width -self.layoutInsets.left-self.layoutInsets.right;
+        CGFloat height = contentRect.size.height - self.layoutInterval - self.layoutImageSize.height-self.layoutInsets.top-self.layoutInsets.bottom;
+        
+        return CGRectMake(x, y, width, height);
+    }else if(_layoutType == DDLayoutButtonTypeTitleTop){
+        
+        CGFloat x = self.layoutInsets.left;
+        CGFloat y = self.layoutInsets.top;
+        CGFloat width = contentRect.size.width -self.layoutInsets.left-self.layoutInsets.right;
+        CGFloat height = contentRect.size.height - self.layoutInterval - self.layoutImageSize.height-self.layoutInsets.top-self.layoutInsets.bottom;
+        
+        return CGRectMake(x, y, width, height);
     }
-    return self;
-}
-
-- (void)setupData{
-    self.titleImageInterval = 5;
-    self.contentEdgeInsets = UIEdgeInsetsMake(CGFLOAT_MIN, 0, CGFLOAT_MIN, 0);
-    self.adjustsImageWhenHighlighted = NO;
-    self.adjustsImageWhenDisabled = NO;
-}
-
-- (void)drawRect:(CGRect)rect{
-    [super drawRect:rect];
-    [self reLayoutSubviews];
-}
-
-- (void)reLayoutSubviews{
-    CGSize imgViewSize,titleSize,btnSize;
-    UIEdgeInsets imageViewEdge,titleEdge;
-    
-    imgViewSize = self.imageView.bounds.size;
-    titleSize = self.titleLabel.bounds.size;
-    btnSize = self.bounds.size;
-    
-    if(imgViewSize.width == 0.0f || imgViewSize.height == 0.0f || titleSize.width == 0.0f || titleSize.height == 0.0f){
-        return;
+    else{
+        
+        return [super titleRectForContentRect:contentRect];
     }
-    
-    CGFloat titleImageInterval = self.titleImageInterval;
-    CGFloat heightInterval = fabs(imgViewSize.height-titleSize.height);
+}
 
-    imageViewEdge = UIEdgeInsetsMake(-titleImageInterval-imgViewSize.height+heightInterval, 0.5*titleSize.width, 0, -0.5*titleSize.width);
-    [self setImageEdgeInsets:imageViewEdge];
+- (CGRect)imageRectForContentRect:(CGRect)contentRect{
     
-    titleEdge = UIEdgeInsetsMake(titleImageInterval+titleSize.height+heightInterval, -0.5*imgViewSize.width-10, 0, 0.5*imgViewSize.width-10);
-    [self setTitleEdgeInsets:titleEdge];
-    
+    if(_layoutType == DDLayoutButtonTypeTitleLeft){
+        
+        CGFloat x = contentRect.size.width - self.layoutImageSize.width-self.layoutInsets.right;
+        CGFloat y =  (contentRect.size.height -  self.layoutImageSize.height)/2.0;
+        CGFloat width = self.layoutImageSize.width;
+        CGFloat height = self.layoutImageSize.height;
+        
+        return CGRectMake(x, y, width, height);
+    }else if(_layoutType == DDLayoutButtonTypeTitleRight){
+        
+        CGFloat x = self.layoutInsets.left;
+        CGFloat y = (contentRect.size.height -  self.layoutImageSize.height)/2.0;
+        CGFloat width = self.layoutImageSize.width;
+        CGFloat height = self.layoutImageSize.height;
+        
+        return CGRectMake(x, y, width, height);
+    }else if(_layoutType == DDLayoutButtonTypeTitleBottom){
+        
+        CGFloat x = (contentRect.size.width-self.layoutImageSize.width)/2.0;
+        CGFloat y = self.layoutInsets.top;
+        CGFloat width = self.layoutImageSize.width;
+        CGFloat height = self.layoutImageSize.height;
+        
+        return CGRectMake(x, y, width, height);
+    }else if(_layoutType == DDLayoutButtonTypeTitleTop){
+        
+        CGFloat x = (contentRect.size.width-self.layoutImageSize.width)/2.0;
+        CGFloat y = contentRect.size.height - self.layoutInsets.bottom-self.layoutImageSize.height;
+        CGFloat width = self.layoutImageSize.width;
+        CGFloat height = self.layoutImageSize.height;
+        
+        return CGRectMake(x, y, width, height);
+    }else{
+        
+        return [super imageRectForContentRect:contentRect];
+    }
 }
 
 @end

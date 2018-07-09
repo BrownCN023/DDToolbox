@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B20AC67920EF25F400ABCEF9 /* DDGridSimpleLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = B20AC67820EF25F400ABCEF9 /* DDGridSimpleLayoutView.m */; };
+		B20AC67C20EF265400ABCEF9 /* DDADBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B20AC67A20EF265300ABCEF9 /* DDADBannerView.m */; };
 		B20C277C20E6053B00E0A433 /* UIButton+DDHighlightColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B20C277A20E6053B00E0A433 /* UIButton+DDHighlightColor.m */; };
 		B211462320BBFF5C0006B6D6 /* TestTableAlertViewCtl.m in Sources */ = {isa = PBXBuildFile; fileRef = B211462220BBFF5C0006B6D6 /* TestTableAlertViewCtl.m */; };
 		B211462720BBFF810006B6D6 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B211462520BBFF810006B6D6 /* TestTableViewCell.m */; };
@@ -104,6 +106,10 @@
 		520B3C740C73C76D45545176 /* libPods-DDTooboxDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DDTooboxDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B70CE3ED59AD2CF0CABAE01 /* Pods-DDTooboxDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDTooboxDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DDTooboxDemo/Pods-DDTooboxDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A14DA01C9EE9EFF0B8B43348 /* Pods-DDTooboxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDTooboxDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DDTooboxDemo/Pods-DDTooboxDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B20AC67720EF25F300ABCEF9 /* DDGridSimpleLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGridSimpleLayoutView.h; sourceTree = "<group>"; };
+		B20AC67820EF25F400ABCEF9 /* DDGridSimpleLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGridSimpleLayoutView.m; sourceTree = "<group>"; };
+		B20AC67A20EF265300ABCEF9 /* DDADBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDADBannerView.m; sourceTree = "<group>"; };
+		B20AC67B20EF265300ABCEF9 /* DDADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDADBannerView.h; sourceTree = "<group>"; };
 		B20C277A20E6053B00E0A433 /* UIButton+DDHighlightColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DDHighlightColor.m"; sourceTree = "<group>"; };
 		B20C277B20E6053B00E0A433 /* UIButton+DDHighlightColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DDHighlightColor.h"; sourceTree = "<group>"; };
 		B211462120BBFF5C0006B6D6 /* TestTableAlertViewCtl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableAlertViewCtl.h; sourceTree = "<group>"; };
@@ -391,8 +397,8 @@
 		B2AA54CB20B3F08E000C0C0A /* DDToolbox */ = {
 			isa = PBXGroup;
 			children = (
-				B212BE4020EC740900B0B506 /* MVP */,
 				B2AE6C7C20BFDD030001E34A /* DDToolbox.h */,
+				B212BE4020EC740900B0B506 /* MVP */,
 				B249EDA220E487DF00B563D8 /* Resources */,
 				B2AE6C3920BFDD030001E34A /* Common */,
 				B2AE6C9620BFDD030001E34A /* Macro */,
@@ -535,6 +541,10 @@
 				C00FA61620ED1A3D00E2474E /* DDAutoLoopCollectionView.m */,
 				B2AE6C9420BFDD030001E34A /* DDLoopTableView.h */,
 				B2AE6C9520BFDD030001E34A /* DDLoopTableView.m */,
+				B20AC67720EF25F300ABCEF9 /* DDGridSimpleLayoutView.h */,
+				B20AC67820EF25F400ABCEF9 /* DDGridSimpleLayoutView.m */,
+				B20AC67B20EF265300ABCEF9 /* DDADBannerView.h */,
+				B20AC67A20EF265300ABCEF9 /* DDADBannerView.m */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -725,6 +735,7 @@
 				C00FA61720ED1A3D00E2474E /* DDAutoLoopCollectionView.m in Sources */,
 				B2AE6CC220BFDD030001E34A /* DDLoopCollectionView.m in Sources */,
 				B2AE6CAD20BFDD030001E34A /* DDPageModel.m in Sources */,
+				B20AC67920EF25F400ABCEF9 /* DDGridSimpleLayoutView.m in Sources */,
 				B20C277C20E6053B00E0A433 /* UIButton+DDHighlightColor.m in Sources */,
 				B212BE8B20EC7D9800B0B506 /* DDViewModel.m in Sources */,
 				B2AA54B720B3F07B000C0C0A /* AppDelegate.m in Sources */,
@@ -735,6 +746,7 @@
 				B2AE6CAE20BFDD030001E34A /* DDResultModel.m in Sources */,
 				B24F598420EA1858003BFDDC /* DDTouchButton.m in Sources */,
 				B212BE8920EC7D9800B0B506 /* DDCollectionSectionViewModel.m in Sources */,
+				B20AC67C20EF265400ABCEF9 /* DDADBannerView.m in Sources */,
 				B261B0B520E2238B00FF6416 /* ViewController3.m in Sources */,
 				B2AE6CA020BFDD030001E34A /* DDXib.m in Sources */,
 				B211462720BBFF810006B6D6 /* TestTableViewCell.m in Sources */,

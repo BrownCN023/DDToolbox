@@ -33,7 +33,7 @@
 
 - (CGFloat)intervalTime{
     if(self.rollingInterval <= 0.0f){
-        return 7.0f;
+        return 6.0f;
     }
     return self.rollingInterval;
 }
@@ -65,7 +65,13 @@
 
 - (void)autoScroll{
         self.rowIndex ++;
-    [self scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.rowIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+    UICollectionViewFlowLayout * layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
+    
+    if(layout.scrollDirection == UICollectionViewScrollDirectionHorizontal){
+        [self scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.rowIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+    }else{
+        [self scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.rowIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
+    }
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView itemIndex:(NSInteger)itemIndex rowIndex:(NSInteger)rowIndex{

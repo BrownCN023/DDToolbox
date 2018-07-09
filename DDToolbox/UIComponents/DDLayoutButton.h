@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-IB_DESIGNABLE
+typedef NS_ENUM(NSInteger,DDLayoutButtonType) {
+    DDLayoutButtonTypeNormal = 0,
+    DDLayoutButtonTypeTitleLeft,
+    DDLayoutButtonTypeTitleRight,
+    DDLayoutButtonTypeTitleTop,
+    DDLayoutButtonTypeTitleBottom
+};
+
 @interface DDLayoutButton : UIButton
 
-@property (nonatomic,assign) IBInspectable CGFloat titleImageInterval;
-
+@property (nonatomic,assign) DDLayoutButtonType layoutType;
+@property (nonatomic,assign) CGFloat layoutInterval;
+@property (nonatomic,assign) CGSize layoutImageSize;
+@property (nonatomic,assign) UIEdgeInsets layoutInsets;
 
 @end

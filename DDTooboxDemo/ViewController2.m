@@ -94,7 +94,7 @@
 
 - (UICollectionViewLayout *)collectionViewLayout{
     UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     layout.minimumLineSpacing = 0;
     layout.minimumInteritemSpacing = 0;
     layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
