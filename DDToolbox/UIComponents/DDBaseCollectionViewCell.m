@@ -34,6 +34,10 @@
     return self;
 }
 
+- (void)awakeFromNib{
+    [super awakeFromNib];
+}
+
 - (void)setupData{
     
 }

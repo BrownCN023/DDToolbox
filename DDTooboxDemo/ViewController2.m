@@ -16,6 +16,7 @@
 #import "ViewController3.h"
 #import "TestWebTableViewController.h"
 #import "DDCircleRecordView.h"
+#import "DDVideoRecordViewController.h"
 
 @interface ViewController2 ()<UICollectionViewDelegate,UICollectionViewDataSource,DDLoopCollectionViewDelegate,DDCircleProgressDelegate>
 
@@ -27,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet TestCircleView *circleView2;
 @property (weak, nonatomic) IBOutlet DDCircleProgressView *circle3;
 @property (weak, nonatomic) IBOutlet DDCircleRecordView *recordView;
+@property (weak, nonatomic) IBOutlet UIImageView *videoImgView;
 
 @end
 
@@ -52,8 +54,22 @@
 }
 
 - (IBAction)clickPushButton:(id)sender {
-    ViewController3 * vctl = [ViewController3 instanceFromXib];
-    [self.navigationController pushViewController:vctl animated:YES];
+
+    DDWeakSelf(self);
+    DDVideoRecordViewController * vctl = [[DDVideoRecordViewController alloc] init];
+    vctl.onRecordCompletionBlock = ^(NSString *videoPath) {
+        NSLog(@"视频压缩处理");
+        NSString * outputUrl = [videoPath stringByReplacingOccurrencesOfString:@".mov" withString:@".mp4"];
+        [DDVideoRecordViewController convertVideoQuailtyWithInputURL:[NSURL fileURLWithPath:videoPath] outputURL:[NSURL fileURLWithPath:outputUrl] completeHandler:^{
+            
+            float duration = 0;
+            UIImage * previewImage = [DDVideoRecordViewController getVideoFirstFramePreViewImage:outputUrl duration:&duration];
+            weakself.videoImgView.image = previewImage;
+            
+            NSLog(@"视频压缩处理完成  -  视频时长:%@",@(duration));
+        }];
+    };
+    [self presentViewController:vctl animated:YES completion:nil];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

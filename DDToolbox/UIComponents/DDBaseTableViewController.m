@@ -34,6 +34,13 @@
 #pragma mark - Setup
 - (void)setupSubviews{
     [super setupSubviews];
+    if(@available(iOS 8.0, *)){
+        if(@available(iOS 11.0, *)){
+            self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }else{
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+    }
     [self.view addSubview:self.tableView];
 }
 - (void)setupLayout{

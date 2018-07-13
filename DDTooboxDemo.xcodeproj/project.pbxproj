@@ -26,6 +26,14 @@
 		B212BE8A20EC7D9800B0B506 /* DDTableSectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B212BE8020EC7D9700B0B506 /* DDTableSectionViewModel.m */; };
 		B212BE8B20EC7D9800B0B506 /* DDViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B212BE8120EC7D9700B0B506 /* DDViewModel.m */; };
 		B24616FC20EB22E0000A09AF /* DDWebTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B24616FB20EB22E0000A09AF /* DDWebTableViewController.m */; };
+		B249151120F449E900A431D2 /* DDVideoRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B249151020F449E900A431D2 /* DDVideoRecordViewController.m */; };
+		B249151420F44C8A00A431D2 /* DDRecordVideoPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = B249151320F44C8A00A431D2 /* DDRecordVideoPreviewView.m */; };
+		B249151820F44FEE00A431D2 /* ddtoolbox-arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B249151520F44FED00A431D2 /* ddtoolbox-arrow@3x.png */; };
+		B249151920F44FEE00A431D2 /* ddtoolbox-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B249151620F44FED00A431D2 /* ddtoolbox-arrow.png */; };
+		B249151A20F44FEE00A431D2 /* ddtoolbox-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B249151720F44FEE00A431D2 /* ddtoolbox-arrow@2x.png */; };
+		B249151E20F4504200A431D2 /* ddtoolbox-camera@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B249151B20F4504200A431D2 /* ddtoolbox-camera@3x.png */; };
+		B249151F20F4504200A431D2 /* ddtoolbox-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = B249151C20F4504200A431D2 /* ddtoolbox-camera.png */; };
+		B249152020F4504200A431D2 /* ddtoolbox-camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B249151D20F4504200A431D2 /* ddtoolbox-camera@2x.png */; };
 		B249EDB120E48D0900B563D8 /* ddtoolbox-right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B249EDAF20E48D0900B563D8 /* ddtoolbox-right@3x.png */; };
 		B249EDB220E48D0900B563D8 /* ddtoolbox-right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B249EDB020E48D0900B563D8 /* ddtoolbox-right@2x.png */; };
 		B249EDD420E4965F00B563D8 /* ddtoolbox-del@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B249EDD320E4965F00B563D8 /* ddtoolbox-del@2x.png */; };
@@ -143,6 +151,16 @@
 		B212BE8320EC7D9800B0B506 /* DDTableControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTableControllerViewModel.h; sourceTree = "<group>"; };
 		B24616FA20EB22E0000A09AF /* DDWebTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDWebTableViewController.h; sourceTree = "<group>"; };
 		B24616FB20EB22E0000A09AF /* DDWebTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDWebTableViewController.m; sourceTree = "<group>"; };
+		B249150F20F449E900A431D2 /* DDVideoRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDVideoRecordViewController.h; sourceTree = "<group>"; };
+		B249151020F449E900A431D2 /* DDVideoRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDVideoRecordViewController.m; sourceTree = "<group>"; };
+		B249151220F44C8A00A431D2 /* DDRecordVideoPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRecordVideoPreviewView.h; sourceTree = "<group>"; };
+		B249151320F44C8A00A431D2 /* DDRecordVideoPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRecordVideoPreviewView.m; sourceTree = "<group>"; };
+		B249151520F44FED00A431D2 /* ddtoolbox-arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ddtoolbox-arrow@3x.png"; sourceTree = "<group>"; };
+		B249151620F44FED00A431D2 /* ddtoolbox-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ddtoolbox-arrow.png"; sourceTree = "<group>"; };
+		B249151720F44FEE00A431D2 /* ddtoolbox-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ddtoolbox-arrow@2x.png"; sourceTree = "<group>"; };
+		B249151B20F4504200A431D2 /* ddtoolbox-camera@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ddtoolbox-camera@3x.png"; sourceTree = "<group>"; };
+		B249151C20F4504200A431D2 /* ddtoolbox-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ddtoolbox-camera.png"; sourceTree = "<group>"; };
+		B249151D20F4504200A431D2 /* ddtoolbox-camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ddtoolbox-camera@2x.png"; sourceTree = "<group>"; };
 		B249EDAF20E48D0900B563D8 /* ddtoolbox-right@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ddtoolbox-right@3x.png"; sourceTree = "<group>"; };
 		B249EDB020E48D0900B563D8 /* ddtoolbox-right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ddtoolbox-right@2x.png"; sourceTree = "<group>"; };
 		B249EDD320E4965F00B563D8 /* ddtoolbox-del@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ddtoolbox-del@2x.png"; sourceTree = "<group>"; };
@@ -321,6 +339,12 @@
 		B249EDA220E487DF00B563D8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B249151C20F4504200A431D2 /* ddtoolbox-camera.png */,
+				B249151D20F4504200A431D2 /* ddtoolbox-camera@2x.png */,
+				B249151B20F4504200A431D2 /* ddtoolbox-camera@3x.png */,
+				B249151620F44FED00A431D2 /* ddtoolbox-arrow.png */,
+				B249151720F44FEE00A431D2 /* ddtoolbox-arrow@2x.png */,
+				B249151520F44FED00A431D2 /* ddtoolbox-arrow@3x.png */,
 				B249EDE920E49B7100B563D8 /* ddtoolbox-shared@3x.png */,
 				B249EDE720E49B2E00B563D8 /* ddtoolbox-shared@2x.png */,
 				B249EDE020E499B100B563D8 /* ddtoolbox-down@2x.png */,
@@ -545,6 +569,10 @@
 				B20AC67820EF25F400ABCEF9 /* DDGridSimpleLayoutView.m */,
 				B20AC67B20EF265300ABCEF9 /* DDADBannerView.h */,
 				B20AC67A20EF265300ABCEF9 /* DDADBannerView.m */,
+				B249151220F44C8A00A431D2 /* DDRecordVideoPreviewView.h */,
+				B249151320F44C8A00A431D2 /* DDRecordVideoPreviewView.m */,
+				B249150F20F449E900A431D2 /* DDVideoRecordViewController.h */,
+				B249151020F449E900A431D2 /* DDVideoRecordViewController.m */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -630,14 +658,20 @@
 				B249EDB120E48D0900B563D8 /* ddtoolbox-right@3x.png in Resources */,
 				B2AA54BD20B3F07B000C0C0A /* Main.storyboard in Resources */,
 				B249EDF020E49CD100B563D8 /* ddtoolbox-more@2x.png in Resources */,
+				B249151F20F4504200A431D2 /* ddtoolbox-camera.png in Resources */,
 				B249EDEA20E49B7100B563D8 /* ddtoolbox-shared@3x.png in Resources */,
 				B211462820BBFF810006B6D6 /* TestTableViewCell.xib in Resources */,
+				B249151A20F44FEE00A431D2 /* ddtoolbox-arrow@2x.png in Resources */,
 				B249EDB220E48D0900B563D8 /* ddtoolbox-right@2x.png in Resources */,
+				B249151820F44FEE00A431D2 /* ddtoolbox-arrow@3x.png in Resources */,
 				B249EDDA20E4987200B563D8 /* ddtoolbox-del@3x.png in Resources */,
+				B249152020F4504200A431D2 /* ddtoolbox-camera@2x.png in Resources */,
 				B2B5C80420D9FE3C00E314D5 /* CollectionViewCell2.xib in Resources */,
 				B249EDF220E4B19D00B563D8 /* ddtoolbox-more@3x.png in Resources */,
 				B249EDE520E499B100B563D8 /* ddtoolbox-up@2x.png in Resources */,
 				B249EDD820E497F800B563D8 /* ddtoolbox-left@3x.png in Resources */,
+				B249151920F44FEE00A431D2 /* ddtoolbox-arrow.png in Resources */,
+				B249151E20F4504200A431D2 /* ddtoolbox-camera@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,6 +762,7 @@
 				B2AE6CA320BFDD030001E34A /* NSMutableString+DDNode.m in Sources */,
 				B2AE6C9B20BFDD030001E34A /* DDPageItemFlowLayout.m in Sources */,
 				B2AE6CA120BFDD030001E34A /* NSDate+DDHelper.m in Sources */,
+				B249151120F449E900A431D2 /* DDVideoRecordViewController.m in Sources */,
 				B212BE4A20EC740900B0B506 /* DDControllerPresenter.m in Sources */,
 				B212BE8720EC7D9800B0B506 /* DDCollectionItemViewModel.m in Sources */,
 				B2AE6CC020BFDD030001E34A /* DDCornerButton.m in Sources */,
@@ -749,6 +784,7 @@
 				B20AC67C20EF265400ABCEF9 /* DDADBannerView.m in Sources */,
 				B261B0B520E2238B00FF6416 /* ViewController3.m in Sources */,
 				B2AE6CA020BFDD030001E34A /* DDXib.m in Sources */,
+				B249151420F44C8A00A431D2 /* DDRecordVideoPreviewView.m in Sources */,
 				B211462720BBFF810006B6D6 /* TestTableViewCell.m in Sources */,
 				B2B5C82420DB891E00E314D5 /* DDWeakDelegateObject.m in Sources */,
 				B212BE8820EC7D9800B0B506 /* DDControllerViewModel.m in Sources */,

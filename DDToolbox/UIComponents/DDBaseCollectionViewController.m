@@ -48,6 +48,13 @@
 }
 - (void)setupSubviews{
     [super setupSubviews];
+    if(@available(iOS 8.0, *)){
+        if(@available(iOS 11.0, *)){
+            self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }else{
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+    }
     [self.view addSubview:self.collectionView];
 }
 - (void)setupLayout{

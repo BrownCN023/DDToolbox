@@ -24,19 +24,13 @@
     return self;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder{
-    if(self = [super initWithCoder:aDecoder]){
-        [self setupData];
-        [self setupNoti];
-        [self setupSubviews];
-        [self setupLayout];
-    }
-    return self;
-}
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    [self setupData];
+    [self setupNoti];
+    [self setupSubviews];
+    [self setupLayout];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
