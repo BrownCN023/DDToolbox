@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "DDToolbox"
-s.version      = "0.0.9"
+s.version      = "0.0.10"
 s.summary      = "辅助开发工具类"
 s.homepage     = "https://github.com/BrownCN023/DDToolbox"
 s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -23,12 +23,6 @@ s.resource     = "DDToolbox/Resources/*"
 #s.source_files =  "DDToolbox/*.h","DDToolbox/**/*.{h,m}"
 
 #二级目录
-s.subspec "MVP" do |mvp|
-mvp.source_files = "DDToolbox/MVP/*.{h,m}"
-end
-s.subspec "Common" do |common|
-common.source_files = "DDToolbox/Common/*.{h,m}"
-end
 s.subspec "Macro" do |macro|
 macro.source_files = "DDToolbox/Macro/*.{h,m}"
 end
@@ -38,11 +32,18 @@ end
 s.subspec "ViewModel" do |viewmodel|
 viewmodel.source_files = "DDToolbox/ViewModel/*.{h,m}"
 end
-s.subspec "UIComponents" do |components|
-components.dependency 'DDToolbox/Macro'
-components.dependency 'DDToolbox/Common'
-components.dependency 'DDToolbox/ViewModel'
-components.source_files = "DDToolbox/UIComponents/*.{h,m}"
+s.subspec "MVP" do |mvp|
+mvp.source_files = "DDToolbox/MVP/*.{h,m}"
+end
+s.subspec "Common" do |common|
+common.dependency 'DDToolbox/Macro'
+common.source_files = "DDToolbox/Common/*.{h,m}"
+end
+s.subspec "UIComponents" do |uicomponents|
+uicomponents.dependency 'DDToolbox/Macro'
+uicomponents.dependency 'DDToolbox/Common'
+uicomponents.dependency 'DDToolbox/ViewModel'
+uicomponents.source_files = "DDToolbox/UIComponents/*.{h,m}"
 end
 #二级目录
 
