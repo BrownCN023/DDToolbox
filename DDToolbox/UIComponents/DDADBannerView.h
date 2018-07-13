@@ -10,6 +10,7 @@
 #import "DDBaseView.h"
 #import "DDAutoLoopCollectionView.h"
 #import "DDBaseCollectionViewCell.h"
+#import "DDXib.h"
 
 @interface DDADBannerCell : DDBaseCollectionViewCell
 
