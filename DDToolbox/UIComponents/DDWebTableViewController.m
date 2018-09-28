@@ -89,7 +89,7 @@
 - (void)setupNavigation{
     [super setupNavigation];
     self.navRightButton.hidden = NO;
-    [self.navRightButton setImage:[UIImage imageNamed:@"ddtoolbox-shared.png"] forState:UIControlStateNormal];
+    [self.navRightButton setImage:[UIImage imageNamed:@"DDToolbox.bundle/ddtoolbox-shared.png"] forState:UIControlStateNormal];
 }
 
 - (void)setupSubviews{

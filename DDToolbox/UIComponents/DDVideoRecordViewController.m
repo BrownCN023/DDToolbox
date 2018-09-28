@@ -227,7 +227,7 @@ typedef NS_ENUM(NSInteger,DDVideoRecordState) {
     if(!_closeButton){
         UIButton * v = [UIButton buttonWithType:UIButtonTypeCustom];
         v.frame = CGRectMake(0, 0, 100, 40);
-        [v setImage:[UIImage imageNamed:@"ddtoolbox-arrow.png"] forState:UIControlStateNormal];
+        [v setImage:[UIImage imageNamed:@"DDToolbox.bundle/ddtoolbox-arrow.png"] forState:UIControlStateNormal];
 //        v.backgroundColor = DD_COLOR_Random();
         [v addTarget:self action:@selector(clickCloseButton) forControlEvents:UIControlEventTouchUpInside];
         _closeButton = v;
@@ -239,7 +239,7 @@ typedef NS_ENUM(NSInteger,DDVideoRecordState) {
     if(!_switchCameraButton){
         UIButton * v = [UIButton buttonWithType:UIButtonTypeCustom];
         v.frame = CGRectMake(0, 0, 100, 40);
-        [v setImage:[UIImage imageNamed:@"ddtoolbox-camera.png"] forState:UIControlStateNormal];
+        [v setImage:[UIImage imageNamed:@"DDToolbox.bundle/ddtoolbox-camera.png"] forState:UIControlStateNormal];
 //        v.backgroundColor = DD_COLOR_Random();
         [v addTarget:self action:@selector(clickSwitchButton) forControlEvents:UIControlEventTouchUpInside];
         _switchCameraButton = v;

@@ -81,7 +81,7 @@
 - (void)setupNavigation{
     UIButton * leftButton = [UIButton buttonWithType:UIButtonTypeSystem];
     leftButton.frame = CGRectMake(0, 0, 50, 44);
-    [leftButton setImage:[UIImage imageNamed:@"ddtoolbox-left.png"] forState:UIControlStateNormal];
+    [leftButton setImage:[UIImage imageNamed:@"DDToolbox.bundle/ddtoolbox-left.png"] forState:UIControlStateNormal];
     [leftButton addTarget:self action:@selector(clickNavLeftButton) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem * leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
     self.navigationItem.leftBarButtonItem = leftItem;
