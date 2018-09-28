@@ -25,9 +25,9 @@
     // Do any additional setup after loading the view.
     __weak typeof(self) weakself = self;
     self.view.onLoadingBlock = ^{
-//        NSURL * htmlUrl = [[NSBundle mainBundle] URLForResource:@"hello.html" withExtension:nil];
+        NSURL * htmlUrl = [[NSBundle mainBundle] URLForResource:@"hello.html" withExtension:nil];
         
-        NSURL * htmlUrl = [NSURL URLWithString:@"http://inews.ifeng.com/58968759/news.shtml"];
+//        NSURL * htmlUrl = [NSURL URLWithString:@"http://inews.ifeng.com/58968759/news.shtml"];
         NSURLRequest * request = [NSURLRequest requestWithURL:htmlUrl];
         [weakself.webView loadRequest:request];
     };

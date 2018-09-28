@@ -13,5 +13,6 @@
 @property (nonatomic,strong,readonly) NSArray * allDelegates;
 - (void)addDelegate:(id)delegate;
 - (void)removeDelegate:(id)delegate;
+- (void)removeAllDelegates;
 
 @end

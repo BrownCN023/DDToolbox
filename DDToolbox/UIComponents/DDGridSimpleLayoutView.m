@@ -33,6 +33,13 @@
     }
 }
 
+- (void)removeAllGrideSubview{
+    [self.gridViewArray enumerateObjectsUsingBlock:^(UIView *  _Nonnull view, NSUInteger idx, BOOL * _Nonnull stop) {
+        [view removeFromSuperview];
+    }];
+    [self.gridViewArray removeAllObjects];
+}
+
 - (void)layoutSubviews{
     [super layoutSubviews];
     [self reLayoutSubviews];

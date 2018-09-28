@@ -10,9 +10,9 @@
 
 @implementation DDControllerPresenter
 
-- (instancetype)initWithView:(UIView *)view viewController:(UIViewController *)viewController
+- (instancetype)initWithViewController:(UIViewController *)viewController
 {
-    self = [super initWithView:view];
+    self = [super init];
     if (self) {
         self.viewController = viewController;
     }

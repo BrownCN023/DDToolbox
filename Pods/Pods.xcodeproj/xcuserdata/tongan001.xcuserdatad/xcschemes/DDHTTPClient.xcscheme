@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D70987D9F795E7C051A1466F4BB404B0"
+               BlueprintIdentifier = "CA636AAEFE3B9D6EDB0B4E2D98820AD3"
                BlueprintName = "DDHTTPClient"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libDDHTTPClient.a">

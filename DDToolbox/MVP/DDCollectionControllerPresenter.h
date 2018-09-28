@@ -6,13 +6,12 @@
 //  Copyright © 2018年 ABiang. All rights reserved.
 //
 
-#import "DDControllerPresenter.h"
+#import "DDCollectionViewPresenter.h"
 
-@interface DDCollectionControllerPresenter : DDControllerPresenter
+@interface DDCollectionControllerPresenter : DDCollectionViewPresenter
 
-@property (nonatomic,weak,readonly) UICollectionView * collectionView;
+@property (nonatomic,weak) UIViewController * viewController;
 
-- (instancetype)initWithView:(UICollectionView *)collectionView;
-- (instancetype)initWithView:(UICollectionView *)collectionView viewController:(UIViewController *)viewController;
+- (instancetype)initWithCollectionView:(UICollectionView *)collectionView viewController:(UIViewController *)viewController;
 
 @end

@@ -15,13 +15,13 @@
 @interface DDADBannerCell : DDBaseCollectionViewCell
 
 @property (nonatomic,strong) UILabel * titleLabel1;
-@property (nonatomic,strong) UILabel * titleLabel2;
 
 @end
 
 @interface DDADBannerView : DDBaseView<UICollectionViewDelegate,UICollectionViewDataSource>
 
-@property (nonatomic,strong) UIImageView * adImgView;
+@property (nonatomic,strong) UIButton * adImgView;
+@property (nonatomic,strong) UIView * vLineView;
 @property (nonatomic,strong) DDAutoLoopCollectionView * adItemLoopView;
 
 @end

@@ -6,12 +6,13 @@
 //  Copyright © 2018年 ABiang. All rights reserved.
 //
 
-#import "DDViewPresenter.h"
+#import "DDPresenter.h"
+#import <UIKit/UIKit.h>
 
-@interface DDControllerPresenter : DDViewPresenter
+@interface DDControllerPresenter : DDPresenter
 
 @property (nonatomic,weak) UIViewController * viewController;
 
-- (instancetype)initWithView:(UIView *)view viewController:(UIViewController *)viewController;
+- (instancetype)initWithViewController:(UIViewController *)viewController;
 
 @end

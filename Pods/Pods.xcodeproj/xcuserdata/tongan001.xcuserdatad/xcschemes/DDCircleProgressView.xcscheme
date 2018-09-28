@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "738E5592031E137B9F0DB1C003301904"
+               BlueprintIdentifier = "DE5E86279D2E5B65C518501129972965"
                BlueprintName = "DDCircleProgressView"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libDDCircleProgressView.a">

@@ -32,11 +32,13 @@ PODS:
     - DDModal/Core
     - Masonry
   - Masonry (1.1.0)
+  - MJExtension (3.0.15.1)
   - ReactiveObjC (3.1.0)
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
   - UINavigation-SXFixSpace (1.0.6)
+  - YYCache (1.0.4)
 
 DEPENDENCIES:
   - DDCircleProgressView (~> 0.0.4)
@@ -44,9 +46,11 @@ DEPENDENCIES:
   - DDLoadingView (~> 0.0.4)
   - DDModal (~> 1.0.21)
   - Masonry (~> 1.1.0)
+  - MJExtension (~> 3.0.13)
   - ReactiveObjC (~> 3.1.0)
   - SDWebImage (~> 4.3.3)
   - UINavigation-SXFixSpace (~> 1.0.6)
+  - YYCache (~> 1.0.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -56,9 +60,11 @@ SPEC REPOS:
     - DDLoadingView
     - DDModal
     - Masonry
+    - MJExtension
     - ReactiveObjC
     - SDWebImage
     - UINavigation-SXFixSpace
+    - YYCache
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -67,10 +73,12 @@ SPEC CHECKSUMS:
   DDLoadingView: 6066b61eb0bd2643c77d91aa70891d8dffa4f4fa
   DDModal: 2900ead470fb199e11b6680df174e8fb0eb71546
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   UINavigation-SXFixSpace: 796b8adf7f3022f1579c791097b3bfed5cb5e3fb
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 0a8d1e3db0bc5695ff4fb5a6c0f19e6b1753d4e8
+PODFILE CHECKSUM: b9b0bff66d4d1589870623ebb8625ca9b55aaaf5
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.1

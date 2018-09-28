@@ -10,18 +10,9 @@
 
 @implementation DDTableControllerPresenter
 
-- (instancetype)initWithView:(UITableView *)tableView{
-    self = [super initWithView:tableView];
-    if (self) {
-        _tableView = tableView;
-    }
-    return self;
-}
-
-- (instancetype)initWithView:(UITableView *)tableView viewController:(UIViewController *)viewController{
-    self = [super initWithView:tableView viewController:viewController];
-    if (self) {
-        _tableView = tableView;
+- (id)initWithTableView:(UITableView *)tableView viewController:(UIViewController *)viewController{
+    if(self = [super initWithTableView:tableView]){
+        self.viewController = viewController;
     }
     return self;
 }

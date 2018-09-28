@@ -6,13 +6,12 @@
 //  Copyright © 2018年 ABiang. All rights reserved.
 //
 
-#import "DDControllerPresenter.h"
+#import "DDTableViewPresenter.h"
 
-@interface DDTableControllerPresenter : DDControllerPresenter
+@interface DDTableControllerPresenter : DDTableViewPresenter
 
-@property (nonatomic,weak,readonly) UITableView * tableView;
+@property (nonatomic,weak) UIViewController * viewController;
 
-- (instancetype)initWithView:(UITableView *)tableView;
-- (instancetype)initWithView:(UITableView *)tableView viewController:(UIViewController *)viewController;
+- (id)initWithTableView:(UITableView *)tableView viewController:(UIViewController *)viewController;
 
 @end

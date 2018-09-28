@@ -15,5 +15,6 @@
 
 - (void)addGridSubview:(UIView *)view;
 - (void)removeGridSubview:(UIView *)view;
+- (void)removeAllGrideSubview;
 
 @end

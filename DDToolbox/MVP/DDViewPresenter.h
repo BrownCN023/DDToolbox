@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DDPresenter.h"
 /*
  Module
     Config
@@ -18,7 +18,7 @@
     View
     Controller
  */
-@interface DDViewPresenter : NSObject
+@interface DDViewPresenter : DDPresenter
 
 @property (nonatomic,weak) UIView * view;
 

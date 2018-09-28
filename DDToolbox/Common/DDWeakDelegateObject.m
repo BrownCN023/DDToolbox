@@ -28,10 +28,21 @@
 }
 
 - (void)addDelegate:(id)delegate{
-    [_delegates addObject:delegate];
+    @synchronized (_delegates) {
+        [_delegates addObject:delegate];
+    }
 }
 
 - (void)removeDelegate:(id)delegate{
-    [_delegates removeObject:delegate];
+    @synchronized (_delegates) {
+        [_delegates removeObject:delegate];
+    }
 }
+
+- (void)removeAllDelegates{
+    @synchronized (_delegates) {
+        [_delegates removeAllObjects];
+    }
+}
+
 @end

@@ -10,18 +10,10 @@
 
 @implementation DDCollectionControllerPresenter
 
-- (instancetype)initWithView:(UICollectionView *)collectionView{
-    self = [super initWithView:collectionView];
+- (instancetype)initWithCollectionView:(UICollectionView *)collectionView viewController:(UIViewController *)viewController{
+    self = [super initWithCollectionView:collectionView];
     if (self) {
-        _collectionView = collectionView;
-    }
-    return self;
-}
-
-- (instancetype)initWithView:(UICollectionView *)collectionView viewController:(UIViewController *)viewController{
-    self = [super initWithView:collectionView viewController:viewController];
-    if (self) {
-        _collectionView = collectionView;
+        self.viewController = viewController;
     }
     return self;
 }
