@@ -98,21 +98,26 @@ dispatch_async(dispatch_get_main_queue(), block);\
 #define DD_StringTrim(str) [str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]
 
 //*************** 尺寸相关 *****************
-#define DD_is_Retina ([UIScreen mainScreen].scale >= 2.0)
-#define DD_iPhone3_5 CGSizeEqualToSize(CGSizeMake(320, 480), [UIScreen mainScreen].bounds.size)
-#define DD_iPhone4_0 CGSizeEqualToSize(CGSizeMake(320, 568), [UIScreen mainScreen].bounds.size)
-#define DD_iPhone4_7 CGSizeEqualToSize(CGSizeMake(375, 667), [UIScreen mainScreen].bounds.size)
-#define DD_iPhone5_5 CGSizeEqualToSize(CGSizeMake(414, 736), [UIScreen mainScreen].bounds.size)
-#define DD_iPhone5_8 CGSizeEqualToSize(CGSizeMake(375, 812), [UIScreen mainScreen].bounds.size)
-
-#define DD_NavigationBarHeight (DD_iPhone5_8?88.0f:44.0f)
-#define DD_StatusBarHeight (DD_iPhone5_8?44.0f:20.0f)
-#define DD_TabBarHeight (DD_iPhone5_8?83.0f:49.0f)
-
 #define DD_ScreenSize [UIScreen mainScreen].bounds.size
 #define DD_ScreenWidth DD_ScreenSize.width
 #define DD_ScreenHeight DD_ScreenSize.height
 
+#define DD_DeviceSizeEqualToSize(toSize) ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(toSize, [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define DD_IS_IPHONE_4 DD_DeviceSizeEqualToSize(CGSizeMake(640,960))
+#define DD_IS_IPHONE_5 DD_DeviceSizeEqualToSize(CGSizeMake(640,1136))
+#define DD_IS_IPHONE_6 DD_DeviceSizeEqualToSize(CGSizeMake(750,1334))
+#define DD_IS_IPHONE_6Plus DD_DeviceSizeEqualToSize(CGSizeMake(1242,2208))
+#define DD_IS_IPHONE_X DD_DeviceSizeEqualToSize(CGSizeMake(1125,2436))
+#define DD_IS_IPHONE_Xr DD_DeviceSizeEqualToSize(CGSizeMake(828,1792))
+#define DD_IS_IPHONE_Xs_Max DD_DeviceSizeEqualToSize(CGSizeMake(1242,2688))
+
+#define DD_StatusBarHeight ((DD_IS_IPHONE_X || DD_IS_IPHONE_Xr || DD_IS_IPHONE_Xs_Max) ? 44.0 : 20.0)
+#define DD_NavigationBarHeight ((DD_IS_IPHONE_X || DD_IS_IPHONE_Xr || DD_IS_IPHONE_Xs_Max) ? 88.0f : 64.0f)
+#define DD_TabBarHeight ((DD_IS_IPHONE_X || DD_IS_IPHONE_Xr || DD_IS_IPHONE_Xs_Max) ? 83.0 : 49.0)
+
+// ---------------  ----------------
+#define DD_AdaptorValue(ip4,ip5,ip6,ip6p,ipx,ipxr,ipxsmax) (DD_IS_IPHONE_4?ip4:(DD_IS_IPHONE_5?ip5:(DD_IS_IPHONE_6?ip6:(DD_IS_IPHONE_6Plus?ip6p:(DD_IS_IPHONE_X?ipx:(DD_IS_IPHONE_Xr?ipxr:(DD_IS_IPHONE_Xs_Max?ipxsmax:0)))))))
 
 #define  DD_adjustsScrollViewInsets_NO(scrollView,vc)\
 do { \

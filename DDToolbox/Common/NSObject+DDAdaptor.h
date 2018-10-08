@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "DDMacro.h"
 
 @class DDLinkAdaptor;
 typedef DDLinkAdaptor *(^LinkListAdaptor)(id node);
@@ -14,11 +16,13 @@ typedef DDLinkAdaptor *(^LinkListAdaptor)(id node);
 @interface DDLinkAdaptor : NSObject
 @property (nonatomic,strong,readonly) id value;
 @property (nonatomic, strong, readonly) LinkListAdaptor iph_def;
-@property (nonatomic, strong, readonly) LinkListAdaptor iph3_5;
-@property (nonatomic, strong, readonly) LinkListAdaptor iph4_0;
-@property (nonatomic, strong, readonly) LinkListAdaptor iph4_7;
-@property (nonatomic, strong, readonly) LinkListAdaptor iph5_5;
-@property (nonatomic, strong, readonly) LinkListAdaptor iph5_8;
+@property (nonatomic, strong, readonly) LinkListAdaptor ip4;
+@property (nonatomic, strong, readonly) LinkListAdaptor ip5;
+@property (nonatomic, strong, readonly) LinkListAdaptor ip6;
+@property (nonatomic, strong, readonly) LinkListAdaptor ip6p;
+@property (nonatomic, strong, readonly) LinkListAdaptor ipx;
+@property (nonatomic, strong, readonly) LinkListAdaptor ipxr;
+@property (nonatomic, strong, readonly) LinkListAdaptor ipxsmax;
 
 @end
 

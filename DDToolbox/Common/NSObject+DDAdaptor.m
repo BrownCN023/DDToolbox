@@ -9,12 +9,6 @@
 #import "NSObject+DDAdaptor.h"
 #import <UIKit/UIKit.h>
 
-#define i3_5 CGSizeEqualToSize(CGSizeMake(320, 480), [UIScreen mainScreen].bounds.size)
-#define i4_0 CGSizeEqualToSize(CGSizeMake(320, 568), [UIScreen mainScreen].bounds.size)
-#define i4_7 CGSizeEqualToSize(CGSizeMake(375, 667), [UIScreen mainScreen].bounds.size)
-#define i5_5 CGSizeEqualToSize(CGSizeMake(414, 736), [UIScreen mainScreen].bounds.size)
-#define i5_8 CGSizeEqualToSize(CGSizeMake(375, 812), [UIScreen mainScreen].bounds.size)
-
 @interface DDLinkAdaptor()
 
 @property (nonatomic,strong) id value;
@@ -36,45 +30,63 @@
     };
 }
 
-- (LinkListAdaptor)iph3_5{
+- (LinkListAdaptor)ip4{
     return ^(id node){
-        if(i3_5){
+        if(DD_IS_IPHONE_4){
             self.value = node;
         }
         return self;
     };
 }
 
-- (LinkListAdaptor)iph4_0{
+- (LinkListAdaptor)ip5{
     return ^(id node){
-        if(i4_0){
+        if(DD_IS_IPHONE_5){
             self.value = node;
         }
         return self;
     };
 }
 
-- (LinkListAdaptor)iph4_7{
+- (LinkListAdaptor)ip6{
     return ^(id node){
-        if(i4_7){
+        if(DD_IS_IPHONE_6){
             self.value = node;
         }
         return self;
     };
 }
 
-- (LinkListAdaptor)iph5_5{
+- (LinkListAdaptor)ip6p{
     return ^(id node){
-        if(i5_5){
+        if(DD_IS_IPHONE_6Plus){
             self.value = node;
         }
         return self;
     };
 }
 
-- (LinkListAdaptor)iph5_8{
+- (LinkListAdaptor)ipx{
     return ^(id node){
-        if(i5_8){
+        if(DD_IS_IPHONE_X){
+            self.value = node;
+        }
+        return self;
+    };
+}
+
+- (LinkListAdaptor)ipxr{
+    return ^(id node){
+        if(DD_IS_IPHONE_Xr){
+            self.value = node;
+        }
+        return self;
+    };
+}
+
+- (LinkListAdaptor)ipxsmax{
+    return ^(id node){
+        if(DD_IS_IPHONE_Xs_Max){
             self.value = node;
         }
         return self;
