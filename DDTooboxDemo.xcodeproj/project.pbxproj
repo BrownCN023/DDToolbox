@@ -94,6 +94,8 @@
 		B2B5C82420DB891E00E314D5 /* DDWeakDelegateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B5C82320DB891E00E314D5 /* DDWeakDelegateObject.m */; };
 		B2B5C82720DB8AB000E314D5 /* NSArray+DDSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B5C82620DB8AB000E314D5 /* NSArray+DDSafeAccess.m */; };
 		B2B5C82A20DB919E00E314D5 /* NSObject+DDSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B5C82920DB919E00E314D5 /* NSObject+DDSwizzling.m */; };
+		B2CE473C216AEDAB0015F639 /* DDQRCodeScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CE4738216AEDAB0015F639 /* DDQRCodeScannerViewController.m */; };
+		B2CE473D216AEDAB0015F639 /* DDSimpleQRCodeScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CE4739216AEDAB0015F639 /* DDSimpleQRCodeScannerViewController.m */; };
 		C00FA61720ED1A3D00E2474E /* DDAutoLoopCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C00FA61620ED1A3D00E2474E /* DDAutoLoopCollectionView.m */; };
 		FADFBB39234711343392AD49 /* libPods-DDTooboxDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 520B3C740C73C76D45545176 /* libPods-DDTooboxDemo.a */; };
 /* End PBXBuildFile section */
@@ -271,6 +273,10 @@
 		B2B5C82620DB8AB000E314D5 /* NSArray+DDSafeAccess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DDSafeAccess.m"; sourceTree = "<group>"; };
 		B2B5C82820DB919E00E314D5 /* NSObject+DDSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+DDSwizzling.h"; sourceTree = "<group>"; };
 		B2B5C82920DB919E00E314D5 /* NSObject+DDSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DDSwizzling.m"; sourceTree = "<group>"; };
+		B2CE4738216AEDAB0015F639 /* DDQRCodeScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDQRCodeScannerViewController.m; sourceTree = "<group>"; };
+		B2CE4739216AEDAB0015F639 /* DDSimpleQRCodeScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSimpleQRCodeScannerViewController.m; sourceTree = "<group>"; };
+		B2CE473A216AEDAB0015F639 /* DDSimpleQRCodeScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSimpleQRCodeScannerViewController.h; sourceTree = "<group>"; };
+		B2CE473B216AEDAB0015F639 /* DDQRCodeScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDQRCodeScannerViewController.h; sourceTree = "<group>"; };
 		C00FA61520ED1A3D00E2474E /* DDAutoLoopCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDAutoLoopCollectionView.h; sourceTree = "<group>"; };
 		C00FA61620ED1A3D00E2474E /* DDAutoLoopCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDAutoLoopCollectionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -551,6 +557,10 @@
 				B249151320F44C8A00A431D2 /* DDRecordVideoPreviewView.m */,
 				B249150F20F449E900A431D2 /* DDVideoRecordViewController.h */,
 				B249151020F449E900A431D2 /* DDVideoRecordViewController.m */,
+				B2CE473B216AEDAB0015F639 /* DDQRCodeScannerViewController.h */,
+				B2CE4738216AEDAB0015F639 /* DDQRCodeScannerViewController.m */,
+				B2CE473A216AEDAB0015F639 /* DDSimpleQRCodeScannerViewController.h */,
+				B2CE4739216AEDAB0015F639 /* DDSimpleQRCodeScannerViewController.m */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -696,6 +706,7 @@
 				B2AE6CBE20BFDD030001E34A /* DDBaseView.m in Sources */,
 				B2B5C82720DB8AB000E314D5 /* NSArray+DDSafeAccess.m in Sources */,
 				B2AE6CA720BFDD030001E34A /* NSUserDefaults+DDHelper.m in Sources */,
+				B2CE473C216AEDAB0015F639 /* DDQRCodeScannerViewController.m in Sources */,
 				B2B5C7FF20D9FD3A00E314D5 /* ViewController2.m in Sources */,
 				B2AA54C520B3F07B000C0C0A /* main.m in Sources */,
 				B2201BB3215DC2CF00BA7199 /* DDPresenter.m in Sources */,
@@ -730,6 +741,7 @@
 				B2201BC5215DD8B900BA7199 /* DDAuthorizationTools.m in Sources */,
 				B2B5C80720DA046100E314D5 /* CircleArcViewLayout.m in Sources */,
 				C00FA61720ED1A3D00E2474E /* DDAutoLoopCollectionView.m in Sources */,
+				B2CE473D216AEDAB0015F639 /* DDSimpleQRCodeScannerViewController.m in Sources */,
 				B2AE6CC220BFDD030001E34A /* DDLoopCollectionView.m in Sources */,
 				B2AE6CAD20BFDD030001E34A /* DDPageModel.m in Sources */,
 				B20AC67920EF25F400ABCEF9 /* DDGridSimpleLayoutView.m in Sources */,
