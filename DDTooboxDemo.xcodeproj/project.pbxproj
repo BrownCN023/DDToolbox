@@ -33,6 +33,9 @@
 		B2201BBF215DD18900BA7199 /* DDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B2201BBE215DD18900BA7199 /* DDUserInfo.m */; };
 		B2201BC2215DD1A900BA7199 /* DDUserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2201BC1215DD1A900BA7199 /* DDUserInfoManager.m */; };
 		B2201BC5215DD8B900BA7199 /* DDAuthorizationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B2201BC4215DD8B800BA7199 /* DDAuthorizationTools.m */; };
+		B2285024216DD477008EA06D /* DDAdvertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2285023216DD477008EA06D /* DDAdvertView.m */; };
+		B2285027216DD495008EA06D /* UIImageView+SDWebImageFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B2285025216DD495008EA06D /* UIImageView+SDWebImageFadeAnimation.m */; };
+		B228502A216DD4AC008EA06D /* DDAppStatusCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B2285029216DD4AC008EA06D /* DDAppStatusCenter.m */; };
 		B24616FC20EB22E0000A09AF /* DDWebTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B24616FB20EB22E0000A09AF /* DDWebTableViewController.m */; };
 		B249151120F449E900A431D2 /* DDVideoRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B249151020F449E900A431D2 /* DDVideoRecordViewController.m */; };
 		B249151420F44C8A00A431D2 /* DDRecordVideoPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = B249151320F44C8A00A431D2 /* DDRecordVideoPreviewView.m */; };
@@ -154,6 +157,12 @@
 		B2201BC1215DD1A900BA7199 /* DDUserInfoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDUserInfoManager.m; sourceTree = "<group>"; };
 		B2201BC3215DD8B800BA7199 /* DDAuthorizationTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAuthorizationTools.h; sourceTree = "<group>"; };
 		B2201BC4215DD8B800BA7199 /* DDAuthorizationTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAuthorizationTools.m; sourceTree = "<group>"; };
+		B2285022216DD476008EA06D /* DDAdvertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAdvertView.h; sourceTree = "<group>"; };
+		B2285023216DD477008EA06D /* DDAdvertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAdvertView.m; sourceTree = "<group>"; };
+		B2285025216DD495008EA06D /* UIImageView+SDWebImageFadeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDWebImageFadeAnimation.m"; sourceTree = "<group>"; };
+		B2285026216DD495008EA06D /* UIImageView+SDWebImageFadeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDWebImageFadeAnimation.h"; sourceTree = "<group>"; };
+		B2285028216DD4AC008EA06D /* DDAppStatusCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAppStatusCenter.h; sourceTree = "<group>"; };
+		B2285029216DD4AC008EA06D /* DDAppStatusCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAppStatusCenter.m; sourceTree = "<group>"; };
 		B24616FA20EB22E0000A09AF /* DDWebTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDWebTableViewController.h; sourceTree = "<group>"; };
 		B24616FB20EB22E0000A09AF /* DDWebTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDWebTableViewController.m; sourceTree = "<group>"; };
 		B249150F20F449E900A431D2 /* DDVideoRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDVideoRecordViewController.h; sourceTree = "<group>"; };
@@ -412,6 +421,8 @@
 		B2AE6C3920BFDD030001E34A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B2285028216DD4AC008EA06D /* DDAppStatusCenter.h */,
+				B2285029216DD4AC008EA06D /* DDAppStatusCenter.m */,
 				B2AE6C4620BFDD030001E34A /* DDTimer.h */,
 				B2AE6C4720BFDD030001E34A /* DDTimer.m */,
 				B2AE6C4420BFDD030001E34A /* DDTimer+Expand.h */,
@@ -513,6 +524,10 @@
 		B2AE6C7D20BFDD030001E34A /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				B2285026216DD495008EA06D /* UIImageView+SDWebImageFadeAnimation.h */,
+				B2285025216DD495008EA06D /* UIImageView+SDWebImageFadeAnimation.m */,
+				B2285022216DD476008EA06D /* DDAdvertView.h */,
+				B2285023216DD477008EA06D /* DDAdvertView.m */,
 				B2AE6C8A20BFDD030001E34A /* DDBaseView.h */,
 				B2AE6C8B20BFDD030001E34A /* DDBaseView.m */,
 				B2AE6C8420BFDD030001E34A /* DDBaseTableViewCell.h */,
@@ -728,6 +743,7 @@
 				B2AE6C9A20BFDD030001E34A /* DDFileCacheTools.m in Sources */,
 				B2AE6CBC20BFDD030001E34A /* DDBaseTableViewController.m in Sources */,
 				B2AE6CB820BFDD030001E34A /* DDBaseCollectionHeaderFooterView.m in Sources */,
+				B2285024216DD477008EA06D /* DDAdvertView.m in Sources */,
 				B261B0A520E1F20400FF6416 /* DDWeakScriptMessageHandler.m in Sources */,
 				B2AE6CA220BFDD030001E34A /* NSMutableArray+DDNode.m in Sources */,
 				B24F598D20EA1AB6003BFDDC /* DDTouchProgressView.m in Sources */,
@@ -743,6 +759,7 @@
 				C00FA61720ED1A3D00E2474E /* DDAutoLoopCollectionView.m in Sources */,
 				B2CE473D216AEDAB0015F639 /* DDSimpleQRCodeScannerViewController.m in Sources */,
 				B2AE6CC220BFDD030001E34A /* DDLoopCollectionView.m in Sources */,
+				B228502A216DD4AC008EA06D /* DDAppStatusCenter.m in Sources */,
 				B2AE6CAD20BFDD030001E34A /* DDPageModel.m in Sources */,
 				B20AC67920EF25F400ABCEF9 /* DDGridSimpleLayoutView.m in Sources */,
 				B20C277C20E6053B00E0A433 /* UIButton+DDHighlightColor.m in Sources */,
@@ -772,6 +789,7 @@
 				B2AE6CC320BFDD030001E34A /* DDLoopTableView.m in Sources */,
 				B2AE6C9920BFDD030001E34A /* DDBarStyle.m in Sources */,
 				B2AE6CBB20BFDD030001E34A /* DDBaseTableViewCell.m in Sources */,
+				B2285027216DD495008EA06D /* UIImageView+SDWebImageFadeAnimation.m in Sources */,
 				B2AE6CBD20BFDD030001E34A /* DDBaseTableViewHeaderFooterView.m in Sources */,
 				B2AE6C9D20BFDD030001E34A /* DDTimer+Expand.m in Sources */,
 				B2201BBF215DD18900BA7199 /* DDUserInfo.m in Sources */,
