@@ -33,12 +33,14 @@
 }
 
 - (void)setShowedWelcomePage:(BOOL)showedWelcomePage{
+    _showedWelcomePage = showedWelcomePage;
     NSUserDefaults * ud = [NSUserDefaults standardUserDefaults];
     [ud setBool:showedWelcomePage forKey:kConfigShowedWelcomePage];
     [ud synchronize];
 }
 
 - (void)setShowedAdvertPage:(BOOL)showedAdvertPage{
+    _showedAdvertPage = showedAdvertPage;
     NSUserDefaults * ud = [NSUserDefaults standardUserDefaults];
     [ud setBool:showedAdvertPage forKey:kConfigShowedAdvertPage];
     [ud synchronize];
