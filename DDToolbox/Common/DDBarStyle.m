@@ -8,6 +8,7 @@
 
 #import "DDBarStyle.h"
 #import "UIImage+DDHelper.h"
+#import "DDMacro.h"
 
 @implementation UINavigationBar (DDHelper)
 - (void)simpleStyleColor:(UIColor *)styleColor{
@@ -17,13 +18,35 @@
     [self setTintColor:[UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1]];
     [self setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1]}];
 }
+
+- (void)setThemeColor:(UIColor *)themeColor fontColor:(UIColor *)fontColor{
+    [self setBackgroundImage:[UIImage createImageWithColor:themeColor size:CGSizeMake([UIScreen mainScreen].bounds.size.width, 64.0f)] forBarMetrics:UIBarMetricsDefault];
+    [self setShadowImage:[UIImage new]];
+    [self setTranslucent:NO];
+    [self setTintColor:fontColor];
+    [self setTitleTextAttributes:@{NSForegroundColorAttributeName: fontColor}];
+}
+
 @end
 
 @implementation UITabBar (DDHelper)
 - (void)simpleStyleColor:(UIColor *)styleColor{
     [self setTranslucent:NO];
     [self setShadowImage:[UIImage new]];
-    [self setBackgroundImage:[UIImage createImageWithColor:styleColor size:CGSizeMake([UIScreen mainScreen].bounds.size.width,49.0f)]];
+    [self setBackgroundImage:[UIImage createImageWithColor:styleColor size:CGSizeMake([UIScreen mainScreen].bounds.size.width,DD_TabBarHeight)]];
+    
+    UIView * lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 0.5)];
+    lineView.backgroundColor = [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1];
+    [self addSubview:lineView];
+}
+
+- (void)setThemeColor:(UIColor *)themeColor tintColor:(UIColor *)tintColor{
+    [self setTranslucent:NO];
+    [self setShadowImage:[UIImage new]];
+    [self setBackgroundImage:[UIImage createImageWithColor:themeColor size:CGSizeMake([UIScreen mainScreen].bounds.size.width,DD_TabBarHeight)]];
+    
+    self.barTintColor = tintColor;
+    self.tintColor = tintColor;
     
     UIView * lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 0.5)];
     lineView.backgroundColor = [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1];

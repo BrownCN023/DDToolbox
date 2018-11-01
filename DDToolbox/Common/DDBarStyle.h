@@ -10,10 +10,12 @@
 
 @interface UINavigationBar (DDHelper)
 - (void)simpleStyleColor:(UIColor *)styleColor;
+- (void)setThemeColor:(UIColor *)themeColor fontColor:(UIColor *)fontColor;
 @end
 
 @interface UITabBar (DDHelper)
 - (void)simpleStyleColor:(UIColor *)styleColor;
+- (void)setThemeColor:(UIColor *)themeColor tintColor:(UIColor *)tintColor;
 @end
 
 @interface DDBarStyle : NSObject
