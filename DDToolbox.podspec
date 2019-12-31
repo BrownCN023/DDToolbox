@@ -26,4 +26,6 @@ s.source_files =  "DDToolbox/**/*.{h,m}"
 s.requires_arc = true
 s.frameworks = "UIKit", "Foundation"
 
+s.dependency "Masonry", "~> 1.1.0"
+
 end
