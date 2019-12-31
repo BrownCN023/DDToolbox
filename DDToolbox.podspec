@@ -19,7 +19,7 @@ s.source       = { :git => "https://github.com/BrownCN023/DDToolbox.git", :tag =
 
 #s.public_header_files = "DDToolbox/DDToolbox.h"
 #s.source_files = "DDToolbox/DDToolbox.h"
-s.source_files =  ""DDToolbox/**/*.{h,m}"
+s.source_files =  "DDToolbox/**/*.{h,m}"
 #s.resource     = "DDToolbox/Resources/*"
 
 
