@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "DDToolbox"
-s.version      = "0.0.15"
+s.version      = "0.1.0"
 s.summary      = "辅助开发工具类"
 s.homepage     = "https://github.com/BrownCN023/DDToolbox"
 s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -18,46 +18,12 @@ s.platform     = :ios, "8.0"
 s.source       = { :git => "https://github.com/BrownCN023/DDToolbox.git", :tag => s.version }
 
 s.public_header_files = "DDToolbox/DDToolbox.h"
-s.source_files = "DDToolbox/DDToolbox.h"
+#s.source_files = "DDToolbox/DDToolbox.h"
+s.source_files =  ""DDToolbox/**/*.{h,m}"
 s.resource     = "DDToolbox/Resources/*"
-#s.source_files =  "DDToolbox/*.h","DDToolbox/**/*.{h,m}"
 
-#二级目录
-s.subspec "Macro" do |macro|
-macro.source_files = "DDToolbox/Macro/*.{h,m}"
-end
-s.subspec "Model" do |model|
-model.source_files = "DDToolbox/Model/*.{h,m}"
-end
-s.subspec "ViewModel" do |viewmodel|
-viewmodel.source_files = "DDToolbox/ViewModel/*.{h,m}"
-end
-s.subspec "MVP" do |mvp|
-mvp.source_files = "DDToolbox/MVP/*.{h,m}"
-end
-s.subspec "Common" do |common|
-common.dependency 'DDToolbox/Macro'
-common.source_files = "DDToolbox/Common/*.{h,m}"
-end
-s.subspec "UIComponents" do |uicomponents|
-uicomponents.dependency 'DDToolbox/Macro'
-uicomponents.dependency 'DDToolbox/Common'
-uicomponents.dependency 'DDToolbox/ViewModel'
-uicomponents.source_files = "DDToolbox/UIComponents/*.{h,m}"
-end
-#二级目录
 
 s.requires_arc = true
 s.frameworks = "UIKit", "Foundation"
-
-s.dependency "Masonry", "~> 1.1.0"
-s.dependency "SDWebImage", "~> 4.4.2"
-s.dependency "YYCache", "~> 1.0.4"
-s.dependency "MJExtension", "~> 3.0.15.1"
-
-s.dependency "DDLoadingView", "~> 0.0.5"
-s.dependency "DDModal", "~> 1.0.22"
-s.dependency "DDCircleProgressView", "~> 0.0.4"
-s.dependency "DDHTTPClient", "~> 0.0.7"
 
 end
