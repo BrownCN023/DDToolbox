@@ -17,10 +17,10 @@ s.author       = { "liyebiao1990" => "347991555@qq.com" }
 s.platform     = :ios, "8.0"
 s.source       = { :git => "https://github.com/BrownCN023/DDToolbox.git", :tag => s.version }
 
-s.public_header_files = "DDToolbox/DDToolbox.h"
+#s.public_header_files = "DDToolbox/DDToolbox.h"
 #s.source_files = "DDToolbox/DDToolbox.h"
 s.source_files =  ""DDToolbox/**/*.{h,m}"
-s.resource     = "DDToolbox/Resources/*"
+#s.resource     = "DDToolbox/Resources/*"
 
 
 s.requires_arc = true
