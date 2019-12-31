@@ -236,7 +236,6 @@
 				B2AA54AE20B3F07B000C0C0A /* Sources */,
 				B2AA54AF20B3F07B000C0C0A /* Frameworks */,
 				B2AA54B020B3F07B000C0C0A /* Resources */,
-				6D39D88CCBC522A478110A2E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,28 +293,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6D39D88CCBC522A478110A2E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DDTooboxDemo/Pods-DDTooboxDemo-resources.sh",
-				"${PODS_ROOT}/DDCircleProgressView/DDCircleProgressViewDemo/DDCircleProgressView/Resources/DDCircleProgressView.bundle",
-				"${PODS_ROOT}/DDLoadingView/DDLoadingView/Resources/DDLoadingView.bundle",
-				"${PODS_ROOT}/DDModal/DDModal/Resources/DDModal.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DDCircleProgressView.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DDLoadingView.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DDModal.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DDTooboxDemo/Pods-DDTooboxDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D0CE1878DBD4F8EBDE22C2EB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

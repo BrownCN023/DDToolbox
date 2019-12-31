@@ -1,2 +1,0 @@
-# DDHTTPClient
-AFNetworking HTTP client
