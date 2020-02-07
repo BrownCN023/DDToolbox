@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "DDToolbox"
-s.version      = "0.1.0"
+s.version      = "0.1.1"
 s.summary      = "辅助开发工具类"
 s.homepage     = "https://github.com/BrownCN023/DDToolbox"
 s.license      = { :type => "MIT", :file => "LICENSE" }

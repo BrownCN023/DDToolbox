@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DDTooboxDemo" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iFn-v9-DhO"/>
                         <viewControllerLayoutGuide type="bottom" id="nij-D9-WcU"/>
@@ -20,26 +20,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xbX-wR-Gf1">
-                                <rect key="frame" x="0.0" y="20" width="375" height="266"/>
-                                <color key="backgroundColor" red="1" green="0.5264812739312319" blue="0.61592190869318775" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="266" id="QhP-9y-xvp"/>
-                                </constraints>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="0.85696198287585257" blue="0.63038459483703524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="xbX-wR-Gf1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GGD-E5-nhQ"/>
-                            <constraint firstItem="xbX-wR-Gf1" firstAttribute="top" secondItem="iFn-v9-DhO" secondAttribute="bottom" id="VFY-8D-qAA"/>
-                            <constraint firstItem="xbX-wR-Gf1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="pOI-At-v5D"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hAq-aB-DjN"/>
-                    <connections>
-                        <outlet property="tableView" destination="xbX-wR-Gf1" id="5Yv-W6-ORe"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

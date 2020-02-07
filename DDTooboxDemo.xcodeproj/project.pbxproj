@@ -31,6 +31,7 @@
 		5306F52E238780BD005C3C26 /* DDWebTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306F528238780BD005C3C26 /* DDWebTableViewController.m */; };
 		5306F5332387836D005C3C26 /* DDWeakScriptMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5306F5322387836D005C3C26 /* DDWeakScriptMessageHandler.m */; };
 		5311501A23BB3B88005BF143 /* NSObject+DDSafeObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 5311501823BB3B88005BF143 /* NSObject+DDSafeObserver.m */; };
+		5352C50A23ED4C7B00A3EEF7 /* DDUserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5352C50423ED4C7B00A3EEF7 /* DDUserInfoManager.m */; };
 		B2AA54B720B3F07B000C0C0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA54B620B3F07B000C0C0A /* AppDelegate.m */; };
 		B2AA54BA20B3F07B000C0C0A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA54B920B3F07B000C0C0A /* ViewController.m */; };
 		B2AA54BD20B3F07B000C0C0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2AA54BB20B3F07B000C0C0A /* Main.storyboard */; };
@@ -91,6 +92,8 @@
 		5306F5322387836D005C3C26 /* DDWeakScriptMessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDWeakScriptMessageHandler.m; sourceTree = "<group>"; };
 		5311501823BB3B88005BF143 /* NSObject+DDSafeObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DDSafeObserver.m"; sourceTree = "<group>"; };
 		5311501923BB3B88005BF143 /* NSObject+DDSafeObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DDSafeObserver.h"; sourceTree = "<group>"; };
+		5352C50423ED4C7B00A3EEF7 /* DDUserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDUserInfoManager.m; sourceTree = "<group>"; };
+		5352C50723ED4C7B00A3EEF7 /* DDUserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDUserInfoManager.h; sourceTree = "<group>"; };
 		5B70CE3ED59AD2CF0CABAE01 /* Pods-DDTooboxDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDTooboxDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DDTooboxDemo/Pods-DDTooboxDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A14DA01C9EE9EFF0B8B43348 /* Pods-DDTooboxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDTooboxDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DDTooboxDemo/Pods-DDTooboxDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B2AA54B220B3F07B000C0C0A /* DDTooboxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDTooboxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +175,8 @@
 		B2AA54CB20B3F08E000C0C0A /* DDToolbox */ = {
 			isa = PBXGroup;
 			children = (
+				5352C50723ED4C7B00A3EEF7 /* DDUserInfoManager.h */,
+				5352C50423ED4C7B00A3EEF7 /* DDUserInfoManager.m */,
 				5311501923BB3B88005BF143 /* NSObject+DDSafeObserver.h */,
 				5311501823BB3B88005BF143 /* NSObject+DDSafeObserver.m */,
 				5306F4F52387800E005C3C26 /* DDAppVersionHelper.h */,
@@ -323,6 +328,7 @@
 				B2AA54BA20B3F07B000C0C0A /* ViewController.m in Sources */,
 				B2AA54C520B3F07B000C0C0A /* main.m in Sources */,
 				5306F5182387804C005C3C26 /* NSObject+DDSwizzling.m in Sources */,
+				5352C50A23ED4C7B00A3EEF7 /* DDUserInfoManager.m in Sources */,
 				5306F5192387804C005C3C26 /* UIView+DDBorder.m in Sources */,
 				5306F5172387804C005C3C26 /* UIButton+DDHighlightColor.m in Sources */,
 				B2AA54B720B3F07B000C0C0A /* AppDelegate.m in Sources */,
