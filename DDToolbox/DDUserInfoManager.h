@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+
+FOUNDATION_EXPORT NSString * _Nonnull const kAppLoginNotification;
+FOUNDATION_EXPORT NSString * _Nonnull const kAppLogoutNotification;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DDUserInfo : NSObject<NSCoding>
@@ -27,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DDHistoryUserInfoManager : DDUserInfoManager
 @property (nonatomic,strong,readonly) NSArray<DDUserInfo *> * historyArray;
++ (DDHistoryUserInfoManager *)sharedManager;
 - (BOOL)clearAllHistory;
 @end
 

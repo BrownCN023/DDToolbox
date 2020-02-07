@@ -8,6 +8,9 @@
 
 #import "DDUserInfoManager.h"
 
+NSString * const kAppLoginNotification = @"kAppLoginNotification";
+NSString * const kAppLogoutNotification = @"kAppLogoutNotification";
+
 @implementation DDUserInfo
 - (void)encodeWithCoder:(NSCoder *)aCoder{
     [aCoder encodeObject:_account forKey:@"account"];
@@ -54,8 +57,7 @@
 
 + (BOOL)saveArchiverObject:(id<NSCoding>)object key:(NSString *)key{
     NSString *path = [self documentDirectory:key];
-    BOOL success = [NSKeyedArchiver archiveRootObject:object toFile:path];
-    return success;
+    return [NSKeyedArchiver archiveRootObject:object toFile:path];
 }
 
 + (id<NSCoding>)readArchiverObjectForKey:(NSString *)key{
@@ -99,7 +101,7 @@
     return [self.class saveUserInfo:userInfo];
 }
 - (BOOL)clearUserInfo{
-    self.currentUserInfo = nil;
+    self.currentUserInfo.token = @"";
     return [self.class saveUserInfo:self.currentUserInfo];
 }
 @end
@@ -116,6 +118,10 @@
 }
 + (NSMutableArray<DDUserInfo *> *)currentHistory{
     return (NSMutableArray<DDUserInfo *> *)[self readArchiverObjectForKey:@"history"];
+}
+
++ (DDHistoryUserInfoManager *)sharedManager{
+    return (DDHistoryUserInfoManager *)[super sharedManager];
 }
 
 - (instancetype)init
