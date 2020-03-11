@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DDUserInfo : NSObject<NSCoding>
 @property (nonatomic,copy) NSString * account;
 @property (nonatomic,copy) NSString * token;
+@property (nonatomic,assign) NSInteger timestamp;
 @end
 
 

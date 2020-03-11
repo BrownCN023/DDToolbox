@@ -77,7 +77,7 @@
     // 创建UserContentController（提供JavaScript向webView发送消息的方法）
     WKUserContentController* userContent = [[WKUserContentController alloc] init];
     // 添加消息处理，注意：self指代的对象需要遵守WKScriptMessageHandler协议，结束时需要移除
-    [userContent addScriptMessageHandler:[[DDWeakScriptMessageHandler alloc] initWithDelegate:self] name:@"appVersion"];
+    //[userContent addScriptMessageHandler:[[DDWeakScriptMessageHandler alloc] initWithDelegate:self] name:@"appVersion"];
     // 将UserConttentController设置到配置文件
     config.userContentController = userContent;
     return config;
@@ -94,6 +94,13 @@
 }
 
 - (void)setupSubviews{
+    if(@available(iOS 11.0,*)){
+        self.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        self.webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }else{
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
     [self.view addSubview:self.scrollView];
     [self.scrollView addSubview:self.webView];
     [self.scrollView addSubview:self.tableView];

@@ -21,7 +21,7 @@
 @implementation DDPageModel
 
 + (DDPageModel *)createPageModel{
-    return [[DDPageModel alloc] initWithPage:0 pageSize:30];
+    return [[DDPageModel alloc] initWithPage:0 pageSize:20];
 }
 
 - (instancetype)initWithPage:(uint)page pageSize:(uint)pageSize
@@ -65,7 +65,7 @@
     _prevPage = _currentPage;
 }
 
-- (void)failure
+- (void)failed
 {
     if(_noData){
         return;

@@ -15,6 +15,7 @@ NSString * const kAppLogoutNotification = @"kAppLogoutNotification";
 - (void)encodeWithCoder:(NSCoder *)aCoder{
     [aCoder encodeObject:_account forKey:@"account"];
     [aCoder encodeObject:_token forKey:@"token"];
+    [aCoder encodeDouble:_timestamp forKey:@"timestamp"];
 }
 - (instancetype)initWithCoder:(NSCoder *)coder
 {
@@ -22,13 +23,14 @@ NSString * const kAppLogoutNotification = @"kAppLogoutNotification";
     if (self) {
         self.account = [coder decodeObjectForKey:@"account"];
         self.token = [coder decodeObjectForKey:@"token"];
+        self.timestamp = [coder decodeDoubleForKey:@"timestamp"];
     }else{
         return nil;
     }
     return self;
 }
 - (NSString *)description{
-    return [NSString stringWithFormat:@"userinfo: .account:%@ .token:%@",self.account,self.token];
+    return [NSString stringWithFormat:@"userinfo: .account:%@ .token:%@ .timestamp:%@",self.account,self.token,@(self.timestamp)];
 }
 @end
 
@@ -97,6 +99,7 @@ NSString * const kAppLogoutNotification = @"kAppLogoutNotification";
     return (self.currentUserInfo != nil) && self.currentUserInfo.token.length > 0;
 }
 - (BOOL)saveOrUpdateUserInfo:(DDUserInfo *)userInfo{
+    userInfo.timestamp = [[NSDate date] timeIntervalSince1970];
     self.currentUserInfo = userInfo;
     return [self.class saveUserInfo:userInfo];
 }

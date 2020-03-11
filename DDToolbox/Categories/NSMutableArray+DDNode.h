@@ -21,7 +21,7 @@ typedef NSMutableArray * (^DDMutableArrayAppendExpNode)(BOOL exp,DDMutableArrayA
 /**
  e.g
  NSMutableArray * marr ...;
- appendNode(exp,^id{
+ marr.appendNode(exp,^id{
  return NSArray<id> objs; | return id;
  });
  */

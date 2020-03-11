@@ -9,7 +9,7 @@
 #import "DDFlagPageModel.h"
 
 @interface DDFlagPageModel(){
-    uint _defaultOffset;
+    uint _defaultPageSize;
     id _defaultFlag;
     id _prevFlag;
     BOOL _noData;
@@ -18,12 +18,12 @@
 
 @implementation DDFlagPageModel
 
-+ (DDFlagPageModel *)createFlagPageModel{
-    return [[DDFlagPageModel alloc] initWithFlag:nil offset:30];
++ (DDFlagPageModel *)createPageModel{
+    return [[DDFlagPageModel alloc] initWithFlag:nil pageSize:20];
 }
-- (instancetype)initWithFlag:(id)flag offset:(uint)offset{
+- (instancetype)initWithFlag:(id)flag pageSize:(uint)pageSize{
     if(self = [super init]){
-        _defaultOffset = offset;
+        _defaultPageSize = pageSize;
         _defaultFlag = flag;
         [self initDataWithIsReset:NO];
     }
@@ -31,20 +31,20 @@
 }
 - (void)initDataWithIsReset:(BOOL)isReset{
     _currentFlag = _defaultFlag;
-    _offset = _defaultOffset;
+    _pageSize = _defaultPageSize;
     _noData = NO;
     if(!isReset){
         _prevFlag = _currentFlag;
     }
 }
-- (void)signFlag:(id)flag{
+- (void)success:(id)flag{
     if(_noData){
         return;
     }
     _currentFlag = flag;
     _prevFlag = _currentFlag;
 }
-- (void)error{
+- (void)failed{
     if(_noData){
         return;
     }
@@ -61,6 +61,10 @@
 }
 - (BOOL)isNoData{
     return _noData;
+}
+- (BOOL)isFirstPage
+{
+    return _currentFlag == _defaultFlag;
 }
 
 @end

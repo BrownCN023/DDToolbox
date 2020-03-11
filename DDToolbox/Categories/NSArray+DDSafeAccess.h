@@ -16,6 +16,8 @@
 
 @interface NSMutableArray (DDSafeAccess)
 
+- (id)safeObjectAtIndex:(NSUInteger)index;
+
 - (void)safeAddObject:(id)obj;
 
 - (void)safeRemoveObject:(id)obj;
