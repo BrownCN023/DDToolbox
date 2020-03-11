@@ -32,6 +32,7 @@ listcomponent.source_files = "DDToolbox/ListComponent/*.{h,m}"
 end
 s.subspec "LoopView" do |loopview|
 loopview.source_files = "DDToolbox/LoopView/*.{h,m}"
+loopview.dependency 'DDToolbox/Other'
 end
 s.subspec "Other" do |other|
 other.source_files = "DDToolbox/Other/*.{h,m}"
