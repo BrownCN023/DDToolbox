@@ -18,7 +18,7 @@ s.platform     = :ios, "8.0"
 s.source       = { :git => "https://github.com/BrownCN023/DDToolbox.git", :tag => s.version }
 
 s.public_header_files = "DDToolbox/DDToolbox.h"
-#s.source_files = "DDToolbox/DDToolbox.h"
+s.source_files = "DDToolbox/DDToolbox.h"
 #s.resource     = "DDToolbox/Resources/*"
 #s.source_files =  "DDToolbox/*.h","DDToolbox/**/*.{h,m}"
 
@@ -31,8 +31,8 @@ s.subspec "ListComponent" do |listcomponent|
 listcomponent.source_files = "DDToolbox/ListComponent/*.{h,m}"
 end
 s.subspec "LoopView" do |loopview|
-loopview.source_files = "DDToolbox/LoopView/*.{h,m}"
 loopview.dependency 'DDToolbox/Other'
+loopview.source_files = "DDToolbox/LoopView/*.{h,m}"
 end
 s.subspec "Other" do |other|
 other.source_files = "DDToolbox/Other/*.{h,m}"
